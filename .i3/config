@@ -111,9 +111,9 @@ bindsym $mod+r mode "resize"
 
 exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
 exec --no-startup-id picom
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id polybar --config=$HOME/.config/polybar/config orchid
 exec --no-startup-id flameshot
-
+exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
 
 smart_borders on
 
