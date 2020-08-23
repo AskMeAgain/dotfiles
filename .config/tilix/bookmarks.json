@@ -1,0 +1,18 @@
+{
+    "list": [
+        {
+            "list": [
+                {
+                    "command": "echo lol",
+                    "name": "111",
+                    "type": "COMMAND"
+                }
+            ],
+            "name": "asdasdasdasd",
+            "type": "FOLDER"
+        }
+    ],
+    "name": "Root",
+    "type": "FOLDER"
+}
+
