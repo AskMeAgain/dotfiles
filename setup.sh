@@ -29,10 +29,3 @@ sudo chmod +x ../.config/polybar/launch.sh
 echo $1 | sudo -S systemctl start docker.service
 sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
-
-yay --save --answerclean All
-yay --save --answerdiff None
-echo $1 | yay -S yadm-git --sudoloop --sudoflags -S
-
-yadm clone $2
-
