@@ -20,12 +20,7 @@ sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< $1
 dconf load /com/gexperts/Tilix/ < ./tilix.dconf
 
-mkdir ./.config/polybar
-
 #docker
 echo $1 | sudo -S systemctl start docker.service
 sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
-
-#finally override again
-#yadm clone $2
