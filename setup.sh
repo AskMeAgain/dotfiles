@@ -14,13 +14,13 @@ cd picom-ibhagwan-git/ && makepkg && echo $1 | sudo -S pacman -U *.pkg.tar.xz --
 
 sudo mv ranger.desktop /usr/share/applications/ranger.desktop
 
-echo 'inode/directory=ranger.desktop' >> ../.config/mimeapps.list
-sudo tar -C /usr/share/themes -xvf theme.tar.xz
+echo 'inode/directory=ranger.desktop' >> ./.config/mimeapps.list
+sudo tar -C /usr/share/themes -xvf ./theme.tar.xz
 sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< $1
 dconf load /com/gexperts/Tilix/ < ./tilix.dconf
 
-mkdir ../.config/polybar
+mkdir ./.config/polybar
 
 #docker
 echo $1 | sudo -S systemctl start docker.service
