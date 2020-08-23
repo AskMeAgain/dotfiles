@@ -110,7 +110,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
-exec --no-startup-id feh --bg-fill ~/Downloads/snow.jpg
 exec --no-startup-id picom
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id flameshot
@@ -127,5 +126,3 @@ client.focused          #afafaf #000000	 #afafaf #afafaf
 client.focused_inactive #333333 #5F676A #ffffff #484e50
 client.unfocused        #333333 #FFFFFF00 #888888 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
-
-
