@@ -4,7 +4,7 @@ echo '1234' | sudo -S localectl set-keymap de
 
 sudo pacman -R --noconfirm pcmanfm
 sudo pacman -Rd --nodeps --noconfirm picom 
-sudo pacman -S --noconfirm asciidoc uthash gcc meson virtualbox-guest-utils xclip feh firefox ranger rofi docker polybar zsh zsh-completions tilix flameshot
+sudo pacman -S --noconfirm asciidoc uthash gcc meson virtualbox-guest-utils xclip feh firefox ranger rofi docker polybar zsh zsh-completions tilix flameshot peek intellij-idea-community-edition
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
