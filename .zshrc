@@ -20,8 +20,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 HISTFILE=~/.zhistory
 HISTSIZE=1000
 SAVEHIST=500
-#export EDITOR=/usr/bin/nano
-#export VISUAL=/usr/bin/nano
+
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 ## Keybindings section
@@ -174,13 +173,14 @@ source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
-VBoxClient-all
-
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
 ## Alias section 
 alias ccc="xclip -sel clip"
-alias files="pcmanfm &"
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 
 source ~/.p10k.zsh
+
+export PATH=/snap/bin/:$PATH

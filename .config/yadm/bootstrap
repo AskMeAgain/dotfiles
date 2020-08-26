@@ -6,11 +6,22 @@ sudo pacman -R --noconfirm pcmanfm
 sudo pacman -Rd --nodeps --noconfirm picom 
 sudo pacman -S --noconfirm asciidoc uthash gcc meson virtualbox-guest-utils xclip feh firefox ranger rofi docker polybar zsh zsh-completions tilix flameshot peek intellij-idea-community-edition
 
+yay --save --answerclean All
+yay --save --answerdiff None
+echo '1234' | yay -S yadm-git --sudoloop --sudoflags -S
+echo '1234' | yay -S postman 
+
+git clone https://aur.archlinux.org/snapd.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 git clone https://github.com/ibhagwan/picom-ibhagwan-git
 
 cd picom-ibhagwan-git/ && makepkg && echo '1234' | sudo -S pacman -U *.pkg.tar.xz --noconfirm && cd ..
+
+cd snapd/ && makepkg && echo '1234' | sudo -S pacman -U *.pkg.tar.xz --noconfirm && sudo systemctl enable --now snapd.socket 
+sudo ln -s /var/lib/snapd/snap /snap && cd ..
+
+sudo snap install rider --classic
 
 sudo mv ranger.desktop /usr/share/applications/ranger.desktop
 

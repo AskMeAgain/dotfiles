@@ -2,12 +2,14 @@ set $mod Mod4
 
 font pango: Source Code Pro 8
 
+VBoxClient-all
+
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec --no-startup-id nm-applet
 
 bindsym Print exec flameshot gui
-bindsym $mod+t exec --no-startup-id tilix -a app-new-window -x ranger
+bindsym $mod+f exec --no-startup-id tilix -a app-new-window -x ranger
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -32,10 +34,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+bindsym $mod+Control+Left move left
+bindsym $mod+Control+Down move down
+bindsym $mod+Control+Up move up
+bindsym $mod+Control+Right move right
 
 # split in horizontal orientation
 bindsym $mod+e layout toggle split
@@ -95,11 +97,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-  # same bindings, but for the arrow keys
-        bindsym Left resize grow width 10 px or 10 ppt
-        bindsym Down resize shrink height 10 px or 10 ppt
-        bindsym Up resize grow height 10 px or 10 ppt
-        bindsym Right resize shrink width 10 px or 10 ppt
+        bindsym Left resize grow width 5 px or 5 ppt
+        bindsym Down resize shrink height 5 px or 5 ppt
+        bindsym Up resize grow height 5 px or 5 ppt
+        bindsym Right resize shrink width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -111,14 +112,13 @@ bindsym $mod+r mode "resize"
 
 exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
 exec --no-startup-id picom
-exec_always --no-startup-id polybar --config=$HOME/.config/polybar/config orchid
+exec_always --no-startup-id bash "killall -q polybar && polybar --config=$HOME/.config/polybar/config orchid"
 exec --no-startup-id flameshot
 exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
 
 smart_borders on
 
 for_window [class=".*"] border pixel 3
-
 
 gaps inner 7
 
