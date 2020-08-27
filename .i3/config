@@ -2,7 +2,7 @@ set $mod Mod4
 
 font pango: Source Code Pro 8
 
-VBoxClient-all
+exec --no-startup-id VBoxClient-all
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
@@ -112,17 +112,20 @@ bindsym $mod+r mode "resize"
 
 exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
 exec --no-startup-id picom
-exec_always --no-startup-id bash "killall -q polybar && polybar --config=$HOME/.config/polybar/config orchid"
+exec_always --no-startup-id killall -q polybar; polybar --config=$HOME/.config/polybar/config orchid
 exec --no-startup-id flameshot
 exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
 
-smart_borders on
-
 for_window [class=".*"] border pixel 3
 
-gaps inner 7
+gaps horizontal 5
+gaps inner 20
 
-client.focused          #afafaf #000000	 #afafaf #afafaf
+client.focused          #000000 #000000 #000000 #000000
 client.focused_inactive #333333 #5F676A #ffffff #484e50
-client.unfocused        #333333 #FFFFFF00 #888888 #292d2e
+client.unfocused        #333333 #ffffff #888888 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
+
+smart_gaps on
+smart_borders on
+
