@@ -32,7 +32,7 @@ win-switch-to-previous-session='<Primary><Shift>Left'
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 background-color='#EEEEEEEEECEC'
-background-transparency-percent=56
+background-transparency-percent=33
 badge-color='#AC7EA8'
 badge-color-set=false
 bold-color-set=false

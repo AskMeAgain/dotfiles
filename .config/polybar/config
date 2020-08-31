@@ -26,7 +26,7 @@ border-bottom-size = 5
 radius = 4
 padding-left = 1
 padding-right = 1
-
+bottom = true
 module-margin-left = 1
 module-margin-right = 1
 font-0 = "Source Code Pro:pixelsize=12;3"
