@@ -29,11 +29,11 @@ padding-right = 1
 bottom = true
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "Source Code Pro:pixelsize=12;3"
-font-1 = "Source Code Pro:pixelsize=17;3"
+font-0 = "SauceCodePro Nerd Font:style=Medium,Regular:pixelsize=12;3"
+font-1 = "SauceCodePro Nerd Font:style=Medium,Regular:pixelsize=15;3"
 
 modules-left = i3
-modules-right = xkeyboard memory cpu date powermenu
+modules-right = xkeyboard memory cpu date
 
 [module/i3]
 type = internal/i3
@@ -42,7 +42,7 @@ index-sort = true
 wrapping-scroll = false
 ;strip-wsnumbers = true
 
-ws-icon-default = ♟
+ws-icon-default = 
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -52,11 +52,13 @@ label-mode-foreground = ${colors.foreground}
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %icon% %name%
-label-focused-foreground = #ffffff
+label-focused = %index%
+label-focused-foreground = 00aa00
 label-focused-background = #000000
 label-focused-underline= #000000
 label-focused-padding = 0
+label-focused-padding-left = 1
+label-focused-padding-right = 1
 label-focused-font = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -82,7 +84,7 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-prefix-underline = #00000000
 

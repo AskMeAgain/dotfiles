@@ -51,16 +51,17 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1 "
-set $ws2 "2 "
-set $ws3 "3 "
-set $ws4 "4 "
-set $ws5 "5 "
-set $ws6 "6 "
-set $ws7 "7 "
-set $ws8 "8 "
-set $ws9 "9 "
-set $ws10 "10 "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+set $ws0 "0"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -73,8 +74,10 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+bindsym $mod+dead_circumflex workspace number $ws0
 
 # move focused container to workspace
+bindsym $mod+Control+dead_circumflex move container to workspace number $ws0; workspace number $ws0
 bindsym $mod+Control+1 move container to workspace number $ws1; workspace number $ws1
 bindsym $mod+Control+2 move container to workspace number $ws2; workspace number $ws2
 bindsym $mod+Control+3 move container to workspace number $ws3; workspace number $ws3
@@ -116,8 +119,8 @@ exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
 
 for_window [class=".*"] border pixel 3
 
-gaps outer 6
-gaps inner 20
+gaps outer 0
+gaps inner 10
 
 client.focused          #000000 #000000 #000000 #000000
 client.focused_inactive #333333 #5F676A #ffffff #484e50

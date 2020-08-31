@@ -180,6 +180,7 @@ bindkey "^[[B" history-beginning-search-forward
 alias ccc="xclip -sel clip"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias nano='micro'
 
 source ~/.p10k.zsh
 

@@ -3,12 +3,12 @@
         {
             "list": [
                 {
-                    "command": "echo lol",
-                    "name": "111",
+                    "command": "pacman-mirrors --fasttrack 5 && sudo pacman -Syyu --noconfirm",
+                    "name": "choose other mirror",
                     "type": "COMMAND"
                 }
             ],
-            "name": "asdasdasdasd",
+            "name": "Useful",
             "type": "FOLDER"
         }
     ],
