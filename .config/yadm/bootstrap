@@ -8,9 +8,7 @@ sudo pacman -S --noconfirm asciidoc uthash gcc meson virtualbox-guest-utils micr
 
 yay --save --answerclean All
 yay --save --answerdiff None
-echo '1234' | yay -S yadm-git --sudoloop --sudoflags -S
-echo '1234' | yay -S postman 
-echo '1234' | yay -S nerd-fonts-source-code-pro 
+echo '1234' | yay -S yadm-git nerd-fonts-source-code-pro postman --sudoloop --sudoflags -S
 
 git clone https://aur.archlinux.org/snapd.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
