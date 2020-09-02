@@ -4,7 +4,7 @@ echo '1234' | sudo -S localectl set-keymap de
 
 sudo pacman -R --noconfirm pcmanfm
 sudo pacman -Rd --nodeps --noconfirm picom 
-sudo pacman -S --noconfirm asciidoc uthash gcc meson virtualbox-guest-utils micro rustup xclip go go-tools python-docutils apparmor feh firefox ranger rofi docker polybar zsh zsh-completions tilix flameshot peek intellij-idea-community-edition
+sudo pacman -S --noconfirm asciidoc uthash gcc meson virtualbox-guest-utils micro rustup xclip go go-tools python-docutils apparmor feh firefox ranger rofi docker polybar zsh zsh-completions tilix flameshot peek intellij-idea-community-edition python-pygments 
 
 yay --save --answerclean All
 yay --save --answerdiff None
@@ -34,8 +34,14 @@ dconf load /com/gexperts/Tilix/ < ./tilix.dconf
 
 rustup update
 
+sudo chmod +x ~/.config/ranger/scope.sh
+
 #docker
 echo '1234' | sudo -S systemctl start docker.service
 sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo chmod +x ~/.i3/ranger_in_new_workspace.sh
+
+xset r rate 150 33

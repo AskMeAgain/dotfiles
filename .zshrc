@@ -181,6 +181,10 @@ alias ccc="xclip -sel clip"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias nano='micro'
+if [ $UID -ne 0 ]; then
+    alias reboot="echo '1234' | sudo -S reboot"
+fi
+alias shutdown='shutdown now'
 
 source ~/.p10k.zsh
 

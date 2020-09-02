@@ -46,7 +46,7 @@ class ColorScheme(ColorScheme):
                 bg = green
             if context.tag_marker and not context.selected:
                 attr |= bold
-                fg = 88
+                fg = 9
             if not context.selected and (context.cut or context.copied):
                 attr = reverse
             if context.main_column:
@@ -54,7 +54,7 @@ class ColorScheme(ColorScheme):
                     attr |= bold
                 if context.marked:
                     attr |= bold
-                    fg = 8
+                    fg = 9
             if context.badinfo:
                 if attr & reverse:
                     bg = 1

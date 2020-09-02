@@ -5,9 +5,10 @@ font pango: Source Code Pro 8
 exec --no-startup-id VBoxClient-all
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+exec --no-startup-id xset r rate 150 33
 
 bindsym Print exec flameshot gui
-bindsym $mod+f exec --no-startup-id tilix -a app-new-window -x ranger
+bindsym $mod+f exec --no-startup-id ~/.i3/open_in_new_workspace.sh ranger
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
