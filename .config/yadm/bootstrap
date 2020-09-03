@@ -8,7 +8,7 @@ sudo pacman -S --noconfirm asciidoc uthash gcc meson virtualbox-guest-utils micr
 
 yay --save --answerclean All
 yay --save --answerdiff None
-echo '1234' | yay -S yadm-git nerd-fonts-source-code-pro postman --sudoloop --sudoflags -S
+echo '1234' | yay -S yadm-git nerd-fonts-source-code-pro --sudoloop --sudoflags -S
 
 git clone https://aur.archlinux.org/snapd.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
@@ -43,3 +43,6 @@ sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chmod +x ~/.i3/open_in_new_workspace.sh
+
+sudo mv ~/orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
+sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py

@@ -5,7 +5,7 @@ font pango: Source Code Pro 8
 exec --no-startup-id VBoxClient-all
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec --no-startup-id xset r rate 150 33
+exec --no-startup-id xset r rate 200 33
 
 bindsym Print exec flameshot gui
 bindsym $mod+f exec --no-startup-id ~/.i3/open_in_new_workspace.sh ranger
