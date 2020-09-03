@@ -3,7 +3,7 @@
         {
             "list": [
                 {
-                    "command": "pacman-mirrors --fasttrack 5 && sudo pacman -Syyu --noconfirm",
+                    "command": "echo '1234' | sudo -S pacman-mirrors --fasttrack 5 && echo '1234' | sudo -S pacman -Syyu --noconfirm",
                     "name": "choose other mirror",
                     "type": "COMMAND"
                 }
