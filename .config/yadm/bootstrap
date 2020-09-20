@@ -45,5 +45,3 @@ sudo chmod +x ~/.config/ranger/scope.sh
 
 sudo mv ~/orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
 sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
-
-set -g DISPLAY_SIZE=$3
