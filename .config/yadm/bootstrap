@@ -34,16 +34,15 @@ dconf load /com/gexperts/Tilix/ < ./tilix.dconf
 
 rustup update
 
+sudo chmod +x ~/.config/ranger/scope.sh
+
+#docker
 echo '1234' | sudo -S systemctl start docker.service
 sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chmod +x ~/.i3/open_in_new_workspace.sh
-sudo chmod +x ~/.config/ranger/scope.sh
 
-#sudo mv ~/orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
-#sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
-
-#echo 'export DISPLAY_SIZE='+$DISPLAY_SIZE >> ~/.zshrc
+sudo mv ~/orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
+sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
