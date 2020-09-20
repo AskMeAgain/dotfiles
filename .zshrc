@@ -191,3 +191,4 @@ source ~/.p10k.zsh
 export PATH=/snap/bin/:$PATH
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export EDITOR=micro
+export TERMINAL=tilix

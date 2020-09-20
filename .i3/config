@@ -2,19 +2,10 @@ set $mod Mod4
 
 font pango: Source Code Pro 8
 
-exec --no-startup-id VBoxClient-all
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
-exec --no-startup-id xset r rate 200 33
-
 bindsym Print exec flameshot gui
 bindsym $mod+f exec --no-startup-id ~/.i3/open_in_new_workspace.sh ranger
 
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # start a terminal
 bindsym $mod+Return exec tilix
@@ -33,11 +24,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Control+Left move left
-bindsym $mod+Control+Down move down
-bindsym $mod+Control+Up move up
-bindsym $mod+Control+Right move right
-
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 # split in horizontal orientation
 bindsym $mod+e layout toggle split
 
@@ -45,7 +35,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+w fullscreen toggle
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -97,12 +87,14 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+floating_modifier $mod
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        bindsym Left resize grow width 5 px or 5 ppt
-        bindsym Down resize shrink height 5 px or 5 ppt
-        bindsym Up resize grow height 5 px or 5 ppt
-        bindsym Right resize shrink width 5 px or 5 ppt
+        bindsym Left resize shrink width 20 px or 20 ppt
+        bindsym Down resize grow height 20 px or 20 ppt
+        bindsym Up resize shrink height 20 px or 20 ppt
+        bindsym Right resize grow width 20 px or 20 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -118,14 +110,20 @@ exec_always --no-startup-id killall -q polybar; polybar --config=$HOME/.config/p
 exec --no-startup-id flameshot
 exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
 
+exec --no-startup-id VBoxClient-all
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+exec --no-startup-id xset r rate 200 33
+
 for_window [class=".*"] border pixel 3
 
-gaps outer 0
-gaps inner 10
+gaps horizontal 0
+gaps top 1
+
+gaps bottom -6
+gaps inner 6
 
 client.focused          #000000 #000000 #000000 #000000
 client.focused_inactive #333333 #5F676A #ffffff #484e50
 client.unfocused        #333333 #000000 #888888 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
-
-smart_gaps inverse_outer

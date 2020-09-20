@@ -47,3 +47,5 @@ sudo chmod +x ~/.i3/open_in_new_workspace.sh
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
 sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
+
+echo "export DISPLAY_SIZE="+$DISPLAY_SIZE >> ~/.zshrc
