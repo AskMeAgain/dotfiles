@@ -112,11 +112,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
 exec --no-startup-id picom
 exec_always --no-startup-id killall -q polybar; polybar --config=$HOME/.config/polybar/config orchid
 exec --no-startup-id flameshot
 exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
+exec --no-startup-id xrandr --output VGA-1 --mode $DISPLAY_SIZE
 
 for_window [class=".*"] border pixel 3
 
@@ -129,3 +129,6 @@ client.unfocused        #333333 #000000 #888888 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 smart_gaps inverse_outer
+
+for_window [class="[.]*"] floating enable
+
