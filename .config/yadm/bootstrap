@@ -44,6 +44,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chmod +x ~/.i3/open_in_new_workspace.sh
 
-sudo mkdir /usr/lib/python3.8/site-packages/pygments/styles/
+sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
 sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
