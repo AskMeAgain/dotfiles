@@ -22,7 +22,7 @@
 }
 #window {
     transparency: "screenshot";
-    background-color: #FFFFFFdd;
+    background-color: #FFFFFFFF;
     border: 2px;
     padding: 0% 0% 0% 0%;
     x-offset: 0;

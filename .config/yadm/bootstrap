@@ -5,24 +5,17 @@ echo '1234' | sudo -S localectl set-keymap de
 sudo pacman -R --noconfirm pcmanfm
 sudo pacman -Rd --nodeps --noconfirm picom 
 sudo pacman -S --noconfirm apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro rustup xclip go go-tools python-docutils libxdg-basedir
-sudo pacman -S --noconfirm feh firefox ranger rofi docker polybar zsh zsh-completions tilix flameshot peek intellij-idea-community-edition python-pygments 
+sudo pacman -S --noconfirm feh firefox ranger rofi docker polybar zsh zsh-completions tilix flameshot peek python-pygments 
 
 yay --save --answerclean All
 yay --save --answerdiff None
 echo '1234' | yay -S nerd-fonts-source-code-pro --sudoloop --sudoflags -S
 
-git clone https://aur.archlinux.org/snapd.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 git clone https://github.com/ibhagwan/picom-ibhagwan-git
 
 cd picom-ibhagwan-git/ && makepkg && echo '1234' | sudo -S pacman -U *.pkg.tar.xz --noconfirm && cd ..
-cd snapd/ && makepkg && echo '1234' | sudo -S pacman -U *.pkg.tar.xz --noconfirm && sudo systemctl enable --now snapd.socket 
-sudo ln -s /var/lib/snapd/snap /snap && cd ..
-
-#give the program some time to start up
-sleep 3
-sudo snap install rider --classic
 
 sudo mv ranger.desktop /usr/share/applications/ranger.desktop
 
@@ -43,9 +36,8 @@ sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chmod +x ~/.i3/open_in_new_workspace.sh
+sudo chmod +x ~/.config/polybar/launch_polybar.sh
 
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
 sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
-
-echo "export DISPLAY_SIZE="+$DISPLAY_SIZE >> ~/.zshrc
