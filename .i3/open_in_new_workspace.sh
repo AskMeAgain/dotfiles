@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-in_console=("ranger")
+not_in_console=("firefox" "idea") 
 
 if [ "$2" = "--new-workspace" ]; 
 then 
@@ -10,18 +10,14 @@ else
 fi
 
 #switch to correct workspace
-i3-msg "workspace number $WS;"
+i3-msg "workspace number $WS"
 
-#if string ends with .sh it should be run in console
-if [[ "$1" == *.sh ]];
+# if special list contains para, start not in console
+if [[ " "${not_in_console[@]}" " == *" "$1" "* ]]; 
 then
-	i3-msg "exec tilix -a app-new-window -x 'zsh -c $1'"
+	echo "new window"
+	i3-msg "exec --no-startup-id $1";
 else
-	# if special list contains para, start in console
-	if [[ " "${in_console[@]}" " == *" "$1" "* ]]; 
-	then
-		i3-msg "exec tilix -a app-new-window -x 'zsh -c $1'"
-	else
-		i3-msg "exec --no-startup-id $1";
-	fi
+	echo "in console"
+	i3-msg "exec tilix -a app-new-window -x 'zsh -c $1'"
 fi
