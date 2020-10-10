@@ -132,5 +132,12 @@ gaps top 1
 
 gaps bottom -6 gaps inner 6
 
-client.focused          #0000ff #00aa00 #ff0000 #ffff00 #ff0000
+exec xrandr --output VGA-1 --mode 1920x1080
 
+client.focused          $bg     $bg     $fg  $bg       #ff0000
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg

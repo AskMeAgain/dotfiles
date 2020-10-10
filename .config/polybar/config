@@ -1,12 +1,11 @@
 [colors]
-background = #000000
-background-alt = #444
-
-foreground = #ffffff
-foreground-alt = #555
-primary = #000000
-secondary = #000000
-alert = #bd2c40
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+transparent = #00000000
 
 [bar/orchid]
 monitor = ${env:MONITOR:}
@@ -18,10 +17,10 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0
-line-color = #f00
+line-color = ${colors.foreground}
 separator = "__"
 border-size = 5
-border-color = #00ffffff
+border-color = ${colors.transparent}
 border-bottom-size = 5
 radius = 4
 padding-left = 1
@@ -47,13 +46,13 @@ wrapping-scroll = false
 
 label-mode-padding = 0
 label-mode-foreground = ${colors.foreground}
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-foreground = 00aa00
-label-focused-background = #000000
-label-focused-underline= #000000
+label-focused-foreground = ${colors.primary}
+label-focused-background = ${colors.background}
+label-focused-underline= ${colors.transparent}
 label-focused-padding = 0
 label-focused-padding-left = 1
 label-focused-padding-right = 1
@@ -84,14 +83,14 @@ blacklist-0 = num lock
 
 format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
-format-prefix-underline = #00000000
+format-prefix-underline = ${colors.transparent}
 
 label-layout = %layout%
 label-layout-underline = #00000000
 
 label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
+label-indicator-margin = 15
+label-indicator-background = ${colors.background}
 label-indicator-underline = ${colors.secondary}
 
 [module/cpu]
@@ -99,7 +98,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #00000000
+format-underline = ${colors.transparent}
 label = %percentage:2%%
 
 [module/memory]
@@ -107,7 +106,7 @@ type = internal/memory
 interval = 2
 format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #00000000
+format-underline = ${colors.transparent}
 label = %percentage_used%%
 
 [module/date]
