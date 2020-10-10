@@ -1,5 +1,5 @@
 [/]
-app-title='${directory}'
+app-title='${{directory}}'
 auto-hide-mouse=true
 control-scroll-zoom=true
 enable-wide-handle=true
@@ -31,19 +31,21 @@ win-switch-to-next-session='<Primary><Shift>Right'
 win-switch-to-previous-session='<Primary><Shift>Left'
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
-background-color='#EEEEEEEEECEC'
 background-transparency-percent=33
-badge-color='#AC7EA8'
+badge-color='{foreground}'
+cursor-background-color='{background}'
 badge-color-set=false
+highlight-background-color= '{background}'
+highlight-foreground-color= '{foreground}'
 bold-color-set=false
 bold-is-bright=true
 cursor-colors-set=false
 dim-transparency-percent=0
 font='SauceCodePro Nerd Font Mono 11'
-foreground-color='#2E2E34343636'
+palette= ["{color0}","{color1}","{color2}","{color3}","{color4}","{color5}","{color6}","{color7}","{color8}","{color9}","{color10}","{color11}","{color12}","{color13}","{color14}","{color15}"]
 highlight-colors-set=false
-palette=['#2E3436', '#CC0000', '#1A1A8A8A2020', '#CECE5C5C0000', '#3465A4', '#75507B', '#06989A', '#D3D7CF', '#555753', '#EF2929', '#3A3AAFAF3131', '#F5F579790000', '#729FCF', '#AD7FA8', '#34346565A4A4', '#EEEEEC']
 use-system-font=false
 use-theme-colors=false
 visible-name='Default'
-
+foreground-color='{foreground}'
+background-color='{background}'

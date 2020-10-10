@@ -40,7 +40,7 @@ configuration {
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "/home/dev/.config/rofi/orchid";
+	theme: "~/.cache/wal/colors-rofi-light";
 /*	max-history-size: 25;*/
 	combi-hide-mode-prefix: true;
 /*	matching-negate-char: '-' /* unsupported */;*/
