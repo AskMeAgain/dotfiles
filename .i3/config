@@ -3,19 +3,20 @@ font pango: Source Code Pro 8
 set $mod Mod4
 
 bindsym Print exec flameshot gui
-bindsym $mod+f exec --no-startup-id ~/.i3/open_in_new_workspace.sh ranger --in-console
+bindsym $mod+f exec --no-startup-id ~/Scripts/open_program.sh ranger --new-workspace
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-bindsym $mod+d exec rofi -show drun -theme orchid -run-command "/home/dev/.i3/open_in_new_workspace.sh {cmd}"
+bindsym $mod+d exec rofi -show run
 
 # start a terminal
 bindsym $mod+Return exec tilix
+bindsym $mod+Shift+Return exec --no-startup-id ~/Scripts/open_program.sh tilix --new-workspace
 
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+Tab exec  --no-startup-id rofi -show window -theme orchid
+bindsym $mod+Tab exec  --no-startup-id rofi -show window
 
 # change focus
 bindsym $mod+Left focus left
@@ -45,6 +46,7 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+set $ws0 "0"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -55,9 +57,9 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $ws0 "0"
 
 # switch to workspace
+bindsym $mod+dead_circumflex workspace number $ws0
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -68,7 +70,6 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-bindsym $mod+dead_circumflex workspace number $ws0
 
 bindsym $mod+Ctrl+Right move workspace to output right
 bindsym $mod+Ctrl+Left move workspace to output left
@@ -85,6 +86,9 @@ bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $
 bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
+
+bindsym $mod+Shift+space exec ~/Scripts/move_to_new_workspace.sh
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -111,7 +115,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec --no-startup-id picom
-exec_always --no-startup-id killall -q polybar; $HOME/.config/polybar/launch_polybar.sh
+exec_always --no-startup-id killall -q polybar; ~/Scripts/launch_polybar.sh
 exec --no-startup-id flameshot
 exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
 

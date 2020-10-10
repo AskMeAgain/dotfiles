@@ -40,8 +40,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 sudo chmod -R +x ~/Scripts/
 
-sudo chmod +x ~/.config/polybar/launch_polybar.sh
-
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
 sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
