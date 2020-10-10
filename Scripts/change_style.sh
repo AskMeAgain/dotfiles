@@ -1,9 +1,5 @@
 #!/bin/bash
 
-tmp=$(mktemp)
-
-curl $1 > $tmp
-
-wal -i $tmp
+wal --theme ~/themes/$1/$1.json
 
 dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf

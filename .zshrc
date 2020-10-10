@@ -189,6 +189,7 @@ alias shutdown='shutdown now'
 source ~/.p10k.zsh
 
 export PATH=/snap/bin/:$PATH
+export PATH=~/Scripts/:$PATH
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export EDITOR=micro
 export TERMINAL=tilix
