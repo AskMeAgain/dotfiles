@@ -14,7 +14,7 @@
         "color4": "#729FCF",
         "color5": "#06989A",
         "color6": "#D3D7CF",
-        "color7": "#888A85",
+        "color7": "#ffffff",
         "color8": "#343636",
         "color9": "#CC0000",
         "color10": "#4E9A06",
@@ -22,6 +22,6 @@
         "color12": "#729FCF",
         "color13": "#65A4A4",
         "color14": "#ffffff",
-        "color15": "#ffffff"
+        "color15": "#888A85"
     }
 }
