@@ -34,4 +34,6 @@ The Vm will have the following applications installed:
 
 ## Theme layout
 
+* color0: polybar background
 * color15: polybar foreground
+* color2, color 10: success
