@@ -2,8 +2,8 @@
     "wallpaper": "/home/dev/themes/winter/winter.jpg",
     "alpha": "40",
     "special": {
-        "background": "#EEEEEEEEECEC",
-        "foreground": "#2E2E34343636",
+        "background": "#EEECEC",
+        "foreground": "#343636",
         "cursor": "#de7f91"
     },
     "colors": {
