@@ -32,3 +32,6 @@ The Vm will have the following applications installed:
 ![Screenshot2](/screenshots/screenshot2.png)
 ![Screenshot3](/screenshots/screenshot3.png)
 
+## Theme layout
+
+* color15: polybar foreground
