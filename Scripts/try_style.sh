@@ -1,8 +1,15 @@
 !/bin/bash
-
+set -e
 tmp=$(mktemp)
 
-curl $1 > $tmp
+if [ "$4" == "-f" ]
+then
+    echo "provided file, moving to correct space"
+    mv $1 $tmp
+else
+	echo "provided link is url, downloading file now"
+	curl $1 > $tmp	
+fi
 
 if [ "$2" == "--light" ]
 then

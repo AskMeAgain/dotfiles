@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/dev/themes/vaporwave-rain/vaporwave-rain.jpg",
+    "alpha": "20",
+    "special": {
+        "background": "#0D1219",
+        "foreground": "#9ecbd6",
+        "cursor": "#9ecbd6"
+    },
+    "colors": {
+        "color0": "#0D1219",
+        "color1": "#5E5568",
+        "color2": "#966366",
+        "color3": "#24728D",
+        "color4": "#5E708B",
+        "color5": "#977D84",
+        "color6": "#2D91AA",
+        "color7": "#9ecbd6",
+        "color8": "#6e8e95",
+        "color9": "#5E5568",
+        "color10": "#966366",
+        "color11": "#24728D",
+        "color12": "#5E708B",
+        "color13": "#977D84",
+        "color14": "#2D91AA",
+        "color15": "#9ecbd6"
+    }
+}
