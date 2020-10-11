@@ -2,7 +2,7 @@
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color7:#222}
-primary = ${xrdb:color1:#222}
+primary = ${xrdb:color2:#222}
 secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 transparent = #00000000
@@ -50,7 +50,7 @@ label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-foreground = ${colors.color2}
+label-focused-foreground = ${colors.primary}
 label-focused-background = ${colors.background}
 label-focused-underline= ${colors.transparent}
 label-focused-padding = 0
