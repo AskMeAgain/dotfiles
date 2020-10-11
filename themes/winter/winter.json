@@ -2,26 +2,26 @@
     "wallpaper": "/home/dev/themes/winter/winter.jpg",
     "alpha": "40",
     "special": {
-        "background": "#EEEEEE",
-        "foreground": "#2E2E34",
+        "background": "#EEECEC",
+        "foreground": "#343636",
         "cursor": "#de7f91"
     },
     "colors": {
         "color0": "#2E3436",
         "color1": "#CC0000",
-        "color2": "#1A1A8A",
-        "color3": "#CECE5C",
+        "color2": "#8A2020",
+        "color3": "#5C0000",
         "color4": "#75507B",
         "color5": "#06989A",
         "color6": "#D3D7CF",
         "color7": "#555753",
         "color8": "#EF2929",
-        "color9": "#3A3AAF",
-        "color10": "#F5F579",
+        "color9": "#AF3131",
+        "color10": "#790000",
         "color11": "#729FCF",
         "color12": "#AD7FA8",
-        "color13": "#343465",
+        "color13": "#65A4A4",
         "color14": "#EEEEEC",
-        "color15": "#ffffff"
+        "color15": "#de7f91"
     }
 }
