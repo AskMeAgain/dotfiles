@@ -4,7 +4,7 @@
     "special": {
         "background": "#EEECEC",
         "foreground": "#343636",
-        "cursor": "#888A85"
+        "cursor": "#000000"
     },
     "colors": {
         "color0": "#000000",
