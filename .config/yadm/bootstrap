@@ -4,7 +4,7 @@ echo '1234' | sudo -S localectl set-keymap de
 
 sudo pacman -R --noconfirm pcmanfm
 sudo pacman -Rd --nodeps --noconfirm picom 
-sudo pacman -S --noconfirm jq apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro rustup xclip go go-tools python-docutils libxdg-basedir
+sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro rustup xclip go go-tools python-docutils libxdg-basedir
 sudo pacman -S --noconfirm feh firefox ranger rofi docker polybar zsh zsh-completions tilix flameshot peek python-pygments python-pywal
 
 yay --save --answerclean All

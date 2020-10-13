@@ -4,27 +4,13 @@ Check this out: https://github.com/AskMeAgain/Devbox
 
 Installation files to use with yadm and DevBox. 
 
-## Setup
+## Introduction
 
-The Vm will have the following applications installed:
+These dotfiles originally started for a lighttheme, but after discoving pywal, i started to support multiple themes in this repo alone. So in the future this repo will be moved to a more fitting repository name.
 
-* Ranger incl. custom theme, highlights done via pygmentize & custom theme
-* Tilix
-* Orchid gtk3.0/gtk2.0 theme
-* Picom rounded corner fork by ibhagwan
-* polybar
-* zsh & powerlevel10k
-* flameshot
-* rofi
-* micro incl. custom theme
-* docker & docker-compose
-* feh
-* firefox
-* source code pro nerd font
-* Intellij idea community edition
-* Rustup
-* Jetbrains Rider
-* Python 3.8
+The winter/orchid theme (see screenshots below) is currently fully supported, the other themes not, but will follow in the next 1 or 2 weeks. Cleanup after installation is still not done, but will happen once i have a feature freeze.
+
+After installing these dependencies, enter "change_style.sh winter" in a console to switch to a style.
 
 ## Screenshots
 
@@ -32,7 +18,7 @@ The Vm will have the following applications installed:
 ![Screenshot2](/screenshots/screenshot2.png)
 ![Screenshot3](/screenshots/screenshot3.png)
 
-## Theme layout
+## Theme layout for pywal (WIP)
 
 * color0: polybar background
 * color15: polybar foreground
