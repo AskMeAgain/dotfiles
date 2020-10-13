@@ -10,7 +10,18 @@ These dotfiles originally started for a lighttheme, but after discoving pywal, i
 
 The winter/orchid theme (see screenshots below) is currently fully supported, the other themes not, but will follow in the next 1 or 2 weeks. Cleanup after installation is still not done, but will happen once i have a feature freeze.
 
-After installing these dependencies, enter "change_style.sh winter" in a console to switch to a style.
+## Usage
+
+After installing these dependencies, enter "change_style.sh winter" in a console to switch to a style (look for the themes folder to see all current installed styles).
+
+If you want to try out your own style, get an url to a wallpaper you would like to use. 
+Make sure that the url ends with a file ending http://cool-image-site.com/cool-picture.jpg (see .jpg here)
+
+execute following command from a console:
+
+try_style.sh (URL) (--light or --dark) (Value from 0 to 100 for alpha background) (optional -f flag to provide a local file)
+
+Follow the instructions on screen to save the theme if you like it.
 
 ## Screenshots
 
