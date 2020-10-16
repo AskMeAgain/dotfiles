@@ -33,10 +33,10 @@ class ColorScheme(ColorScheme):
                 attr |= bold
                 fg = 5
             if context.socket:
-                fg = {color5}
+                fg = 5
                 attr |= bold
             if context.fifo or context.device:
-                fg = {color5}
+                fg = 5
                 if context.device:
                     attr |= bold
             if context.link:
@@ -64,16 +64,16 @@ class ColorScheme(ColorScheme):
                 attr = bold
                 if fg == black:
                     fg = white
-                bg = black
+                bg = 0
             else:
                 attr = normal
            
         elif context.in_titlebar:
             attr |= normal
             if context.hostname:
-                fg = context.bad and black or black
+                fg = context.bad and 0 or 0
             elif context.directory:
-                fg = black
+                fg = 0
             elif context.tab:
                 if context.good:
                     bg = 2
@@ -86,7 +86,7 @@ class ColorScheme(ColorScheme):
                     fg = red
             if context.marked:
                 attr |= bold | reverse
-                fg = 88
+                fg = 2
             if context.message:
                 if context.bad:
                     attr |= bold
