@@ -12,7 +12,20 @@ gotoWorkspace(){
 	i3-msg "workspace $WS"
 }
 
-not_in_console=("firefox" "idea") 
+writeGtkTheme(){
+
+if [ "$1" == "--light" ]
+then	
+	TMP="Orchis-light"
+else
+	TMP="Nordian-Breeze-GTK"
+fi
+
+sed -i "s/gtk-theme-name=.*/gtk-theme-name=$TMP/g" /home/dev/.config/gtk-3.0/settings.ini
+
+}
+
+not_in_console=("firefox" "idea" "postman") 
 
 openProgram(){
 	# if special list contains para, start not in console

@@ -1,5 +1,8 @@
-!/bin/bash
+#!/bin/bash
+. /home/dev/Scripts/utils.sh
+
 set -e
+
 tmp=$(mktemp)
 
 if [ "$4" == "-f" ]
@@ -14,9 +17,11 @@ fi
 if [ "$2" == "--light" ]
 then
 	theme_style="light"
+	writeGtkTheme "--light"
 	wal -i $tmp -l -a $3
 else
 	theme_style="dark"
+	writeGtkTheme "--dark"
 	wal -i $tmp -a $3
 fi
 
@@ -42,7 +47,7 @@ else
 
 	#fixing wallpaper location
 	replaced_home=$(printf '%s\n' "$HOME" | sed -e 's/[\/&]/\\&/g')
-	sed -i "s/\"wallpaper\".*/\"wallpaper\": \"$replaced_home\/themes\/$theme_name\/$theme_name\.$file_ending\",/g" ~/themes/$theme_name/$theme_name.json
+	sed -i "s/\"wallpaper\".*/\"wallpaper\": \"$replaced_home\/themes\/$theme_name\/$theme_name\.$file_ending\",/g" ~/themes/$theme_name/$theme_name-$theme_style.json
 	echo "Saved theme under $theme_name/$theme_name"
 fi
 

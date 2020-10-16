@@ -126,6 +126,7 @@ exec --no-startup-id xset r rate 200 33
 exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
 
 for_window [class=".*"] border pixel 1
+for_window [title="Select Bookmark"] border pixel 0
 
 gaps horizontal 0
 gaps top 1
@@ -142,4 +143,4 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 
-wal -R
+exec wal -R

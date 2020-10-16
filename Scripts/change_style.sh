@@ -1,5 +1,15 @@
 #!/bin/bash
+. /home/dev/Scripts/utils.sh
 
-wal --theme /home/dev/themes/$1/$1.json
+if test -f "/home/dev/themes/$1/$1-light.json"; 
+then
+    wal --theme /home/dev/themes/$1/$1-light.json
+    writeGtkTheme --light
+else
+    wal --theme /home/dev/themes/$1/$1-dark.json
+    writeGtkTheme --dark
+fi
 
 dconf load /com/gexperts/Tilix/ < /home/dev/.cache/wal/tilix.dconf
+
+

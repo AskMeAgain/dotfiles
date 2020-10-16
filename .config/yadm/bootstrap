@@ -43,3 +43,5 @@ sudo chmod -R +x ~/Scripts/
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
 sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
+
+echo '1234' | yay -S postman-bin --sudoloop --sudoflags -S

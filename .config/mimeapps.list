@@ -1,0 +1,41 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Firefox Firefox.desktop
+x-scheme-handler/https=userapp-Firefox Firefox.desktop
+x-scheme-handler/ftp=userapp-Firefox Firefox.desktop
+x-scheme-handler/chrome=userapp-Firefox Firefox.desktop
+text/html=userapp-Firefox Firefox.desktop
+application/x-extension-htm=userapp-Firefox Firefox.desktop
+application/x-extension-html=userapp-Firefox Firefox.desktop
+application/x-extension-shtml=userapp-Firefox Firefox.desktop
+application/xhtml+xml=userapp-Firefox Firefox.desktop
+application/x-extension-xhtml=userapp-Firefox Firefox.desktop
+application/x-extension-xht=userapp-Firefox Firefox.desktop
+image/jpeg=viewnior.desktop;gpicview.desktop;
+image/png=viewnior.desktop;gpicview.desktop;
+text/plain=mousepad.desktop
+x-scheme-handler/mailto=userapp-Thunderbird.desktop
+message/rfc822=userapp-Thunderbird.desktop
+application/pdf=epdfview.desktop
+application/x-bittorrent=deluge.desktop
+x-scheme-handler/postman=Postman.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Firefox Firefox.desktop;
+x-scheme-handler/https=userapp-Firefox Firefox.desktop;
+x-scheme-handler/ftp=userapp-Firefox Firefox.desktop;
+x-scheme-handler/chrome=userapp-Firefox Firefox.desktop;
+text/html=userapp-Firefox Firefox.desktop;
+application/x-extension-htm=userapp-Firefox Firefox.desktop;
+application/x-extension-html=userapp-Firefox Firefox.desktop;
+application/x-extension-shtml=userapp-Firefox Firefox.desktop;
+application/xhtml+xml=userapp-Firefox Firefox.desktop;
+application/x-extension-xhtml=userapp-Firefox Firefox.desktop;
+application/x-extension-xht=userapp-Firefox Firefox.desktop;
+image/jpeg=viewnior.desktop;gpicview.desktop;
+image/png=viewnior.desktop;gpicview.desktop;
+text/plain=mousepad.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird.desktop;
+message/rfc822=userapp-Thunderbird.desktop;
+application/pdf=epdfview.desktop;
+application/x-bittorrent=deluge.desktop;
+inode/directory=ranger.desktop
