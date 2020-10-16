@@ -10,33 +10,33 @@ class ColorScheme(ColorScheme):
             return default_colors
 
         elif context.in_browser:
-            fg = black
+            fg = {foreground}
             if context.empty or context.error:
                 fg = black
             if context.border:
                 fg = black
             if context.image:
-                fg = blue
+                fg = {color2}
             if context.video:
-                fg = blue
+                fg = {color3}
             if context.audio:
-                fg = blue
+                fg = {color4}
             if context.document:
-                fg = blue
+                fg = {color5}
             if context.container:
-                fg = blue
+                fg = {color6}
             if context.directory:
-                fg = black
+                fg = {color7}
             elif context.executable and not \
                     any((context.media, context.container,
                        context.fifo, context.socket)):
                 attr |= bold
-                fg = blue
+                fg = {color2}
             if context.socket:
-                fg = blue
+                fg = {color3}
                 attr |= bold
             if context.fifo or context.device:
-                fg = red
+                fg = {color2}
                 if context.device:
                     attr |= bold
             if context.link:
