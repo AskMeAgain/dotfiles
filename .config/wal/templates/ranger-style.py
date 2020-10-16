@@ -14,7 +14,7 @@ class ColorScheme(ColorScheme):
             if context.empty or context.error:
                 fg = {color1}
             if context.border:
-                fg = {color9}
+                fg = {color6}
             if context.image:
                 fg = {color2}
             if context.video:
