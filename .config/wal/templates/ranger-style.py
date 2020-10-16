@@ -12,15 +12,15 @@ class ColorScheme(ColorScheme):
         elif context.in_browser:
             fg = {foreground}
             if context.empty or context.error:
-                fg = black
+                fg = {color1}
             if context.border:
-                fg = black
+                fg = {color9}
             if context.image:
                 fg = {color5}
             if context.video:
                 fg = {color3}
             if context.audio:
-                fg = {color4}
+                fg = {color5}
             if context.document:
                 fg = {color5}
             if context.container:
@@ -101,7 +101,7 @@ class ColorScheme(ColorScheme):
 
         if context.in_taskview:
             if context.title:
-                fg = 4
+                fg = {color3}
 
             if context.selected:
                 attr |= reverse
