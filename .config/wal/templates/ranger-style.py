@@ -16,7 +16,7 @@ class ColorScheme(ColorScheme):
             if context.border:
                 fg = {color9}
             if context.image:
-                fg = {color5}
+                fg = {color2}
             if context.video:
                 fg = {color5}
             if context.audio:
