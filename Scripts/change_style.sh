@@ -11,6 +11,6 @@ else
 fi
 
 dconf load /com/gexperts/Tilix/ < /home/dev/.cache/wal/tilix.dconf
-mv /home/dev/.config/wal/flameshot.ini /home/dev/.config/flameshot/flameshot.ini
+mv /home/dev/.config/wal/tempaltes/flameshot.ini /home/dev/.config/flameshot/flameshot.ini
 
 
