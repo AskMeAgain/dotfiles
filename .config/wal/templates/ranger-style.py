@@ -18,7 +18,7 @@ class ColorScheme(ColorScheme):
             if context.image:
                 fg = {color5}
             if context.video:
-                fg = {color3}
+                fg = {color5}
             if context.audio:
                 fg = {color5}
             if context.document:
@@ -33,7 +33,7 @@ class ColorScheme(ColorScheme):
                 attr |= bold
                 fg = {color5}
             if context.socket:
-                fg = {color3}
+                fg = {color5}
                 attr |= bold
             if context.fifo or context.device:
                 fg = {color5}
@@ -101,7 +101,7 @@ class ColorScheme(ColorScheme):
 
         if context.in_taskview:
             if context.title:
-                fg = {color3}
+                fg = {color2}
 
             if context.selected:
                 attr |= reverse
