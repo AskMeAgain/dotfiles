@@ -25,7 +25,7 @@ sed -i "s/gtk-theme-name=.*/gtk-theme-name=$TMP/g" /home/dev/.config/gtk-3.0/set
 
 }
 
-not_in_console=("firefox" "idea" "postman") 
+not_in_console=("firefox" "idea" "idea.sh" "postman" "dbeaver") 
 
 openProgram(){
 	# if special list contains para, start not in console
