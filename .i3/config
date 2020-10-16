@@ -3,6 +3,7 @@ font pango: Source Code Pro 8
 set $mod Mod4
 
 bindsym Print exec flameshot gui
+bindsym Print+Shift exec peek
 bindsym $mod+f exec --no-startup-id ~/Scripts/open_program.sh ranger --new-workspace
 
 set $refresh_i3status killall -SIGUSR1 i3status

@@ -19,8 +19,8 @@ cd picom-ibhagwan-git/ && makepkg && echo '1234' | sudo -S pacman -U *.pkg.tar.x
 
 sudo mv ranger.desktop /usr/share/applications/ranger.desktop
 
-echo 'inode/directory=ranger.desktop' >> ./.config/mimeapps.list
-sudo tar -C /usr/share/themes -xvf ./theme.tar.xz
+sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
+sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/Nordian-Breeze-GTK  
 sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
 dconf load /com/gexperts/Tilix/ < ./tilix.dconf
