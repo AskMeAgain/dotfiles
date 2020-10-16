@@ -16,7 +16,7 @@ class ColorScheme(ColorScheme):
             if context.border:
                 fg = black
             if context.image:
-                fg = {color2}
+                fg = {color5}
             if context.video:
                 fg = {color3}
             if context.audio:
@@ -31,12 +31,12 @@ class ColorScheme(ColorScheme):
                     any((context.media, context.container,
                        context.fifo, context.socket)):
                 attr |= bold
-                fg = {color2}
+                fg = {color5}
             if context.socket:
                 fg = {color3}
                 attr |= bold
             if context.fifo or context.device:
-                fg = {color2}
+                fg = {color5}
                 if context.device:
                     attr |= bold
             if context.link:
