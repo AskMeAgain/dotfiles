@@ -14,7 +14,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 bindsym $mod+d exec rofi -show run
 
 # start a terminal
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec konsole
 bindsym $mod+Shift+Return exec --no-startup-id ~/Scripts/open_program.sh tilix --new-workspace
 
 # kill focused window
