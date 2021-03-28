@@ -9,7 +9,7 @@ sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions ti
 
 yay --save --answerclean All
 yay --save --answerdiff None
-echo '1234' | yay -S nerd-fonts-source-code-pro --sudoloop --sudoflags -S
+{echo '1234', echo '1'} | yay -S nerd-fonts-source-code-pro --sudoloop --sudoflags -S
 echo '1' | yay -S google-chrome --sudoloop --sudoflags -S
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
