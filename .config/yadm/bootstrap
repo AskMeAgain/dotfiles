@@ -47,5 +47,6 @@ echo "export BROWSER=google-chrome-stable" >> ~/.profile
 echo '1234' | yay -S postman-bin --sudoloop --sudoflags -S
 
 mkdir /home/dev/.config/ranger/colorschemes/
+mkdir /home/dev/.config/flameshot/
 
 ~/Scripts/change_style.sh vaporwave
