@@ -10,7 +10,7 @@ echo "1234" | yay -S google-chrome --noprovides --sudoloop --sudoflags -S
 sudo pacman -R --noconfirm pcmanfm
 sudo pacman -Rd --nodeps --noconfirm picom 
 sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
-sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix flameshot peek python-pygments python-pywal
+sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix flameshot peek python-pygments python-pywal unzip
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
@@ -21,7 +21,7 @@ cd picom-ibhagwan-git/ && makepkg && echo '1234' | sudo -S pacman -U *.pkg.tar.x
 echo '1234' | sudo -S mv ranger.desktop /usr/share/applications/ranger.desktop
 
 sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
-sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/Nordian-Breeze-GTK  
+sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
 sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
 dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
