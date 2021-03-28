@@ -45,3 +45,7 @@ sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.
 echo "export BROWSER=google-chrome-stable" >> ~/.profile
 
 echo '1234' | yay -S postman-bin --sudoloop --sudoflags -S
+
+mkdir /home/dev/.config/ranger/colorschemes/
+
+~/Scripts/change_style.sh vaporwave
