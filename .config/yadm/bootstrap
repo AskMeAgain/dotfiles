@@ -4,14 +4,14 @@ echo '1234' | sudo -S localectl set-keymap de
 
 sudo pacman -R --noconfirm pcmanfm
 sudo pacman -Rd --nodeps --noconfirm picom 
-#sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
-#sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix flameshot peek python-pygments python-pywal
+sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
+sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix flameshot peek python-pygments python-pywal
 
 yay --save --answerclean All
 yay --save --answerdiff None
-echo '1234' | yay -S nerd-fonts-source-code-pro --sudoloop --sudoflags -S
-echo '1' | yay -S google-chrome --sudoloop --sudoflags -S
-return 0;
+# echo '1234' | yay -S nerd-fonts-source-code-pro --sudoloop --sudoflags -S
+# echo '1' | yay -S google-chrome --sudoloop --sudoflags -S
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 git clone https://github.com/ibhagwan/picom-ibhagwan-git
