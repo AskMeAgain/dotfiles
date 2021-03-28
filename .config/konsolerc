@@ -1,6 +1,9 @@
 [Desktop Entry]
 DefaultProfile=KonsoleTheme.profile
 
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
 [MainWindow]
 MenuBar=Disabled
 RestorePositionForNextInstance=false
