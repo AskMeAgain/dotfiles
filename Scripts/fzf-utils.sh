@@ -4,7 +4,7 @@
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-export FZF_DEFAULT_OPTS='--height="40%" --info=inline --reverse'
+export FZF_DEFAULT_OPTS='--height="40%"  --info=inline --reverse --color=fg:-1,gutter:-1,prompt:0,pointer:-1,marker:1,info:2,fg+:-1,bg+:4'
 
 alias bookmarks='eval $(alias + | fzf)'
 
@@ -20,9 +20,9 @@ fh() {
 dl() {
   local cid
   cid=$(docker ps -a --format "table {{.ID}} \t{{.Image}}\t{{.Status}}\t{{.Ports}}" \
-  | sed 1d | fzf --height='60%' \
+  | sed 1d | fzf --height='70%' \
   --preview 'docker logs $(echo {} | cut -d " " -f1)' \
-  --preview-window follow:12:down:rounded:wrap \
+  --preview-window follow:50%:down:rounded:wrap \
   -1 -q "$1" \
   | awk '{print $1}')
 

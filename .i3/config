@@ -6,6 +6,9 @@ bindsym Print exec flameshot gui
 bindsym Shift+Print exec peek
 bindsym $mod+f exec --no-startup-id ~/Scripts/open_program.sh ranger --new-workspace
 
+bindsym $mod+F1 exec ~/Scripts/change_style.sh winter
+bindsym $mod+F2 exec ~/Scripts/change_style.sh vaporwave
+
 set $refresh_i3status killall -SIGUSR1 i3status
 
 bindsym $mod+d exec rofi -show run
