@@ -24,7 +24,7 @@ sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
 sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/Nordian-Breeze-GTK  
 sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
-dconf load /com/gexperts/Tilix/ < ./tilix.dconf
+dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
 
 sudo chmod +x ~/.config/ranger/scope.sh
 

@@ -1,5 +1,4 @@
 ## Options section
-setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
 setopt rcexpandparam                                            # Array expension with parameters
@@ -140,7 +139,6 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-r
 
-
 ## Plugins section: Enable fish style features
 # Use syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -150,8 +148,6 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
-#bindkey '^[[A' history-substring-search-up			
-#bindkey '^[[B' history-substring-search-down
 
 # Apply different settigns for different terminals
 case $(basename "$(cat "/proc/$PPID/comm")") in
@@ -176,17 +172,6 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
-## Alias section 
-alias ccc="xclip -sel clip"
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias nano='micro'
-alias dps='docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
-if [ $UID -ne 0 ]; then
-    alias reboot="echo '1234' | sudo -S reboot"
-fi
-alias shutdown='shutdown now'
-
 source ~/.p10k.zsh
 
 export PATH=/snap/bin/:$PATH
@@ -195,4 +180,5 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 export EDITOR=micro
 export TERMINAL=tilix
 
+source ~/Scripts/aliases.sh
 source ~/Scripts/fzf-utils.sh
