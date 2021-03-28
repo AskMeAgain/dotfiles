@@ -80,13 +80,13 @@ Color={color7.rgb}
 Color={color7.rgb}
 
 [Foreground]
-Color={forground.rgb}
+Color={foreground.rgb}
 
 [ForegroundFaint]
-Color={forground.rgb}
+Color={foreground.rgb}
 
 [ForegroundIntense]
-Color={forground.rgb}
+Color={foreground.rgb}
 
 [General]
 Blur=false
