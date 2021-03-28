@@ -1,0 +1,19 @@
+[Desktop Entry]
+DefaultProfile=KonsoleTheme.profile
+
+[MainWindow]
+MenuBar=Disabled
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAAB3IAAAQvAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+VGA-1 Height 1920x1080=1071
+VGA-1 Width 1920x1080=1906
+VGA-1 XPosition 1920x1080=7
+VGA-1 YPosition 1920x1080=8
+
+[SplitView]
+SplitDragHandleSize=SplitDragHandleLarge
+SplitViewVisibility=AlwaysHideSplitHeader
+
+[TabBar]
+TabBarVisibility=AlwaysHideTabBar

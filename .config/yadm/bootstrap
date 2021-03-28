@@ -26,8 +26,6 @@ sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
 dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
 
-sudo chmod +x ~/.config/ranger/scope.sh
-
 #docker
 echo '1234' | sudo -S systemctl start docker.service
 sudo systemctl enable docker.service

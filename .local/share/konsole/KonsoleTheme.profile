@@ -7,7 +7,7 @@ LineSpacing=2
 UseFontLineChararacters=false
 
 [General]
-Name=Theme
+Name=KonsoleTheme
 Parent=FALLBACK/
 TerminalCenter=false
 TerminalMargin=15

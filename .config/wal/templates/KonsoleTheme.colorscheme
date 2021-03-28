@@ -92,5 +92,5 @@ Color={foreground.rgb}
 Blur=false
 ColorRandomization=false
 Description=KonsoleTheme
-Opacity={alpha}
+Opacity=0.5
 Wallpaper=
