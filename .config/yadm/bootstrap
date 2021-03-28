@@ -10,6 +10,7 @@ sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions ti
 yay --save --answerclean All
 yay --save --answerdiff None
 echo '1234' | yay -S nerd-fonts-source-code-pro --sudoloop --sudoflags -S
+echo '1' | yay -S google-chrome --sudoloop --sudoflags -S
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
@@ -17,7 +18,7 @@ git clone https://github.com/ibhagwan/picom-ibhagwan-git
 
 cd picom-ibhagwan-git/ && makepkg && echo '1234' | sudo -S pacman -U *.pkg.tar.xz --noconfirm && cd ..
 
-sudo mv ranger.desktop /usr/share/applications/ranger.desktop
+echo '1234' | sudo -S mv ranger.desktop /usr/share/applications/ranger.desktop
 
 sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
 sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/Nordian-Breeze-GTK  
@@ -33,13 +34,14 @@ sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-
 sudo chmod +x /usr/local/bin/docker-compose
-
 sudo chmod -R +x ~/Scripts/
+sudo chmod +x ~/.config/ranger/scope.sh
 
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
 sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
+
+echo "export BROWSER=google-chrome-stable" >> ~/.profile
 
 echo '1234' | yay -S postman-bin --sudoloop --sudoflags -S
