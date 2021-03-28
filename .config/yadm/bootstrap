@@ -4,8 +4,8 @@ echo '1234' | sudo -S localectl set-keymap de
 
 yay --save --answerclean All
 yay --save --answerdiff None
-echo "1234" | sudo -S yay -S nerd-fonts-source-code-pro --sudoloop --sudoflags -S
-echo "1" | sudo -S yay -S nerd-fonts-source-code-pro --sudoloop --sudoflags -S
+echo "1234" | yay -S nerd-fonts-source-code-pro --sudoflags -S
+echo "1" | yay -S nerd-fonts-source-code-pro --sudoloop --sudoflags -S
 echo '1' | yay -S google-chrome --sudoloop --sudoflags -S
 
 sudo pacman -R --noconfirm pcmanfm
