@@ -26,7 +26,7 @@ sed -i "s/gtk-theme-name=.*/gtk-theme-name=$TMP/g" /home/dev/.config/gtk-3.0/set
 }
 
 fixKonsoleTheme(){
-	sed -i "s/Opacity=/Opacity=0./g" /home/dev/.cache/wal/colors-konsole.colorscheme
+	sed -i "s/Opacity=/Opacity=0./g" /home/dev/.cache/wal/KonsoleTheme.colorscheme
 }
 
 not_in_console=("firefox" "google-chrome-stable" "idea" "idea.sh" "postman" "dbeaver") 
