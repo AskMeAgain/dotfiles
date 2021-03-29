@@ -14,14 +14,14 @@ fe() {
 }
 
 fh() {
-  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')'\n'
+  eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
 
 dl() {
   local cid
   cid=$(docker ps -a --format "table {{.ID}} \t{{.Image}}\t{{.Status}}\t{{.Ports}}" \
   | sed 1d | fzf --height='70%' --header="Select Container to be removed" \
-  --preview 'docker logs $(echo {} | cut -d " " -f1)'  --header="Select Container to display logs" \
+  --preview 'docker logs $(echo {} | cut -d " " -f1) -n $FZF_PREVIEW_FILE'  --header="Select Container to display logs" \
   --preview-window follow:50%:down:rounded:wrap \
   -1 -q "$1" \
   | awk '{print $1}')
@@ -32,7 +32,7 @@ dl() {
 drm() {
   local cid
   cid=$(docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
-  | fzf --preview 'docker logs $(echo {} | cut -d " " -f1)' --height='70%'  --header="Select Containers to be removed" \
+  | fzf --preview 'docker logs $(echo {} | cut -d " " -f1) -n $FZF_PREVIEW_FILE' --height='70%'  --header="Select Containers to be removed" \
   --preview-window follow:50%:down:rounded:wrap --multi -1 -q "$1" | awk '{print $1}')
 
 	if [[ $cid ]]; then
@@ -44,7 +44,7 @@ drm() {
 dex() {
   local cid
   cid=$(docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
-  | fzf --preview 'docker logs $(echo {} | cut -d " " -f1)' --height='70%' \
+  | fzf --preview 'docker logs $(echo {} | cut -d " " -f1) -n $FZF_PREVIEW_FILE' --height='70%' \
      --header="Select Container go into" --preview-window follow:50%:down:rounded:wrap --multi -1 -q "$1" | awk '{print $1}')
 
 	if [[ $cid ]]; then

@@ -4,6 +4,9 @@ DefaultProfile=KonsoleTheme.profile
 [KonsoleWindow]
 ShowMenuBarByDefault=false
 
+[Shortcut Schemes]
+Current Scheme=Konsole
+
 [MainWindow]
 MenuBar=Disabled
 RestorePositionForNextInstance=false
