@@ -20,7 +20,7 @@ bindsym $mod+Shift+Return exec --no-startup-id ~/Scripts/open_program.sh tilix -
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+Tab exec  --no-startup-id rofi -show window
+bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # change focus
 bindsym $mod+Left focus left

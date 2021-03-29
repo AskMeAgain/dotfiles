@@ -1,12 +1,12 @@
 #!/bin/zsh
 
-
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+source ~/Scripts/aliases.sh
 
 export FZF_DEFAULT_OPTS='--height="40%"  --info=inline --reverse  --color=fg:-1,gutter:-1,prompt:0,pointer:-1,marker:2,info:2,fg+:-1,bg+:4'
 
-alias bookmarks='eval $(alias + | fzf)'
+alias _bookmarks='eval $(getBookmarks | fzf --preview-window follow:70%:right:rounded:wrap --preview="source ~/Scripts/aliases.sh && getPreviewText '{}'")'
 
 fe() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --preview 'cat {}' --multi --select-1 --exit-0))
@@ -31,14 +31,11 @@ dl() {
 
 drm() {
   local cid
-  cid=$(docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
+  cid=$(docker ps -a --format "table {{.ID}} \t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
   | fzf --preview 'docker logs $(echo {} | cut -d " " -f1) -n $FZF_PREVIEW_FILE' --height='70%'  --header="Select Containers to be removed" \
-  --preview-window follow:50%:down:rounded:wrap --multi -1 -q "$1" | awk '{print $1}')
-
-	if [[ $cid ]]; then
-      for dockerId in $(echo $cid);
-      	  [ -n "$cid" ] && docker rm -f "$dockerId"
-    fi
+  --preview-window follow:50%:down:rounded:wrap --print0 --multi -1 -q "$1" | awk '{print $1}')
+  
+      	  docker rm -f $cid
 }
 
 dex() {

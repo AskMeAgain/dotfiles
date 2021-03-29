@@ -148,7 +148,7 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
-bindkey -s '\EOM' 'bookmarks\n'
+bindkey -s '\EOM' '_bookmarks\n'
 
 # Apply different settigns for different terminals
 case $(basename "$(cat "/proc/$PPID/comm")") in
@@ -167,7 +167,7 @@ fi
 
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
-source ~/Scripts/aliases.sh
+source ~/Scripts/bookmarks.sh
 source ~/Scripts/fzf-utils.sh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"

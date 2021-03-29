@@ -7,10 +7,10 @@ yay --save --answerdiff None
 echo "1234" | yay -S nerd-fonts-source-code-pro --noprovides --sudoloop --sudoflags -S
 echo "1234" | yay -S google-chrome --noprovides --sudoloop --sudoflags -S
 
-sudo pacman -R --noconfirm pcmanfm
+sudo pacman -R --noconfirm pcmanfm palemoon-bin
 sudo pacman -Rd --nodeps --noconfirm picom 
 sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
-sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix flameshot peek python-pygments python-pywal unzip python2
+sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
