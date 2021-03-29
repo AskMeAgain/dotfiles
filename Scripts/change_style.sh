@@ -15,6 +15,6 @@ fixKonsoleTheme
 dconf load /com/gexperts/Tilix/ < /home/dev/.cache/wal/tilix.dconf
 mv /home/dev/.cache/wal/ranger-style.py /home/dev/.config/ranger/colorschemes/orchid.py
 mv /home/dev/.cache/wal/flameshot.ini /home/dev/.config/flameshot/flameshot.ini
-mv /home/dev/.cache/wal/colors-konsole.colorscheme /home/dev/.local/share/konsole/KonsoleTheme.colorscheme
+mv /home/dev/.cache/wal/KonsoleTheme.colorscheme /home/dev/.local/share/konsole/KonsoleTheme.colorscheme
 
 
