@@ -2,8 +2,8 @@ font pango: Source Code Pro 8
 
 set $mod Mod4
 
-bindsym Print exec flameshot gui
-bindsym Shift+Print exec peek
+bindsym $mod+p exec flameshot gui
+bindsym $mod+Shift+p exec peek
 bindsym $mod+f exec --no-startup-id ~/Scripts/open_program.sh ranger --new-workspace
 
 bindsym $mod+F1 exec ~/Scripts/change_style.sh winter
