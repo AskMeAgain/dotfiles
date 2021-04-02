@@ -18,10 +18,10 @@ if [ $UID -ne 0 ]; then
     alias reboot="echo '1234' | sudo -S reboot"
 fi
 
-alias _bookmarks='eval $(getBookmarks | fzf --preview-window follow:70%:right:rounded:wrap --preview="source ~/Scripts/bookmarks.sh && getPreviewText {} )'
+alias _bookmarks='eval $(getBookmarks | fzf --preview-window follow:70%:right:rounded:wrap --preview="source ~/Scripts/bookmarks.sh && getPreviewText '{}'")'
 
 function getBookmarks(){
-	echo "upgrade-system"
+	echo "upgrade-system" $(getPreviewText "upgrade-system")
 	echo "dps"
 	echo "dl"
 	echo "dex"
@@ -34,7 +34,6 @@ function getBookmarks(){
 }
 
 function getPreviewText() {
-	echo $1
 	case $1 in	
 	  "dps") echo "Pretty Prints docker commands" ;;	
 	  "upgrade-system") echo "Upgrades the whole system" ;;
