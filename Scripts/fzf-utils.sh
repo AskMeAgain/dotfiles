@@ -110,10 +110,8 @@ docker() {
           docker_stop $@
         elif [ "$CMD" = "exec" ]; then
           docker_exec $@
-        elif [ "$CMD" = "rm" ]; then
-          docker rm $@
         elif [ "$CMD" = "logs" ]; then
-          docker logs $@
+          docker_logs $@
         else
           docker $CMD $@
         fi
