@@ -66,18 +66,18 @@ docker_start() {
 
 docker_exec() {
   local cid
-  cid=$(\docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
-  | fzf --preview '\docker logs $(echo {} | cut -d " " -f1) -n $FZF_PREVIEW_LINES' --height='70%' \
+  cid=$(docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
+  | fzf --preview 'docker logs $(echo {} | cut -d " " -f1) -n $FZF_PREVIEW_LINES' --height='70%' \
      --header="Select Container go into" --preview-window follow:50%:down:rounded:wrap --multi -1 -q "$1" | awk '{print $1}')
 
-  STATE=$(\docker inspect $cid | jq '.[0].State.Status')
+  STATE=$(docker inspect $cid | jq '.[0].State.Status')
   
   if [[ $STATE == *"unnin"* ]];
   then
     [ -n "$cid" ] && \docker exec -it "$cid" bash
   else
-	\docker commit $cid temp/tempcontainer
-	\docker run -it temp/tempcontainer sh
+	docker commit $cid temp/tempcontainer
+	docker run -it temp/tempcontainer sh
   fi
 }
 
@@ -90,7 +90,7 @@ docker_inspect() {
   [ -n "$cid" ] && docker inspect "$cid"
 }
 
-docker() {
+d() {
     CMD=$1
     shift
     if [ -z "$CMD" ]; then
