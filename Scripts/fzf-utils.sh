@@ -93,12 +93,12 @@ docker_inspect() {
 docker_ps() {
   if [ -z "$1"]; then
     docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+  else
+    while [ true ]; do 
+      docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+      sleep $1
+    done
   fi
-
-  while [ true ]; do 
-    docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
-  done
-
 }
 
 d() {
