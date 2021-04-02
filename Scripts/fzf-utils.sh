@@ -51,7 +51,7 @@ dex() {
 
 di() {
   local cid
-  cid=$(docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
+  cid=$(docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
   | fzf --preview 'docker logs $(echo {} | cut -d " " -f1) -n $FZF_PREVIEW_FILE' --height='70%' \
   --header="Select Container go into" --preview-window follow:50%:down:rounded:wrap --multi -1 -q "$1" | awk '{print $1}')
 
