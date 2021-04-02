@@ -19,7 +19,7 @@ if [ $UID -ne 0 ]; then
 fi
 
 function getBookmarks(){
-	echo "upgrade-system"
+	echo "upgrade-system" getPreviewText "upgrade-system"
 	echo "dps"
 	echo "dl"
 	echo "dex"
