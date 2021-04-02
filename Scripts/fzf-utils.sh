@@ -90,6 +90,17 @@ docker_inspect() {
   [ -n "$cid" ] && docker inspect "$cid"
 }
 
+docker_ps() {
+  if [ -z "$1"]; then
+    docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+  fi
+
+  while [ true ]; do 
+    docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+  done
+
+}
+
 d() {
     CMD=$1
     shift
@@ -112,6 +123,8 @@ d() {
           docker_exec $@
         elif [ "$CMD" = "logs" ]; then
           docker_logs $@
+        elif [ "$CMD" = "ps" ]; then
+          docker_ps $@
         else
           docker $CMD $@
         fi
