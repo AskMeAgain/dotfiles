@@ -169,6 +169,7 @@ source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 source ~/Scripts/bookmarks.sh
 source ~/Scripts/fzf-utils.sh
+source ~/Scripts/fzf-docker.sh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
