@@ -2,7 +2,7 @@
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-source ~/Scripts/aliases.sh
+source ~/Scripts/bookmarks.sh
 
 export FZF_DEFAULT_OPTS='--height="40%"  --info=inline --reverse  --color=fg:-1,gutter:-1,prompt:0,pointer:-1,marker:2,info:2,fg+:-1,bg+:4'
 
