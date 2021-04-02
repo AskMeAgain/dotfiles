@@ -23,6 +23,10 @@ function getBookmarks(){
 	echo "dps"
 	echo "dl"
 	echo "dex"
+	echo "dsta"
+	echo "dre"
+	echo "dsto"
+	echo "di"
 	echo "drm"
 	echo "rma"
 }
@@ -32,9 +36,11 @@ function getPreviewText() {
 	  "dps") echo "Pretty Prints docker commands" ;;	
 	  "upgrade-system") echo "Upgrades the whole system" ;;
 	  "dl") echo "Opens docker container list for log utility" ;;
+	  "dre") echo "Opens docker container list for docker restart utility" ;;
 	  "dex") echo "Opens docker container list for docker exec utility" ;;
 	  "drm") echo "Opens docker container list for docker rm -f utility" ;;
 	  "rma") echo "Removes all containers" ;;
+	  "di") echo "Opens docker container list for docker inspect utility" ;;
 	esac
 	echo ""
 	type $1

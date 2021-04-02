@@ -2,7 +2,7 @@
 AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=KonsoleTheme
-Font=SauceCodePro Nerd Font Mono,11,-1,5,50,0,0,0,0,0
+Font=SauceCodePro Nerd Font,11,-1,5,57,0,0,0,0,0,Medium
 LineSpacing=2
 UseFontLineChararacters=false
 
