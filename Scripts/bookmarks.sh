@@ -34,6 +34,7 @@ function getBookmarks(){
 }
 
 function getPreviewText() {
+	echo $1
 	case $1 in	
 	  "dps") echo "Pretty Prints docker commands" ;;	
 	  "upgrade-system") echo "Upgrades the whole system" ;;
