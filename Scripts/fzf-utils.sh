@@ -89,3 +89,33 @@ docker_inspect() {
 
   [ -n "$cid" ] && docker inspect "$cid"
 }
+
+docker() {
+    CMD=$1
+    shift
+    if [ -z "$CMD" ]; then
+        docker
+    else
+        if [ "$CMD" = "inspect" ]; then
+          docker_inspect $@
+        elif [ "$CMD" = "rm" ]; then
+          docker_rm $@
+        elif [ "$CMD" = "exec" ]; then
+          docker_exec $@
+        elif [ "$CMD" = "start" ]; then
+          docker_start $@
+        elif [ "$CMD" = "exec" ]; then
+          docker_exec $@
+        elif [ "$CMD" = "stop" ]; then
+          docker_stop $@
+        elif [ "$CMD" = "exec" ]; then
+          docker_exec $@
+        elif [ "$CMD" = "rm" ]; then
+          docker rm $@
+        elif [ "$CMD" = "logs" ]; then
+          docker logs $@
+        else
+          docker $CMD $@
+        fi
+    fi
+}
