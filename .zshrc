@@ -148,6 +148,8 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
+
+# custom bookmarks
 bindkey -s '\EOM' '_bookmarks\n'
 
 # Apply different settigns for different terminals

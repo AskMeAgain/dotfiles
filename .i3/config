@@ -13,9 +13,9 @@ set $refresh_i3status killall -SIGUSR1 i3status
 
 bindsym $mod+d exec rofi -show run
 
-# start a terminal
 bindsym $mod+Return exec konsole
 bindsym $mod+Shift+Return exec --no-startup-id ~/Scripts/open_program.sh tilix --new-workspace
+bindsym $mod+a exec --no-start-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # kill focused window
 bindsym $mod+q kill
@@ -45,8 +45,6 @@ bindsym $mod+shift+w fullscreen toggle global
 # toggle tiling / floating
 bindsym $mod+space floating toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -120,6 +118,8 @@ bindsym $mod+r mode "resize"
 
 exec --no-startup-id picom
 exec_always --no-startup-id killall -q polybar; ~/Scripts/launch_polybar.sh
+exec_always --no-startup-id killall -q greenclip; greenclip daemon
+
 exec --no-startup-id flameshot
 exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
 
