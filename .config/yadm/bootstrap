@@ -8,9 +8,7 @@ yay --save --answerclean All
 yay --save --answerdiff None
 
 echo "--- yay installations ---"
-yay -S nerd-fonts-source-code-pro --noprovides
-yay -S google-chrome --noprovides 
-yay -S postman-bin rofi-greenclip --noprovides
+yay -S nerd-fonts-source-code-pro google-chrome postman-bin rofi-greenclip --noprovides
 
 echo "--- pacman installations ---"
 echo "1234" | sudo -S pacman -R --noconfirm pcmanfm palemoon-bin
