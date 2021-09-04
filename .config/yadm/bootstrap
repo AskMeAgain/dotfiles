@@ -14,10 +14,10 @@ yay -S postman-bin --noprovides
 yay -S rofi-greenclip --noprovides
 
 echo "--- pacman installations ---"
-echo "1234" | sudo -S pacman -R --noconfirm pcmanfm palemoon-bin
-echo "1234" | sudo -S pacman -Rd --nodeps --noconfirm picom 
-echo "1234" | sudo -S pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
-echo "1234" | sudo -S pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2
+pacman -R --noconfirm pcmanfm palemoon-bin
+pacman -Rd --nodeps --noconfirm picom 
+pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
+pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2
 
 echo "--- zsh ---"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
