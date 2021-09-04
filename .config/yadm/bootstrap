@@ -10,8 +10,7 @@ yay --save --answerdiff None
 echo "--- yay installations ---"
 yay -S nerd-fonts-source-code-pro --noprovides
 yay -S google-chrome --noprovides 
-yay -S postman-bin --noprovides
-yay -S rofi-greenclip --noprovides
+yay -S postman-bin rofi-greenclip --noprovides
 
 echo "--- pacman installations ---"
 pacman -R --noconfirm pcmanfm palemoon-bin
@@ -24,31 +23,31 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 git clone https://github.com/ibhagwan/picom-ibhagwan-git
 
-cd picom-ibhagwan-git/ && makepkg && echo '1234' | sudo -S pacman -U *.pkg.tar.xz --noconfirm && cd ..
+cd picom-ibhagwan-git/ && makepkg && pacman -U *.pkg.tar.xz --noconfirm && cd ..
 
-echo '1234' | sudo -S mv ranger.desktop /usr/share/applications/ranger.desktop
+mv ranger.desktop /usr/share/applications/ranger.desktop
 
-sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
-sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
-sudo usermod --shell $(which zsh) $USER
+tar -C /usr/share/themes -xvf ./orchi.tar.xz
+unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
+usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
 dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
 
 echo "--- docker installation ---"
-echo '1234' | sudo -S systemctl start docker.service
-sudo systemctl enable docker.service
-sudo usermod -aG docker $USER
-sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+systemctl start docker.service
+systemctl enable docker.service
+usermod -aG docker $USER
+curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 echo "--- making everything executable ---"
-sudo chmod +x /usr/local/bin/docker-compose
-sudo chmod -R +x ~/Scripts/
-sudo chmod +x ~/.config/ranger/scope.sh
+chmod +x /usr/local/bin/docker-compose
+chmod -R +x ~/Scripts/
+chmod +x ~/.config/ranger/scope.sh
 
 echo "--- python installations ---"
-sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
-sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
-sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
+mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
+mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
+mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
 
 echo "export BROWSER=google-chrome-stable" >> ~/.profile
 
