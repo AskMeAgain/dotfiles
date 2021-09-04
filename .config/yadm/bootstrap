@@ -1,7 +1,5 @@
 #!/bin/sh -e
 
-echo "--- local to DE ---"
-echo "1234" | sudo -S localectl set-keymap de
 
 echo "--- pacman installations ---"
 
