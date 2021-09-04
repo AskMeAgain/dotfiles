@@ -1,20 +1,25 @@
-#!/bin/bash
+#!/bin/sh
 
-echo '1234' | sudo -S localectl set-keymap de
+echo "--- local to DE ---"
+localectl set-keymap de
 
+echo "--- yay setups ---"
 yay --save --answerclean All
 yay --save --answerdiff None
 
+echo "--- yay installations ---"
 echo "1234" | yay -S nerd-fonts-source-code-pro --noprovides --sudoloop --sudoflags -S
 echo "1234" | yay -S google-chrome --noprovides --sudoloop --sudoflags -S
 echo "1234" | yay -S postman-bin --noprovides --sudoloop --sudoflags -S
 echo "1234" | yay -S rofi-greenclip --noprovides --sudoloop --sudoflags -S
 
-sudo pacman -R --noconfirm pcmanfm palemoon-bin
-sudo pacman -Rd --nodeps --noconfirm picom 
-sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
-sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2
+echo "--- pacman installations ---"
+echo "1234" | sudo -S pacman -R --noconfirm pcmanfm palemoon-bin
+echo "1234" | sudo -S pacman -Rd --nodeps --noconfirm picom 
+echo "1234" | sudo -S pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
+echo "1234" | sudo -S pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2
 
+echo "--- zsh ---"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 git clone https://github.com/ibhagwan/picom-ibhagwan-git
@@ -29,16 +34,18 @@ sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
 dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
 
-#docker
+echo "--- docker installation ---"
 echo '1234' | sudo -S systemctl start docker.service
 sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
+echo "--- making everything executable ---"
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chmod -R +x ~/Scripts/
 sudo chmod +x ~/.config/ranger/scope.sh
 
+echo "--- python installations ---"
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
 sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
@@ -48,4 +55,5 @@ echo "export BROWSER=google-chrome-stable" >> ~/.profile
 mkdir /home/dev/.config/ranger/colorschemes/
 mkdir /home/dev/.config/flameshot/
 
+echo "--- activating style ---"
 ~/Scripts/change_style.sh vaporwave
