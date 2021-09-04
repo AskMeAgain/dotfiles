@@ -14,6 +14,7 @@ cd picom-ibhagwan-git/ && makepkg && pacman -U *.pkg.tar.xz --noconfirm && cd ..
 
 mv ranger.desktop /usr/share/applications/ranger.desktop
 
+echo "--- zsh stuff ---"
 tar -C /usr/share/themes -xvf ./orchi.tar.xz
 unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
 usermod --shell $(which zsh) $USER
