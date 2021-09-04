@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 echo "--- local to DE ---"
-sudo localectl set-keymap de
+echo "1234" | sudo -S localectl set-keymap de
 
 echo "--- yay setups ---"
 yay --save --answerclean All
