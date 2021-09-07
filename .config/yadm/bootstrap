@@ -58,5 +58,6 @@ echo "--- activating style ---"
 sudo ~/Scripts/change_style.sh vaporwave
 
 chown -R dev:dev ~/.config
+chown -R dev:dev ~/.cache
 
 #dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
