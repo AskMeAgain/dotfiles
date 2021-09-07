@@ -60,5 +60,3 @@ sudo chown -R dev:dev ~/.config
 sudo chown -R dev:dev ~/.cache
 
 sudo ~/Scripts/change_style.sh vaporwave
-
-dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
