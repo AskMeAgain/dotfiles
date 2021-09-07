@@ -34,8 +34,8 @@ sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
 
 echo "--- docker installation ---"
-systemctl start docker.service
-systemctl enable docker.service
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
