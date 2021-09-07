@@ -25,7 +25,7 @@ makepkg
 sudo pacman -U *.pkg.tar.xz --noconfirm 
 cd ..
 
-mv ranger.desktop /usr/share/applications/ranger.desktop
+sudo mv ranger.desktop /usr/share/applications/ranger.desktop
 
 echo "--- zsh stuff ---"
 tar -C /usr/share/themes -xvf ./orchi.tar.xz
