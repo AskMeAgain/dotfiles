@@ -28,7 +28,7 @@ cd ..
 sudo mv ranger.desktop /usr/share/applications/ranger.desktop
 
 echo "--- zsh stuff ---"
-tar -C /usr/share/themes -xvf ./orchi.tar.xz
+sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
 sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
 usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
