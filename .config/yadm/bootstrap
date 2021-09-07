@@ -2,8 +2,11 @@
 
 echo "--- pacman installations ---"
 sudo pacman -R --noconfirm pcmanfm palemoon-bin
+echo "picom"
 sudo pacman -Rd --nodeps --noconfirm picom 
+echo "other 1"
 sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
+echo "other 2"
 sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2
 
 echo "--- yay setups ---"
