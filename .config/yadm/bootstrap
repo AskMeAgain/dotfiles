@@ -20,7 +20,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 git clone https://github.com/ibhagwan/picom-ibhagwan-git
 
-cd picom-ibhagwan-git/ && makepkg && pacman -U *.pkg.tar.xz --noconfirm && cd ..
+cd picom-ibhagwan-git/ 
+makepkg 
+sudo pacman -U *.pkg.tar.xz --noconfirm 
+cd ..
 
 mv ranger.desktop /usr/share/applications/ranger.desktop
 
