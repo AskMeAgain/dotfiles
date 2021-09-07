@@ -29,7 +29,7 @@ sudo mv ranger.desktop /usr/share/applications/ranger.desktop
 
 echo "--- zsh stuff ---"
 tar -C /usr/share/themes -xvf ./orchi.tar.xz
-unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
+sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
 usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
 dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
@@ -46,14 +46,14 @@ chmod -R +x ~/Scripts/
 chmod +x ~/.config/ranger/scope.sh
 
 echo "--- python installations ---"
-mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
-mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
-mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
+sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
+sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
+sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
 
 echo "export BROWSER=google-chrome-stable" >> ~/.profile
 
-mkdir /home/dev/.config/ranger/colorschemes/
-mkdir /home/dev/.config/flameshot/
+sudo mkdir /home/dev/.config/ranger/colorschemes/
+sudo mkdir /home/dev/.config/flameshot/
 
 echo "--- activating style ---"
 ~/Scripts/change_style.sh vaporwave
