@@ -55,7 +55,12 @@ sudo mkdir /home/dev/.config/ranger/colorschemes/
 sudo mkdir /home/dev/.config/flameshot/
 
 echo "--- activating style ---"
-sudo ~/Scripts/change_style.sh vaporwave
+
+
+#chown -R dev:dev ~/.config
+#chown -R dev:dev ~/.cache
+
+#sudo ~/Scripts/change_style.sh vaporwave
 
 chown -R dev:dev ~/.config
 chown -R dev:dev ~/.cache
