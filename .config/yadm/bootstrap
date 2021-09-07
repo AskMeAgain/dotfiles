@@ -1,10 +1,10 @@
 #!/bin/sh -e
 
 echo "--- pacman installations ---"
-pacman -R --noconfirm pcmanfm palemoon-bin
-pacman -Rd --nodeps --noconfirm picom 
-pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
-pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2
+sudo pacman -R --noconfirm pcmanfm palemoon-bin
+sudo pacman -Rd --nodeps --noconfirm picom 
+sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
+sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2
 
 echo "--- yay setups ---"
 yay --save --answerclean All
