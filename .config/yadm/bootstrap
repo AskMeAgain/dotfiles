@@ -30,14 +30,14 @@ sudo mv ranger.desktop /usr/share/applications/ranger.desktop
 echo "--- zsh stuff ---"
 sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
 sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
-usermod --shell $(which zsh) $USER
+sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
 dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
 
 echo "--- docker installation ---"
 systemctl start docker.service
 systemctl enable docker.service
-usermod -aG docker $USER
+sudo usermod -aG docker $USER
 curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 echo "--- making everything executable ---"
