@@ -47,7 +47,7 @@ sudo chmod +x ~/.config/ranger/scope.sh
 echo "--- python installations ---"
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
-sudo mv ~/__init__.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
+sudo mv ~/init.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
 
 echo "export BROWSER=google-chrome-stable" >> ~/.profile
 
