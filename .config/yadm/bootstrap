@@ -32,7 +32,6 @@ sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
 sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
 sudo usermod --shell $(which zsh) $USER
 chsh -s $(which zsh) <<< '1234'
-dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
 
 echo "--- docker installation ---"
 systemctl start docker.service
@@ -57,3 +56,5 @@ sudo mkdir /home/dev/.config/flameshot/
 
 echo "--- activating style ---"
 ~/Scripts/change_style.sh vaporwave
+
+#dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
