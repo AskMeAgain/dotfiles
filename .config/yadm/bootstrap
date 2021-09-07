@@ -55,6 +55,8 @@ sudo mkdir /home/dev/.config/ranger/colorschemes/
 sudo mkdir /home/dev/.config/flameshot/
 
 echo "--- activating style ---"
-~/Scripts/change_style.sh vaporwave
+sudo ~/Scripts/change_style.sh vaporwave
+
+chown -R dev:dev ~/.config
 
 #dconf load /com/gexperts/Tilix/ < ~/.cache/wal/tilix.dconf
