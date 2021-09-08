@@ -11,9 +11,12 @@
     anchor: center;
     location: center;
 }}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
 #window {{
-    transparency: "screenshot";
-    background-color: {background};
+    background-color: @background;
     border: 2px;
     padding: 0% 0% 0% 0%;
     x-offset: 0;
