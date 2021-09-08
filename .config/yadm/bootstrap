@@ -59,4 +59,4 @@ sudo chmod -R +x ~/Scripts/
 sudo chmod +x ~/.config/ranger/scope.sh
 
 echo "--- activating style ---"
-sudo ~/Scripts/change_style.sh vaporwave
+~/Scripts/change_style.sh vaporwave
