@@ -11,10 +11,10 @@
     anchor: center;
     location: center;
 }}
-element-text {
+element-text {{
     background-color: inherit;
     text-color:       inherit;
-}
+}}
 #window {{
     background-color: @background;
     border: 2px;
