@@ -10,7 +10,7 @@ else
     writeGtkTheme --dark
 fi
 
-fixKonsoleTheme
+#fixKonsoleTheme
 
 dconf load /com/gexperts/Tilix/ < /home/dev/.cache/wal/tilix.dconf
 mv /home/dev/.cache/wal/ranger-style.py /home/dev/.config/ranger/colorschemes/orchid.py
