@@ -49,14 +49,14 @@ echo "export BROWSER=google-chrome-stable" >> ~/.profile
 sudo mkdir /home/dev/.config/ranger/colorschemes/
 sudo mkdir /home/dev/.config/flameshot/
 
-echo "--- fixing permissions ---"
-sudo chown -R dev:dev ~/.config
-sudo chown -R dev:dev ~/.cache
-
 echo "--- making everything executable ---"
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chmod -R +x ~/Scripts/
 sudo chmod +x ~/.config/ranger/scope.sh
+
+echo "--- fixing permissions ---"
+sudo chown -R dev:dev ~/.config
+sudo chown -R dev:dev ~/.cache
 
 echo "--- activating style ---"
 sudo ~/Scripts/change_style.sh vaporwave
