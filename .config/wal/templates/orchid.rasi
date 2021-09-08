@@ -58,7 +58,7 @@
 }}
 #element normal.active {{
     text-color: #ffffff;
-    background-color: #999999;
+    background-color: #ff0000;
 }}
 #element selected.normal {{
     text-color: @selected-fg;
