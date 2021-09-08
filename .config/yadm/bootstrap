@@ -39,11 +39,6 @@ sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-echo "--- making everything executable ---"
-sudo chmod +x /usr/local/bin/docker-compose
-sudo chmod -R +x ~/Scripts/
-sudo chmod +x ~/.config/ranger/scope.sh
-
 echo "--- python installations ---"
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
@@ -54,9 +49,14 @@ echo "export BROWSER=google-chrome-stable" >> ~/.profile
 sudo mkdir /home/dev/.config/ranger/colorschemes/
 sudo mkdir /home/dev/.config/flameshot/
 
-echo "--- activating style ---"
-
+echo "--- fixing permissions ---"
 sudo chown -R dev:dev ~/.config
 sudo chown -R dev:dev ~/.cache
 
+echo "--- making everything executable ---"
+sudo chmod +x /usr/local/bin/docker-compose
+sudo chmod -R +x ~/Scripts/
+sudo chmod +x ~/.config/ranger/scope.sh
+
+echo "--- activating style ---"
 sudo ~/Scripts/change_style.sh vaporwave
