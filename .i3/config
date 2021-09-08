@@ -11,7 +11,6 @@ bindsym $mod+F2 exec ~/Scripts/change_style.sh vaporwave
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-bindsym $mod+d exec rofi -show run
 
 bindsym $mod+Return exec tilix
 bindsym $mod+Shift+Return exec --no-startup-id ~/Scripts/open_program.sh tilix --new-workspace
@@ -20,8 +19,9 @@ bindsym $mod+Shift+Return exec --no-startup-id ~/Scripts/open_program.sh tilix -
 bindsym $mod+q kill
 
 #rofi stuff
+bindsym $mod+d exec rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
-bindsym $mod+a exec --no-start-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $mod+a exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # change focus
 bindsym $mod+Left focus left
