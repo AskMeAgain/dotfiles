@@ -54,9 +54,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo chmod -R +x ~/Scripts/
 sudo chmod +x ~/.config/ranger/scope.sh
 
+echo "--- activating style ---"
+sudo ~/Scripts/change_style.sh vaporwave
+
 echo "--- fixing permissions ---"
 sudo chown -R dev:dev ~/.config
 sudo chown -R dev:dev ~/.cache
-
-echo "--- activating style ---"
-sudo ~/Scripts/change_style.sh vaporwave
