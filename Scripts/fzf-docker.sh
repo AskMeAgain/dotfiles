@@ -2,7 +2,6 @@
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-source ~/Scripts/bookmarks.sh
 source ~/Scripts/fzf-utils.sh
 
 docker_logs() {
@@ -79,7 +78,8 @@ docker_inspect() {
 }
 
 docker_ps() {
-  if [ -z "$1"]; then
+  if [[ -z "$1" ]];
+  then
     docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
   else
     while [ true ]; do 

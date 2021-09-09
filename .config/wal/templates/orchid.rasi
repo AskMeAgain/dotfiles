@@ -16,7 +16,7 @@ element-text {{
     text-color:       inherit;
 }}
 #window {{
-    background-color: @background;
+    background-color: @input-bg;
     border: 2px;
     padding: 0% 0% 0% 0%;
     x-offset: 0;
