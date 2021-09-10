@@ -176,6 +176,7 @@ bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
 export PATH=/snap/bin/:$PATH
+export PATH=~/idea/bin/:$PATH
 export PATH=~/Scripts/:$PATH
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export EDITOR=micro

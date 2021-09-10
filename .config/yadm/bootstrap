@@ -39,6 +39,11 @@ sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
+echo "--- installing intellij ---"
+curl -L https://download.jetbrains.com/idea/ideaIU-2021.2.1.tar.gz > intellij.tar.gz
+tar -zxvf intellij.tar.gz
+mv idea-IU-* idea
+
 echo "--- python installations ---"
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
