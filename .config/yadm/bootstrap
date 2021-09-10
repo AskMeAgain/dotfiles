@@ -7,6 +7,7 @@ yay --save --answerdiff None
 echo "--- yay installations ---"
 yay -S nerd-fonts-source-code-pro --noprovides --noconfirm
 yay -S google-chrome --noprovides --noconfirm
+yay -S postman-bin --noprovides --noconfirm
 yay -S rofi-greenclip --noprovides --noconfirm
 
 echo "--- pacman installations ---"
@@ -50,6 +51,9 @@ sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orc
 sudo mv ~/init.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
 
 echo "export BROWSER=google-chrome-stable" >> ~/.profile
+echo "export PATH=/snap/bin/:$PATH" >> ~/.profile
+echo "export PATH=~/idea/bin/:$PATH" >> ~/.profile
+echo "export PATH=~/Scripts/:$PATH" >> ~/.profile
 
 sudo mkdir /home/dev/.config/ranger/colorschemes/
 sudo mkdir /home/dev/.config/flameshot/
