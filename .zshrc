@@ -149,9 +149,6 @@ zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-# custom bookmarks
-bindkey -s '\EOM' '_bookmarks\n'
-
 # Apply different settigns for different terminals
 case $(basename "$(cat "/proc/$PPID/comm")") in
   login)
@@ -169,7 +166,6 @@ fi
 
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
-source ~/Scripts/bookmarks.sh
 source ~/Scripts/fzf-utils.sh
 source ~/Scripts/fzf-docker.sh
 
