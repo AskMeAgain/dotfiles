@@ -6,9 +6,9 @@ Installation files to use with yadm and DevBox.
 
 ## Introduction
 
-These dotfiles originally started for a lighttheme, but after discoving pywal, i started to support multiple themes in this repo alone. So in the future this repo will be moved to a more fitting repository name.
+These dotfiles originally started for a lighttheme, but after discoving pywal, i started to support multiple themes in this repo. So in the future this repo will be moved to a more fitting repository name.
 
-The winter/orchid theme (see screenshots below) is currently fully supported, the other themes not, but will follow in the next 1 or 2 weeks. Cleanup after installation is still not done, but will happen once i have a feature freeze.
+The winter and the vaporwave theme (see screenshots below) are currently fully supported
 
 ## Usage
 
@@ -29,7 +29,7 @@ Follow the instructions on screen to save the theme if you like it.
 ![Screenshot2](/screenshots/screenshot2.png)
 ![Screenshot3](/screenshots/screenshot3.png)
 
-## Theme layout for pywal (WIP)
+## Theme layout for pywal
 
 * color0: polybar background
 * color15: polybar foreground
