@@ -50,11 +50,6 @@ sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
 sudo mv ~/init.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
 
-echo "export BROWSER=google-chrome-stable" >> ~/.profile
-echo "export PATH=/snap/bin/:$PATH" >> ~/.profile
-echo "export PATH=~/idea/bin/:$PATH" >> ~/.profile
-echo "export PATH=~/Scripts/:$PATH" >> ~/.profile
-
 sudo mkdir /home/dev/.config/ranger/colorschemes/
 sudo mkdir /home/dev/.config/flameshot/
 
