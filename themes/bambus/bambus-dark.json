@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/dev/themes/bambus/bambus.jpg",
+    "alpha": "50",
+    "special": {
+        "background": "#0C1407",
+        "foreground": "#adc894",
+        "cursor": "#adc894"
+    },
+    "colors": {
+        "color0": "#0C1407",
+        "color1": "#405F1E",
+        "color2": "#41671E",
+        "color3": "#405E24",
+        "color4": "#486F26",
+        "color5": "#58872E",
+        "color6": "#639534",
+        "color7": "#adc894",
+        "color8": "#798c67",
+        "color9": "#405F1E",
+        "color10": "#41671E",
+        "color11": "#405E24",
+        "color12": "#486F26",
+        "color13": "#58872E",
+        "color14": "#639534",
+        "color15": "#adc894"
+    }
+}

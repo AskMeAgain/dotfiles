@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/dev/themes/blue/blue.jpg",
+    "alpha": "55",
+    "special": {
+        "background": "#000811",
+        "foreground": "#79c2f4",
+        "cursor": "#79c2f4"
+    },
+    "colors": {
+        "color0": "#000811",
+        "color1": "#013E84",
+        "color2": "#024592",
+        "color3": "#0252AE",
+        "color4": "#0E69B4",
+        "color5": "#0263D0",
+        "color6": "#0273F0",
+        "color7": "#79c2f4",
+        "color8": "#5487aa",
+        "color9": "#013E84",
+        "color10": "#024592",
+        "color11": "#0252AE",
+        "color12": "#0E69B4",
+        "color13": "#0263D0",
+        "color14": "#0273F0",
+        "color15": "#79c2f4"
+    }
+}

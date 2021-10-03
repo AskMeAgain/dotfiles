@@ -3,10 +3,11 @@
     <property name="created">2021-09-15T21:13:25</property>
     <property name="ide">idea</property>
     <property name="ideVersion">2021.2.1.0.0</property>
-    <property name="modified">2021-09-15T21:26:36</property>
+    <property name="modified">2021-10-03T09:04:15</property>
     <property name="originalScheme">AskMeAgain</property>
   </metaInfo>
   <colors>
+    <option name="SELECTION_BACKGROUND" value="543d3d" />
     <option name="WHITESPACES" value="c2c2c2" />
   </colors>
   <attributes>
@@ -16,9 +17,10 @@
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
-    <option name="CONSTRUCTOR_CALL_ATTRIBUTES">
+    <option name="ANONYMOUS_CLASS_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="8e9bee" />
+        <option name="FOREGROUND" value="89aee1" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_NAME">
@@ -28,17 +30,17 @@
     </option>
     <option name="DEFAULT_COMMA">
       <value>
-        <option name="FOREGROUND" value="cc3232" />
+        <option name="FOREGROUND" value="c04c4c" />
       </value>
     </option>
     <option name="DEFAULT_DOT">
       <value>
-        <option name="FOREGROUND" value="cc3232" />
+        <option name="FOREGROUND" value="c04c4c" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="a7d8ff" />
+        <option name="FOREGROUND" value="87b0d9" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
@@ -63,7 +65,7 @@
     </option>
     <option name="DEFAULT_INTERFACE_NAME">
       <value>
-        <option name="FOREGROUND" value="fc8457" />
+        <option name="FOREGROUND" value="b75d5d" />
       </value>
     </option>
     <option name="DEFAULT_KEYWORD">
@@ -73,18 +75,76 @@
     </option>
     <option name="DEFAULT_OPERATION_SIGN">
       <value>
-        <option name="FOREGROUND" value="cc3232" />
+        <option name="FOREGROUND" value="c04c4c" />
+      </value>
+    </option>
+    <option name="DEFAULT_REASSIGNED_LOCAL_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="a9b9c6" />
+        <option name="EFFECT_COLOR" value="a9b9c6" />
+        <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_SEMICOLON">
       <value>
-        <option name="FOREGROUND" value="cc3232" />
+        <option name="FOREGROUND" value="c04c4c" />
       </value>
     </option>
     <option name="DEFAULT_STATIC_FIELD">
       <value>
         <option name="FOREGROUND" value="a0b8ff" />
         <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="DEFAULT_STRING">
+      <value>
+        <option name="FOREGROUND" value="569f53" />
+      </value>
+    </option>
+    <option name="IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="89a1c5" />
+        <option name="EFFECT_COLOR" value="899ac5" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="REASSIGNED_LOCAL_VARIABLE_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="a9b9c6" />
+        <option name="EFFECT_COLOR" value="a9b9c6" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="REASSIGNED_PARAMETER_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="a9b9c6" />
+        <option name="EFFECT_COLOR" value="a9b9c6" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="STATIC_METHOD_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="87b0d9" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="STATIC_METHOD_IMPORTED_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="87b0d9" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="b8c0c5" />
+        <option name="BACKGROUND" value="2b2b2b" />
+        <option name="EFFECT_TYPE" value="5" />
+      </value>
+    </option>
+    <option name="WARNING_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="d2c6c6" />
+        <option name="BACKGROUND" value="5e5442" />
       </value>
     </option>
   </attributes>
