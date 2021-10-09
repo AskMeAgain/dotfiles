@@ -1,4 +1,11 @@
 <keymap version="1" name="AskMeAgain" parent="Visual Studio">
+  <action id="$Redo">
+    <keyboard-shortcut first-keystroke="shift ctrl z" />
+    <keyboard-shortcut first-keystroke="shift alt back_space" />
+  </action>
+  <action id="ChangeSignature">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="s" />
+  </action>
   <action id="ChangesView.ToggleCommitUi" />
   <action id="CheckinProject">
     <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl c" />
@@ -7,10 +14,17 @@
     <keyboard-shortcut first-keystroke="ctrl subtract" />
     <keyboard-shortcut first-keystroke="ctrl minus" />
   </action>
+  <action id="CompileDirty">
+    <keyboard-shortcut first-keystroke="f7" />
+    <keyboard-shortcut first-keystroke="shift f8" />
+  </action>
   <action id="Console.TableResult.EditValueMaximized" />
   <action id="DatabaseView.PropertiesAction" />
   <action id="DebugClass">
     <keyboard-shortcut first-keystroke="ctrl t" second-keystroke="ctrl d" />
+  </action>
+  <action id="EditorDeleteLine">
+    <keyboard-shortcut first-keystroke="ctrl y" />
   </action>
   <action id="EditorLookupDown" />
   <action id="EditorLookupUp" />
@@ -22,8 +36,17 @@
     <keyboard-shortcut first-keystroke="ctrl add" />
     <keyboard-shortcut first-keystroke="ctrl equals" />
   </action>
+  <action id="ExtractFunction">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="m" />
+  </action>
+  <action id="ExtractInterface">
+    <keyboard-shortcut first-keystroke="ctrl e" second-keystroke="ctrl i" />
+  </action>
+  <action id="ExtractMethod">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl e" />
+  </action>
+  <action id="ForceOthersToFollowAction" />
   <action id="Git.Commit.And.Push.Executor">
-    <keyboard-shortcut first-keystroke="shift ctrl alt k" />
     <keyboard-shortcut first-keystroke="ctrl alt k" />
   </action>
   <action id="Git.Commit.Stage" />
@@ -34,10 +57,34 @@
     <mouse-shortcut keystroke="button2" />
   </action>
   <action id="GotoLine" />
+  <action id="GotoPreviousBookmark">
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="p" />
+  </action>
   <action id="GotoRow" />
+  <action id="Gradle.RefreshDependencies">
+    <keyboard-shortcut first-keystroke="shift ctrl o" />
+  </action>
   <action id="IncrementalSearch" />
+  <action id="IntroduceConstant">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl c" />
+  </action>
+  <action id="IntroduceField">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl f" />
+  </action>
+  <action id="IntroduceParameter">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl p" />
+  </action>
+  <action id="IntroduceParameterObject">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="shift ctrl p" />
+  </action>
+  <action id="ManageRecentProjects">
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl p" />
+  </action>
   <action id="MethodOverloadSwitchDown" />
   <action id="MethodOverloadSwitchUp" />
+  <action id="ModifyObject">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="s" />
+  </action>
   <action id="MoveElementLeft">
     <keyboard-shortcut first-keystroke="shift ctrl alt left" />
     <keyboard-shortcut first-keystroke="ctrl kp_left" />
@@ -60,6 +107,9 @@
     <keyboard-shortcut first-keystroke="shift ctrl alt up" />
     <keyboard-shortcut first-keystroke="ctrl kp_up" />
   </action>
+  <action id="NewAction">
+    <keyboard-shortcut first-keystroke="ctrl alt enter" />
+  </action>
   <action id="NewClass">
     <keyboard-shortcut first-keystroke="ctrl i" second-keystroke="ctrl c" />
   </action>
@@ -76,9 +126,18 @@
   <action id="OpenInRightSplit">
     <mouse-shortcut keystroke="alt button1 doubleClick" />
   </action>
+  <action id="ReformatCode">
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="f" />
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl f" />
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="d" />
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl d" />
+  </action>
   <action id="RunClass">
     <keyboard-shortcut first-keystroke="ctrl alt f5" />
     <keyboard-shortcut first-keystroke="ctrl t" second-keystroke="ctrl t" />
+  </action>
+  <action id="RunConfigurationAsAction_Run_ExampleSpringKafkaApplication_default_target">
+    <keyboard-shortcut first-keystroke="shift ctrl f9" />
   </action>
   <action id="SearchEverywhere" />
   <action id="SearchEverywhere.NavigateToNextGroup">
@@ -93,9 +152,37 @@
     <keyboard-shortcut first-keystroke="shift alt f10" />
     <keyboard-shortcut first-keystroke="shift enter" />
   </action>
+  <action id="StackOverflow.AskQuestion.ToolsMenu">
+    <keyboard-shortcut first-keystroke="ctrl i" second-keystroke="ctrl m" />
+  </action>
+  <action id="SurroundWith">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl s" />
+  </action>
+  <action id="SwitchHeaderSource">
+    <keyboard-shortcut first-keystroke="alt o" />
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="o" />
+  </action>
+  <action id="SwitcherIterateItems" />
+  <action id="SwitcherRecentEditedChangedToggleCheckBox" />
+  <action id="Vcs.Push">
+    <keyboard-shortcut first-keystroke="shift ctrl k" />
+    <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl p" />
+  </action>
   <action id="Vcs.UpdateProject">
     <keyboard-shortcut first-keystroke="ctrl alt w" />
     <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl u" />
+  </action>
+  <action id="ask.me.again.shortcut.additions.introducemock">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl m" />
+  </action>
+  <action id="ask.me.again.shortcut.additions.introducemock.field">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl comma" />
+  </action>
+  <action id="ask.me.again.shortcut.additions.introducemock.variable">
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl m" />
+  </action>
+  <action id="editRunConfigurations">
+    <keyboard-shortcut first-keystroke="f12" />
   </action>
   <action id="org.intellij.plugins.markdown.ui.actions.styling.ToggleItalicAction" />
 </keymap>
