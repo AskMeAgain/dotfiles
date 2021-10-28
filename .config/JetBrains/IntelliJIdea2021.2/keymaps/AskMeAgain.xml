@@ -6,10 +6,17 @@
   <action id="ChangeSignature">
     <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="s" />
   </action>
+  <action id="ChangesView.Revert">
+    <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl r" />
+  </action>
   <action id="ChangesView.ToggleCommitUi" />
+  <action id="CheckStyleProjectFilesAction">
+    <keyboard-shortcut first-keystroke="ctrl #10000d6" second-keystroke="ctrl c" />
+  </action>
   <action id="CheckinProject">
     <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl c" />
   </action>
+  <action id="ChooseRunConfiguration" />
   <action id="CollapseExpandableComponent">
     <keyboard-shortcut first-keystroke="ctrl subtract" />
     <keyboard-shortcut first-keystroke="ctrl minus" />
@@ -32,20 +39,31 @@
   <action id="EditorScrollDown" />
   <action id="EditorScrollUp" />
   <action id="EditorStartNewLine" />
+  <action id="EvaluateExpression">
+    <keyboard-shortcut first-keystroke="shift f9" />
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl e" />
+  </action>
   <action id="ExpandExpandableComponent">
     <keyboard-shortcut first-keystroke="ctrl add" />
     <keyboard-shortcut first-keystroke="ctrl equals" />
   </action>
-  <action id="ExtractFunction">
-    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="m" />
+  <action id="ExtractClass">
+    <keyboard-shortcut first-keystroke="ctrl e" second-keystroke="ctrl d" />
   </action>
+  <action id="ExtractFunction" />
   <action id="ExtractInterface">
     <keyboard-shortcut first-keystroke="ctrl e" second-keystroke="ctrl i" />
   </action>
   <action id="ExtractMethod">
-    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl e" />
+    <keyboard-shortcut first-keystroke="ctrl e" second-keystroke="ctrl m" />
+  </action>
+  <action id="ExtractSuperclass">
+    <keyboard-shortcut first-keystroke="ctrl e" second-keystroke="ctrl s" />
   </action>
   <action id="ForceOthersToFollowAction" />
+  <action id="Git.Branches">
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl o" />
+  </action>
   <action id="Git.Commit.And.Push.Executor">
     <keyboard-shortcut first-keystroke="ctrl alt k" />
   </action>
@@ -71,6 +89,7 @@
   <action id="IntroduceField">
     <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl f" />
   </action>
+  <action id="IntroduceFunctionalParameter" />
   <action id="IntroduceParameter">
     <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl p" />
   </action>
@@ -126,11 +145,23 @@
   <action id="OpenInRightSplit">
     <mouse-shortcut keystroke="alt button1 doubleClick" />
   </action>
+  <action id="QuickChangeScheme">
+    <keyboard-shortcut first-keystroke="ctrl l" second-keystroke="ctrl c" />
+  </action>
+  <action id="Refactorings.QuickListPopupAction" />
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="f" />
     <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl f" />
     <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="d" />
     <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl d" />
+  </action>
+  <action id="Replace">
+    <keyboard-shortcut first-keystroke="ctrl h" />
+    <keyboard-shortcut first-keystroke="shift ctrl r" />
+  </action>
+  <action id="ReplaceInPath">
+    <keyboard-shortcut first-keystroke="shift ctrl h" />
+    <keyboard-shortcut first-keystroke="shift ctrl alt r" />
   </action>
   <action id="RunClass">
     <keyboard-shortcut first-keystroke="ctrl alt f5" />
@@ -139,12 +170,21 @@
   <action id="RunConfigurationAsAction_Run_ExampleSpringKafkaApplication_default_target">
     <keyboard-shortcut first-keystroke="shift ctrl f9" />
   </action>
+  <action id="ScopeView.EditScopes">
+    <keyboard-shortcut first-keystroke="ctrl l" second-keystroke="ctrl s" />
+  </action>
   <action id="SearchEverywhere" />
   <action id="SearchEverywhere.NavigateToNextGroup">
     <keyboard-shortcut first-keystroke="page_down" />
   </action>
   <action id="SearchEverywhere.NavigateToPrevGroup">
     <keyboard-shortcut first-keystroke="page_up" />
+  </action>
+  <action id="SelectAllOccurrences">
+    <keyboard-shortcut first-keystroke="shift ctrl alt j" />
+  </action>
+  <action id="Session.Close">
+    <keyboard-shortcut first-keystroke="ctrl #10000d6" second-keystroke="ctrl d" />
   </action>
   <action id="ShowIntentionActions">
     <keyboard-shortcut first-keystroke="alt enter" />
@@ -164,6 +204,7 @@
   </action>
   <action id="SwitcherIterateItems" />
   <action id="SwitcherRecentEditedChangedToggleCheckBox" />
+  <action id="Terminal.ClearBuffer" />
   <action id="Vcs.Push">
     <keyboard-shortcut first-keystroke="shift ctrl k" />
     <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl p" />
@@ -173,12 +214,6 @@
     <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl u" />
   </action>
   <action id="ask.me.again.shortcut.additions.introducemock">
-    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl m" />
-  </action>
-  <action id="ask.me.again.shortcut.additions.introducemock.field">
-    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl comma" />
-  </action>
-  <action id="ask.me.again.shortcut.additions.introducemock.variable">
     <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl m" />
   </action>
   <action id="editRunConfigurations">

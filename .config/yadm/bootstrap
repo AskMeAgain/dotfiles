@@ -13,8 +13,8 @@ yay -S rofi-greenclip --noprovides --noconfirm
 echo "--- pacman installations ---"
 sudo pacman -R --noconfirm pcmanfm palemoon-bin
 sudo pacman -Rd --nodeps --noconfirm picom 
-sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
-sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2
+sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf seahorse
+sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2 zip unzip 
 
 echo "--- zsh ---"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
@@ -52,6 +52,12 @@ sudo mv ~/init.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
 
 sudo mkdir /home/dev/.config/ranger/colorschemes/
 sudo mkdir /home/dev/.config/flameshot/
+
+echo "--- installing java ---"
+sudo curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+sdk install java 16.0.1.hs-adpt
 
 echo "--- fixing permissions ---"
 sudo chown -R dev:dev ~/.config

@@ -8,6 +8,8 @@ bindsym $mod+f exec --no-startup-id ~/Scripts/open_program.sh ranger --new-works
 
 bindsym $mod+F1 exec ~/Scripts/change_style.sh winter
 bindsym $mod+F2 exec ~/Scripts/change_style.sh vaporwave
+bindsym $mod+F3 exec ~/Scripts/change_style.sh bambus
+bindsym $mod+F4 exec ~/Scripts/change_style.sh blue
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
@@ -131,6 +133,7 @@ exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
 
 for_window [class=".*"] border pixel 1
 for_window [title="Select Bookmark"] border pixel 0
+for_window [title="Seahorse"] floating enable
 for_window [class="jetbrains-.*" title="win0"] floating enable border none
 
 gaps horizontal 0
