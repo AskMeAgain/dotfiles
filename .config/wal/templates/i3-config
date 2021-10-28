@@ -1,6 +1,5 @@
 font pango: Source Code Pro 8
 
-set $mod Mod4
 
 bindsym $mod+p exec flameshot gui
 bindsym $mod+Shift+p exec peek
@@ -62,6 +61,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+set $mod Mod4
+
 # switch to workspace
 bindsym $mod+dead_circumflex workspace number $ws0
 bindsym $mod+1 workspace number $ws1
@@ -104,7 +105,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 floating_modifier $mod
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+mode "resize" {{
         bindsym Left resize shrink width 20 px or 20 ppt
         bindsym Down resize grow height 20 px or 20 ppt
         bindsym Up resize shrink height 20 px or 20 ppt
@@ -114,7 +115,7 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
-}
+}}
 
 bindsym $mod+r mode "resize"
 
@@ -141,14 +142,12 @@ gaps top 1
 
 gaps bottom -6 gaps inner 6
 
-exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
-
-client.focused          $bg     $bg     $fg  $bg       #ff0000
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-
-client.background       $bg
+# class                  border        bground     text         indicator    child_border
+client.focused           {background} {background} {foreground} {background} {foreground}
+client.focused_inactive  {background} {background} {foreground} {background} {background} 
+client.unfocused         {background} {background} {foreground} {background} {background} 
+client.urgent            {background} {background} {foreground} {background} {background} 
+client.placeholder       {background} {background} {foreground} {background} {background} 
+client.background        {background} 
 
 exec --no-startup-id wal -R
