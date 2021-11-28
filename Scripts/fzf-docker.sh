@@ -51,6 +51,15 @@ docker_start() {
   docker start $cid
 }
 
+docker_restart() {
+  local cid
+  cid=$(docker ps -a --format "table {{.ID}} \t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
+  | fzf --preview 'docker logs $(echo {} | cut -d " " -f1) -n $FZF_PREVIEW_LINES' --height='70%'  --header="Select Containers to be removed" \
+  --preview-window follow:50%:down:rounded:wrap --print0 --multi -1 -q "$1" | awk '{print $1}')
+  
+  docker restart $cid
+}
+
 docker_exec() {
   local cid
   cid=$(docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}" | sed 1d \
@@ -99,8 +108,8 @@ d() {
           docker_inspect $@
         elif [ "$CMD" = "rm" ]; then
           docker_rm $@
-        elif [ "$CMD" = "exec" ]; then
-          docker_exec $@
+        elif [ "$CMD" = "restart" ]; then
+          docker_restart $@
         elif [ "$CMD" = "start" ]; then
           docker_start $@
         elif [ "$CMD" = "exec" ]; then

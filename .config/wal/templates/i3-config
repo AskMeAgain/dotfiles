@@ -135,7 +135,7 @@ exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
 
 for_window [class=".*"] border pixel 1
 for_window [title="Select Bookmark"] border pixel 0
-for_window [title="Seahorse"] floating enable
+for_window [class="Seahorse"] floating enable
 for_window [class="jetbrains-.*" title="win0"] floating enable border none
 
 gaps horizontal 0
@@ -143,7 +143,7 @@ gaps top 1
 
 gaps bottom -6 gaps inner 6
 
-# class                  border        bground     text         indicator    child_border
+# class                  border       bground      text         indicator    child_border
 client.focused           {background} {background} {foreground} {background} {foreground}
 client.focused_inactive  {background} {background} {foreground} {background} {background} 
 client.unfocused         {background} {background} {foreground} {background} {background} 
