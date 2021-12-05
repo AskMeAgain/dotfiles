@@ -21,11 +21,15 @@
     <keyboard-shortcut first-keystroke="ctrl subtract" />
     <keyboard-shortcut first-keystroke="ctrl minus" />
   </action>
+  <action id="Compare.Selected">
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl w" />
+  </action>
   <action id="CompileDirty">
     <keyboard-shortcut first-keystroke="f7" />
     <keyboard-shortcut first-keystroke="shift f8" />
   </action>
   <action id="Console.TableResult.EditValueMaximized" />
+  <action id="Console.TableResult.NextPage" />
   <action id="DatabaseView.PropertiesAction" />
   <action id="DebugClass">
     <keyboard-shortcut first-keystroke="ctrl t" second-keystroke="ctrl d" />
@@ -38,7 +42,15 @@
   <action id="EditorPasteFromX11" />
   <action id="EditorScrollDown" />
   <action id="EditorScrollUp" />
+  <action id="EditorSelectWord">
+    <keyboard-shortcut first-keystroke="shift alt equals" />
+    <keyboard-shortcut first-keystroke="ctrl w" />
+  </action>
   <action id="EditorStartNewLine" />
+  <action id="EditorUnSelectWord">
+    <keyboard-shortcut first-keystroke="shift alt minus" />
+    <keyboard-shortcut first-keystroke="shift ctrl w" />
+  </action>
   <action id="EvaluateExpression">
     <keyboard-shortcut first-keystroke="shift f9" />
     <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl e" />
@@ -68,6 +80,9 @@
     <keyboard-shortcut first-keystroke="ctrl alt k" />
   </action>
   <action id="Git.Commit.Stage" />
+  <action id="Git.CompareWithBranch">
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl b" />
+  </action>
   <action id="Git.Fetch">
     <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl f" />
   </action>
@@ -81,6 +96,10 @@
   <action id="GotoRow" />
   <action id="Gradle.RefreshDependencies">
     <keyboard-shortcut first-keystroke="shift ctrl o" />
+  </action>
+  <action id="GuiDesigner.ShrinkSelection">
+    <keyboard-shortcut first-keystroke="shift alt minus" />
+    <keyboard-shortcut first-keystroke="shift ctrl w" />
   </action>
   <action id="IncrementalSearch" />
   <action id="IntroduceConstant">
@@ -142,6 +161,7 @@
     <keyboard-shortcut first-keystroke="shift ctrl alt insert" />
     <keyboard-shortcut first-keystroke="ctrl i" second-keystroke="ctrl s" />
   </action>
+  <action id="NextOccurence" />
   <action id="OpenInRightSplit">
     <mouse-shortcut keystroke="alt button1 doubleClick" />
   </action>
@@ -162,6 +182,10 @@
   <action id="ReplaceInPath">
     <keyboard-shortcut first-keystroke="shift ctrl h" />
     <keyboard-shortcut first-keystroke="shift ctrl alt r" />
+  </action>
+  <action id="Run">
+    <keyboard-shortcut first-keystroke="ctrl f5" />
+    <keyboard-shortcut first-keystroke="shift f10" />
   </action>
   <action id="RunClass">
     <keyboard-shortcut first-keystroke="ctrl alt f5" />
@@ -186,14 +210,41 @@
   <action id="Session.Close">
     <keyboard-shortcut first-keystroke="ctrl #10000d6" second-keystroke="ctrl d" />
   </action>
+  <action id="ShowBookmarks">
+    <keyboard-shortcut first-keystroke="ctrl back_quote" />
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="w" />
+  </action>
   <action id="ShowIntentionActions">
     <keyboard-shortcut first-keystroke="alt enter" />
     <keyboard-shortcut first-keystroke="ctrl period" />
     <keyboard-shortcut first-keystroke="shift alt f10" />
     <keyboard-shortcut first-keystroke="shift enter" />
   </action>
+  <action id="ShowPopupMenu">
+    <keyboard-shortcut first-keystroke="context_menu" />
+  </action>
+  <action id="SmartSelect">
+    <keyboard-shortcut first-keystroke="shift alt equals" />
+    <keyboard-shortcut first-keystroke="ctrl w" />
+  </action>
+  <action id="SmartUnSelect">
+    <keyboard-shortcut first-keystroke="shift alt minus" />
+    <keyboard-shortcut first-keystroke="shift ctrl w" />
+  </action>
   <action id="StackOverflow.AskQuestion.ToolsMenu">
     <keyboard-shortcut first-keystroke="ctrl i" second-keystroke="ctrl m" />
+  </action>
+  <action id="StepInto">
+    <keyboard-shortcut first-keystroke="f11" />
+    <keyboard-shortcut first-keystroke="ctrl alt right" />
+  </action>
+  <action id="StepOut">
+    <keyboard-shortcut first-keystroke="shift f11" />
+    <keyboard-shortcut first-keystroke="ctrl alt left" />
+  </action>
+  <action id="StepOver">
+    <keyboard-shortcut first-keystroke="f10" />
+    <keyboard-shortcut first-keystroke="ctrl alt down" />
   </action>
   <action id="SurroundWith">
     <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl s" />
@@ -204,6 +255,14 @@
   </action>
   <action id="SwitcherIterateItems" />
   <action id="SwitcherRecentEditedChangedToggleCheckBox" />
+  <action id="TableResult.GrowSelection">
+    <keyboard-shortcut first-keystroke="shift alt equals" />
+    <keyboard-shortcut first-keystroke="ctrl w" />
+  </action>
+  <action id="TableResult.ShrinkSelection">
+    <keyboard-shortcut first-keystroke="shift alt minus" />
+    <keyboard-shortcut first-keystroke="shift ctrl w" />
+  </action>
   <action id="Terminal.ClearBuffer" />
   <action id="Vcs.Push">
     <keyboard-shortcut first-keystroke="shift ctrl k" />

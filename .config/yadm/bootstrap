@@ -63,8 +63,8 @@ sudo chown -R dev:dev ~/.cache
 
 echo "--- making everything executable ---"
 sudo chmod +x /usr/local/bin/docker-compose
-sudo chmod -R +x ~/Scripts/
+sudo chmod -R +x ~/scripts/
 sudo chmod +x ~/.config/ranger/scope.sh
 
 echo "--- activating style ---"
-~/Scripts/change_style.sh vaporwave
+~/scripts/change_style.sh vaporwave

@@ -166,9 +166,9 @@ fi
 
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
-source ~/Scripts/fzf-utils.sh
-source ~/Scripts/alias.sh
-source ~/Scripts/fzf-docker.sh
+source ~/scripts/fzf-utils.sh
+source ~/scripts/alias.sh
+source ~/scripts/fzf-docker.sh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
@@ -178,7 +178,7 @@ bindkey "^[[B" history-beginning-search-forward
 
 export PATH=/snap/bin/:$PATH
 export PATH=~/idea/bin/:$PATH
-export PATH=~/Scripts/:$PATH
+export PATH=~/scripts/:$PATH
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export EDITOR=micro
 export TERMINAL=tilix

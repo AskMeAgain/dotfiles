@@ -3,18 +3,18 @@ font pango: Source Code Pro 8
 
 bindsym $mod+p exec flameshot gui
 bindsym $mod+Shift+p exec peek
-bindsym $mod+f exec --no-startup-id ~/Scripts/open_program.sh ranger --new-workspace
+bindsym $mod+f exec --no-startup-id ~/scripts/open_program.sh ranger --new-workspace
 
-bindsym $mod+F1 exec ~/Scripts/change_style.sh winter
-bindsym $mod+F2 exec ~/Scripts/change_style.sh vaporwave
-bindsym $mod+F3 exec ~/Scripts/change_style.sh bambus
-bindsym $mod+F4 exec ~/Scripts/change_style.sh blue
+bindsym $mod+F1 exec ~/scripts/change_style.sh winter
+bindsym $mod+F2 exec ~/scripts/change_style.sh vaporwave
+bindsym $mod+F3 exec ~/scripts/change_style.sh bambus
+bindsym $mod+F4 exec ~/scripts/change_style.sh blue
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
 
 bindsym $mod+Return exec tilix
-bindsym $mod+Shift+Return exec --no-startup-id ~/Scripts/open_program.sh tilix --new-workspace
+bindsym $mod+Shift+Return exec --no-startup-id ~/scripts/open_program.sh tilix --new-workspace
 
 # kill focused window
 bindsym $mod+q kill
@@ -22,7 +22,7 @@ bindsym $mod+q kill
 #rofi stuff
 bindsym $mod+d exec rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
-bindsym $mod+a exec --no-startup-id ~/Scripts/greenclip-utils.sh
+bindsym $mod+a exec --no-startup-id ~/scripts/greenclip-utils.sh
 bindsym $mod+S exec --no-startup-id seahorse
 
 # change focus
@@ -93,7 +93,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $
 bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
 
-bindsym $mod+Shift+space exec ~/Scripts/move_to_new_workspace.sh
+bindsym $mod+Shift+space exec ~/scripts/move_to_new_workspace.sh
 
 
 # reload the configuration file
@@ -121,7 +121,7 @@ mode "resize" {{
 bindsym $mod+r mode "resize"
 
 exec --no-startup-id picom
-exec_always --no-startup-id killall -q polybar; ~/Scripts/launch_polybar.sh
+exec_always --no-startup-id killall -q polybar; ~/scripts/launch_polybar.sh
 exec_always --no-startup-id killall -q greenclip; greenclip daemon
 
 exec --no-startup-id flameshot

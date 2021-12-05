@@ -2,7 +2,6 @@
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-source ~/Scripts/fzf-utils.sh
 
 docker_logs() {
   local cid
@@ -116,8 +115,6 @@ d() {
           docker_exec $@
         elif [ "$CMD" = "stop" ]; then
           docker_stop $@
-        elif [ "$CMD" = "exec" ]; then
-          docker_exec $@
         elif [ "$CMD" = "logs" ]; then
           docker_logs $@
         elif [ "$CMD" = "ps" ]; then

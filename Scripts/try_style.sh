@@ -1,5 +1,5 @@
 #!/bin/bash
-. /home/dev/Scripts/utils.sh
+. /home/dev/scripts/utils.sh
 
 set -e
 

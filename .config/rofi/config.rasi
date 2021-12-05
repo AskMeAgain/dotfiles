@@ -3,8 +3,8 @@ configuration {
 /*	bw: 1;*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
-	run-command: "/home/dev/Scripts/open_program.sh {cmd}";
-    run-shell-command: "/home/dev/Scripts/open_program.sh {cmd} --new-workspace";
+	run-command: "/home/dev/scripts/open_program.sh {cmd}";
+    run-shell-command: "/home/dev/scripts/open_program.sh {cmd} --new-workspace";
 	window-command: "wmctrl -i -R {window}";
 	terminal: "tilix";
 /*	window-match-fields: "all";*/
