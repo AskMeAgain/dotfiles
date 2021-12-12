@@ -40,3 +40,8 @@ openProgram(){
 		i3-msg "exec tilix -a app-new-window -x 'zsh -c $1'"
 	fi
 }
+
+unpack_tar_gz(){
+	tar -xzf $1
+	echo "Done unpacking .tar.gz"
+}

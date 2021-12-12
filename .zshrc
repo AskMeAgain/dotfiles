@@ -167,6 +167,7 @@ fi
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 source ~/scripts/fzf-utils.sh
+source ~/scripts/utils.sh
 source ~/scripts/alias.sh
 source ~/scripts/fzf-docker.sh
 
