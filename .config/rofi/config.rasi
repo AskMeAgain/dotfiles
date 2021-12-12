@@ -40,10 +40,11 @@ configuration {
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "~/.cache/wal/orchid.rasi";
 /*	max-history-size: 25;*/
 	combi-hide-mode-prefix: true;
 /*	matching-negate-char: '-' /* unsupported */;*/
 /*	cache-dir: ;*/
 
 }
+
+@theme "~/.cache/wal/orchid.rasi"
