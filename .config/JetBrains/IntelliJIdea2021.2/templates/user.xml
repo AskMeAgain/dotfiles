@@ -4,8 +4,21 @@
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
-  <template name="ctor" value="public $class$($END$){&#10;&#10;}" description="Adds constructor" toReformat="false" toShortenFQNames="true">
+  <template name="ctor" value="public $class$($END$) {&#10;&#10;}" description="Adds constructor" toReformat="false" toShortenFQNames="true">
     <variable name="class" expression="className" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="pctor" value="private $class$() {&#10;  throw new UnsupportedException();&#10;}" description="Adds private constructor" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="pfin" value="private final $CLAZZ$ $CLAZZ_SMALL$;" description="private final" toReformat="false" toShortenFQNames="true">
+    <variable name="CLAZZ" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLAZZ_SMALL" expression="camelCase(CLAZZ)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="JAVA_CODE" value="true" />
     </context>

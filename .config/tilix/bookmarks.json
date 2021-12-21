@@ -6,6 +6,11 @@
                     "command": "echo '1234' | sudo -S pacman-mirrors --fasttrack 5 && echo '1234' | sudo -S pacman -Syyu --noconfirm",
                     "name": "choose other mirror",
                     "type": "COMMAND"
+                },
+                {
+                    "command": "ip route get 1.2.3.4 | awk '{print $7}'",
+                    "name": "show local ip",
+                    "type": "COMMAND"
                 }
             ],
             "name": "Useful",

@@ -45,6 +45,9 @@ curl -L https://download.jetbrains.com/idea/ideaIU-2021.2.1.tar.gz > intellij.ta
 tar -zxvf intellij.tar.gz
 mv idea-IU-* idea
 
+echo "--- obsidian installations ---"
+curl https://github.com/obsidianmd/obsidian-releases/releases/download/v0.12.19/Obsidian-0.12.19.AppImage --output ~/obsidian
+
 echo "--- python installations ---"
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
 sudo mv ~/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
@@ -65,6 +68,7 @@ echo "--- making everything executable ---"
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chmod -R +x ~/scripts/
 sudo chmod +x ~/.config/ranger/scope.sh
+sudo chmod +x ~/obsidian.app
 
 echo "--- activating style ---"
 ~/scripts/change_style.sh vaporwave

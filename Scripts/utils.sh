@@ -29,7 +29,7 @@ fixKonsoleTheme(){
 	sed -i "s/Opacity=/Opacity=0./g" /home/dev/.cache/wal/KonsoleTheme.colorscheme
 }
 
-not_in_console=("firefox" "google-chrome-stable" "idea" "idea.sh" "postman" "dbeaver") 
+not_in_console=("firefox" "google-chrome-stable" "idea" "idea.sh" "postman" "dbeaver" "/home/dev/obsidian") 
 
 openProgram(){
 	# if special list contains para, start not in console

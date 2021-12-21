@@ -1,4 +1,5 @@
 from ranger.api.commands import Command
+import os
 
 class paste_as_root(Command):
 	def execute(self):
@@ -7,9 +8,10 @@ class paste_as_root(Command):
 		else:
 			self.fm.execute_console('shell sudo cp -r %c .')
 
-class fzf_select(Command):
+# fzf_locate
+class fzf_locate(Command):
     """
-    :fzf_select
+    :fzf_locate
 
     Find a file using fzf.
 
@@ -19,19 +21,14 @@ class fzf_select(Command):
     """
     def execute(self):
         import subprocess
-        import os.path
         if self.quantifier:
-            # match only directories
-            command="find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m --reverse --header='Jump to file'"
+            command="locate home media | fzf -e -i"
         else:
-            # match files and directories
-            command="find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -print 2> /dev/null | sed 1d | cut -b3- | fzf +m --reverse --header='Jump to filemap <C-f> fzf_select'"
-        fzf = self.fm.execute_command(command, universal_newlines=True, stdout=subprocess.PIPE)
+            command="locate home media | fzf -e -i"
+        fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
-            fzf_file = os.path.abspath(stdout.rstrip('\n'))
+            fzf_file = os.path.abspath(stdout.decode('utf-8').rstrip('\n'))
             if os.path.isdir(fzf_file):
                 self.fm.cd(fzf_file)
             else:
