@@ -32,12 +32,17 @@ fixKonsoleTheme(){
 not_in_console=("firefox" "google-chrome-stable" "idea" "idea.sh" "postman" "dbeaver" "/home/dev/obsidian") 
 
 openProgram(){
-	# if special list contains para, start not in console
-	if [[ " "${not_in_console[@]}" " == *" "$1" "* ]]; 
+	if [[ "streamdeck" == $1 ]];
 	then
-		i3-msg "exec --no-startup-id $1";
+		i3-msg "exec --no-startup-id pkill streamdeck"
+		i3-msg "exec python3 /bin/streamdeck && exec streamdeck -n"
 	else
-		i3-msg "exec tilix -a app-new-window -x 'zsh -c $1'"
+		if [[ " "${not_in_console[@]}" " == *" "$1" "* ]]; 
+		then
+			i3-msg "exec --no-startup-id $1";
+		else
+			i3-msg "exec tilix -a app-new-window -x 'zsh -c $1'"
+		fi
 	fi
 }
 
