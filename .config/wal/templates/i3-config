@@ -1,6 +1,5 @@
 font pango: Source Code Pro 8
 
-
 bindsym $mod+p exec flameshot gui
 bindsym $mod+Shift+p exec peek
 bindsym $mod+f exec --no-startup-id ~/scripts/open_program.sh ranger --new-workspace
@@ -64,6 +63,10 @@ set $ws9 "9"
 set $ws10 "10"
 
 set $mod Mod4
+
+assign [class="Postman"] $ws0
+assign [class="Google-chrome"] $ws2
+assign [class="jetbrains-idea"] $ws1
 
 # switch to workspace
 bindsym $mod+dead_circumflex workspace number $ws0

@@ -161,34 +161,37 @@
                         "icon": "/home/dev/streamdeck/postman.png",
                         "switch_page": 1
                     },
-                    "1": {},
-                    "2": {},
+                    "1": {
+                        "text": "Local",
+                        "command": "python3  /home/dev/streamdeck/postman.py local",
+                        "write": ""
+                    },
+                    "2": {
+                        "command": "python3  /home/dev/streamdeck/postman.py fb",
+                        "text": "FB"
+                    },
                     "3": {
-                        "text": "SendStuff",
-                        "command": "sh /home/dev/scripts/postman.sh metrics"
+                        "text": "Int",
+                        "command": "python3  /home/dev/streamdeck/postman.py int",
+                        "write": ""
                     },
                     "4": {
                         "text": "Sandbox",
-                        "command": "sh /home/dev/scripts/postman.sh sandbox",
+                        "command": "python3  /home/dev/streamdeck/postman.py sandbox",
                         "write": ""
                     },
                     "5": {},
                     "6": {},
                     "7": {},
                     "8": {},
-                    "9": {
-                        "text": "Int",
-                        "command": "sh /home/dev/scripts/postman.sh int",
-                        "write": ""
-                    },
+                    "9": {},
                     "10": {},
                     "11": {},
                     "12": {},
                     "13": {},
                     "14": {
-                        "text": "Local",
-                        "command": "sh /home/dev/scripts/postman.sh local",
-                        "write": ""
+                        "text": "SendStuff",
+                        "command": "sh /home/dev/scripts/postman.sh metrics"
                     }
                 },
                 "9": {
@@ -265,7 +268,7 @@
                     "14": {}
                 }
             },
-            "page": 0
+            "page": 8
         }
     }
 }
