@@ -1,6 +1,12 @@
 <application>
   <component name="CodeInsightSettings">
+    <option name="completionCaseSensitive" value="2" />
+    <option name="COMPLETION_CASE_SENSITIVE" value="2" />
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.api.AssertionsForClassTypes.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.api.AssertionsForInterfaceTypes.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.assertj.core.api.Java6Assertions.assertThat" />
+    <EXCLUDED_PACKAGE NAME="org.junit.Test" />
   </component>
   <component name="EditorSettings">
     <option name="IS_WHITESPACES_SHOWN" value="true" />
@@ -12,5 +18,6 @@
         <option value="JAVA.java.implicit.types" />
       </set>
     </option>
+    <option name="lastViewedProviderKeyId" value="parameter.hints.old" />
   </component>
 </application>

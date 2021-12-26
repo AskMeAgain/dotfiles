@@ -3,6 +3,10 @@
     <keyboard-shortcut first-keystroke="shift ctrl z" />
     <keyboard-shortcut first-keystroke="shift alt back_space" />
   </action>
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="ctrl alt 3" />
+    <keyboard-shortcut first-keystroke="ctrl l" second-keystroke="ctrl d" />
+  </action>
   <action id="ChangeSignature">
     <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="s" />
   </action>
@@ -30,6 +34,9 @@
   </action>
   <action id="Console.TableResult.EditValueMaximized" />
   <action id="Console.TableResult.NextPage" />
+  <action id="Console.TableResult.ViewAsTable">
+    <keyboard-shortcut first-keystroke="ctrl l" second-keystroke="ctrl t" />
+  </action>
   <action id="DatabaseView.PropertiesAction" />
   <action id="Debug">
     <keyboard-shortcut first-keystroke="alt f5" />
@@ -92,6 +99,9 @@
   <action id="Git.Fetch">
     <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl f" />
   </action>
+  <action id="GotoDatabaseObject">
+    <keyboard-shortcut first-keystroke="f5" />
+  </action>
   <action id="GotoDeclaration">
     <mouse-shortcut keystroke="button2" />
   </action>
@@ -103,6 +113,7 @@
   <action id="Gradle.RefreshDependencies">
     <keyboard-shortcut first-keystroke="shift ctrl o" />
   </action>
+  <action id="Graph.RouteEdges" />
   <action id="GuiDesigner.ShrinkSelection">
     <keyboard-shortcut first-keystroke="shift alt minus" />
     <keyboard-shortcut first-keystroke="shift ctrl w" />
@@ -194,6 +205,7 @@
     <keyboard-shortcut first-keystroke="shift ctrl h" />
     <keyboard-shortcut first-keystroke="shift ctrl alt r" />
   </action>
+  <action id="Resume" />
   <action id="Run">
     <keyboard-shortcut first-keystroke="ctrl f5" />
     <keyboard-shortcut first-keystroke="shift f10" />

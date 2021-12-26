@@ -165,11 +165,11 @@
                     "2": {},
                     "3": {
                         "text": "SendStuff",
-                        "command": "sh /home/dev/Scripts/postman.sh metrics"
+                        "command": "sh /home/dev/scripts/postman.sh metrics"
                     },
                     "4": {
                         "text": "Sandbox",
-                        "command": "sh /home/dev/Scripts/postman.sh sandbox",
+                        "command": "sh /home/dev/scripts/postman.sh sandbox",
                         "write": ""
                     },
                     "5": {},
@@ -178,7 +178,7 @@
                     "8": {},
                     "9": {
                         "text": "Int",
-                        "command": "sh /home/dev/Scripts/postman.sh int",
+                        "command": "sh /home/dev/scripts/postman.sh int",
                         "write": ""
                     },
                     "10": {},
@@ -187,7 +187,7 @@
                     "13": {},
                     "14": {
                         "text": "Local",
-                        "command": "sh /home/dev/Scripts/postman.sh local",
+                        "command": "sh /home/dev/scripts/postman.sh local",
                         "write": ""
                     }
                 },
