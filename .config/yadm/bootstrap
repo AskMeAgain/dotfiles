@@ -68,7 +68,7 @@ echo "--- making everything executable ---"
 sudo chmod +x /usr/local/bin/docker-compose
 sudo chmod -R +x ~/scripts/
 sudo chmod +x ~/.config/ranger/scope.sh
-sudo chmod +x ~/obsidian.app
+sudo chmod +x ~/obsidian
 
 echo "--- activating style ---"
 ~/scripts/change_style.sh vaporwave
