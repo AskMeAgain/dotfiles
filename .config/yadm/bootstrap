@@ -9,7 +9,7 @@ yay -S nerd-fonts-source-code-pro --noprovides --noconfirm
 yay -S google-chrome --noprovides --noconfirm
 yay -S postman-bin --noprovides --noconfirm
 yay -S rofi-greenclip --noprovides --noconfirm
-yay -S streackdeck-ui --noprovides --noconfirm
+yay -S streamdeck-ui --noprovides --noconfirm
 
 echo "--- pacman installations ---"
 sudo pacman -R --noconfirm pcmanfm palemoon-bin
