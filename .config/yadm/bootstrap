@@ -78,5 +78,8 @@ sudo chmod +x  /home/dev/obsidian
 echo "--- activating style ---"
 /home/dev/scripts/change_style.sh vaporwave
 
+echo "---removing stuff ---"
+rm -Rf /home/dev/screenshots
+
 echo "--- usb stuff for streamdeck ---"
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="0fd9", ATTRS{idProduct}=="0080", GROUP="users", MODE="0666"' >> /etc/udev/rules.d/70-streamdeck.rules
