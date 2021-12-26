@@ -1,5 +1,5 @@
 #!/bin/bash
-. /home/dev/Scripts/utils.sh
+. /home/dev/scripts/utils.sh
 
 if test -f "/home/dev/themes/$1/$1-light.json"; 
 then

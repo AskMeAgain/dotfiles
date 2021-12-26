@@ -34,3 +34,8 @@ Follow the instructions on screen to save the theme if you like it.
 * color0: polybar background
 * color15: polybar foreground
 * color2, color 10: success
+
+
+## Streamdeck mk2
+
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="0fd9", ATTRS{idProduct}=="0080", GROUP="users", MODE="0666"

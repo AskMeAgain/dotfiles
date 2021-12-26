@@ -9,20 +9,20 @@
                         "brightness_change": 0,
                         "text": "",
                         "keys": "",
-                        "icon": "/home/dev/shared/IntelliJ_IDEA_Logo.svg_.png",
+                        "icon": "/home/dev/streamdeck/IntelliJ_IDEA_Logo.svg_.png",
                         "command": "i3-msg workspace number 1",
                         "switch_page": 8
                     },
                     "1": {
                         "text": "",
                         "write": "",
-                        "icon": "/home/dev/shared/postman.png",
+                        "icon": "/home/dev/streamdeck/postman.png",
                         "command": "i3-msg workspace number 0",
                         "keys": "",
                         "switch_page": 9
                     },
                     "2": {
-                        "icon": "/home/dev/shared/db.png",
+                        "icon": "/home/dev/streamdeck/db.png",
                         "text": "",
                         "switch_page": 10,
                         "command": "i3-msg workspace number 1"
@@ -158,7 +158,7 @@
                 },
                 "8": {
                     "0": {
-                        "icon": "/home/dev/shared/postman.png",
+                        "icon": "/home/dev/streamdeck/postman.png",
                         "switch_page": 1
                     },
                     "1": {},
@@ -193,7 +193,7 @@
                 },
                 "9": {
                     "0": {
-                        "icon": "/home/dev/shared/db.png",
+                        "icon": "/home/dev/streamdeck/db.png",
                         "switch_page": 1
                     },
                     "1": {
@@ -243,7 +243,7 @@
                 "7": {
                     "0": {
                         "switch_page": 1,
-                        "icon": "/home/dev/shared/IntelliJ_IDEA_Logo.svg_.png",
+                        "icon": "/home/dev/streamdeck/IntelliJ_IDEA_Logo.svg_.png",
                         "write": ""
                     },
                     "1": {

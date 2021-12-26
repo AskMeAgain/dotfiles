@@ -47,7 +47,7 @@ tar -zxvf intellij.tar.gz
 mv idea-IU-* idea
 
 echo "--- obsidian installations ---"
-curl https://github.com/obsidianmd/obsidian-releases/releases/download/v0.12.19/Obsidian-0.12.19.AppImage --output /home/dev/obsidian
+curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v0.12.19/Obsidian-0.12.19.AppImage --output /home/dev/obsidian
 
 echo "--- python installations ---"
 sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
