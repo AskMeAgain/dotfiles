@@ -39,3 +39,7 @@ Follow the instructions on screen to save the theme if you like it.
 ## Streamdeck mk2
 
     SUBSYSTEM=="usb", ATTRS{idVendor}=="0fd9", ATTRS{idProduct}=="0080", GROUP="users", MODE="0666"
+
+## Sigusr1 to python3 gui.py
+
+	kill -USR1 $(ps aux | grep '[p]ython3 gui.py' | awk '{print $2}')
