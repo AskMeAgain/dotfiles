@@ -46,7 +46,7 @@ sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 echo "--- installing intellij ---"
-curl -L https://download.jetbrains.com/idea/ideaIU-2021.2.1.tar.gz > intellij.tar.gz
+curl -L https://download.jetbrains.com/idea/ideaIC-2021.3.1.tar.gz > intellij.tar.gz
 tar -zxvf intellij.tar.gz
 mv idea-IU-* idea
 
@@ -54,6 +54,13 @@ echo "--- installing pycharm ---"
 curl -L https://download.jetbrains.com/python/pycharm-community-2021.3.tar.gz > pycharm.tar.gz
 tar -zxvf pycharm.tar.gz
 mv pycharm-* pycharm
+
+echo "--- loading jetbrains configs ---"
+sudo cp -r /home/dev/.config/JetBrains/colors /home/dev/.config/JetBrains/IdeaIC2021.3/ 
+sudo cp -r /home/dev/.config/JetBrains/colors /home/dev/.config/JetBrains/PyCharm2021.3/
+
+sudo cp -r /home/dev/.config/JetBrains/keymaps /home/dev/.config/JetBrains/IdeaIC2021.3/ 
+sudo cp -r /home/dev/.config/JetBrains/keymaps /home/dev/.config/JetBrains/PyCharm2021.3/ 
 
 echo "--- obsidian installations ---"
 curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v0.12.19/Obsidian-0.12.19.AppImage --output /home/dev/obsidian
