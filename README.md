@@ -43,3 +43,7 @@ Follow the instructions on screen to save the theme if you like it.
 ## Sigusr1 to python3 gui.py
 
 	kill -USR1 $(ps aux | grep '[p]ython3 gui.py' | awk '{print $2}')
+
+## poetry fix
+
+    pip install cleo tomlkit poetry.core requests cachecontrol cachy html5lib pkginfo virtualenv lockfile pexpect shellingham

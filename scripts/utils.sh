@@ -29,7 +29,7 @@ fixKonsoleTheme(){
 	sed -i "s/Opacity=/Opacity=0./g" /home/dev/.cache/wal/KonsoleTheme.colorscheme
 }
 
-not_in_console=("firefox" "google-chrome-stable" "idea" "idea.sh" "postman" "dbeaver" "/home/dev/obsidian") 
+not_in_console=("firefox" "google-chrome-stable" "idea" "idea.sh" "postman" "dbeaver" "/home/dev/obsidian" "pycharm.sh") 
 
 openProgram(){
 	if [[ "streamdeck" == $1 ]];

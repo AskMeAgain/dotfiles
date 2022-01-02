@@ -9,13 +9,13 @@ yay -S nerd-fonts-source-code-pro --noprovides --noconfirm
 yay -S google-chrome --noprovides --noconfirm
 yay -S postman-bin --noprovides --noconfirm
 yay -S rofi-greenclip --noprovides --noconfirm
-yay -S streamdeck-ui --noprovides --noconfirm
+yay -S polybar-git --noprovides --noconfirm
 
 echo "--- pacman installations ---"
 sudo pacman -R --noconfirm pcmanfm palemoon-bin
 sudo pacman -Rd --nodeps --noconfirm picom 
 sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf 
-sudo pacman -S --noconfirm feh ranger rofi docker polybar zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2 zip seahorse 
+sudo pacman -S --noconfirm feh ranger rofi docker zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2 zip seahorse 
 sudo pacman -S --noconfirm npm
 
 echo "--- npm installations ---"
@@ -57,10 +57,10 @@ mv pycharm-* pycharm
 
 echo "--- loading jetbrains configs ---"
 sudo cp -r /home/dev/.config/JetBrains/colors /home/dev/.config/JetBrains/IdeaIC2021.3/ 
-sudo cp -r /home/dev/.config/JetBrains/colors /home/dev/.config/JetBrains/PyCharm2021.3/
+sudo cp -r /home/dev/.config/JetBrains/colors /home/dev/.config/JetBrains/PyCharmCE2021.3/
 
 sudo cp -r /home/dev/.config/JetBrains/keymaps /home/dev/.config/JetBrains/IdeaIC2021.3/ 
-sudo cp -r /home/dev/.config/JetBrains/keymaps /home/dev/.config/JetBrains/PyCharm2021.3/ 
+sudo cp -r /home/dev/.config/JetBrains/keymaps /home/dev/.config/JetBrains/PyCharmCE2021.3/ 
 
 echo "--- obsidian installations ---"
 curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v0.12.19/Obsidian-0.12.19.AppImage --output /home/dev/obsidian
@@ -72,6 +72,8 @@ sudo mv /home/dev/init.py /usr/lib/python3.8/site-packages/pygments/styles/__ini
 sudo pip install zenipy
 sudo mkdir /home/dev/.config/ranger/colorschemes/
 sudo mkdir /home/dev/.config/flameshot/
+
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
 echo "--- installing java ---"
 sudo curl -s "https://get.sdkman.io" | bash
@@ -94,4 +96,5 @@ echo "---removing stuff ---"
 rm -Rf /home/dev/screenshots
 
 echo "--- usb stuff for streamdeck ---"
+git clone https://github.com/AskMeAgain/streamdeck4p
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="0fd9", ATTRS{idProduct}=="0080", GROUP="users", MODE="0666"' | sudo tee -a  /etc/udev/rules.d/70-streamdeck.rules >/dev/null    22:09:30
