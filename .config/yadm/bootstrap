@@ -48,7 +48,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-
 echo "--- installing intellij ---"
 curl -L https://download.jetbrains.com/idea/ideaIC-2021.3.1.tar.gz > intellij.tar.gz
 tar -zxvf intellij.tar.gz
-mv idea-IU-* idea
+mv idea-IC-* idea
 
 echo "--- installing pycharm ---"
 curl -L https://download.jetbrains.com/python/pycharm-community-2021.3.tar.gz > pycharm.tar.gz
