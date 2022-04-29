@@ -5,7 +5,7 @@ yay --save --answerclean All
 yay --save --answerdiff None
 
 echo "--- pacman installations ---"
-sudo pacman -R --noconfirm pcmanfm palemoon-bin
+sudo pacman -R --noconfirm pcmanfm palemoon-bin dunstify
 sudo pacman -Rd --nodeps --noconfirm picom 
 sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf 
 sudo pacman -S --noconfirm feh ranger rofi docker zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2 zip seahorse 
