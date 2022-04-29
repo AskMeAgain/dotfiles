@@ -9,7 +9,7 @@ sudo pacman -R --noconfirm pcmanfm palemoon-bin
 sudo pacman -Rd --nodeps --noconfirm picom 
 sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf 
 sudo pacman -S --noconfirm feh ranger rofi docker zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2 zip seahorse 
-sudo pacman -S --noconfirm npm python-pip
+sudo pacman -S --noconfirm npm python-pip keepassxc
 
 echo "--- yay installations ---"
 yay -S nerd-fonts-source-code-pro --noprovides --noconfirm
