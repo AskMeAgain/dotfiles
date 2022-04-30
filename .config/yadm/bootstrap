@@ -5,9 +5,6 @@ yay --save --answerclean All
 yay --save --answerdiff None
 
 echo "--- pacman installations ---"
-sudo pacman -Rs manjaro-i3-settings
-sudo pacman -R dunstify
-sudo pacman -S manjaro-i3-settings
 sudo pacman -R --noconfirm pcmanfm palemoon-bin
 sudo pacman -Rd --nodeps --noconfirm picom 
 sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf 
