@@ -49,7 +49,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-
 echo "--- installing intellij ---"
 curl -L https://download.jetbrains.com/idea/ideaIU-2022.1.tar.gz > intellij.tar.gz
 tar -zxvf intellij.tar.gz
-mv idea-IC-* idea
+mv idea-IU-* idea
 
 echo "--- installing pycharm ---"
 curl -L https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz > pycharm.tar.gz
