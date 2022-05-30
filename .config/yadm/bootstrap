@@ -10,7 +10,7 @@ sudo pacman -Rd --nodeps --noconfirm picom
 sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf 
 sudo pacman -S --noconfirm feh ranger rofi docker zsh zsh-completions tilix konsole flameshot peek python-pygments python-pywal unzip python2 zip seahorse 
 sudo pacman -R --noconfirm dunstify
-sudo pacman -S --noconfirm npm python-pip keepassxc libxcrypt-compat
+sudo pacman -S --noconfirm python-pip keepassxc libxcrypt-compat
 
 echo "--- yay installations ---"
 yay -S nerd-fonts-source-code-pro --noprovides --noconfirm
@@ -18,9 +18,6 @@ yay -S google-chrome --noprovides --noconfirm
 yay -S postman-bin --noprovides --noconfirm
 yay -S rofi-greenclip --noprovides --noconfirm
 yay -S polybar-git --noprovides --noconfirm
-
-echo "--- npm installations ---"
-sudo npm install -g newman
 
 echo "--- zsh ---"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/dev/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
