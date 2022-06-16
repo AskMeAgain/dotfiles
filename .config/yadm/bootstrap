@@ -53,13 +53,6 @@ curl -L https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz
 tar -zxvf pycharm.tar.gz
 mv pycharm-* pycharm
 
-echo "--- loading jetbrains configs ---"
-sudo cp -r /home/dev/.config/JetBrains/colors /home/dev/.config/JetBrains/IntelliJIdea2022.1/ 
-sudo cp -r /home/dev/.config/JetBrains/colors /home/dev/.config/JetBrains/PyCharm2022.1/
-
-sudo cp -r /home/dev/.config/JetBrains/keymaps /home/dev/.config/JetBrains/IntelliJIdea2022.1/ 
-sudo cp -r /home/dev/.config/JetBrains/keymaps /home/dev/.config/JetBrains/PyCharm2022.1/ 
-
 echo "--- obsidian installations ---"
 curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v0.12.19/Obsidian-0.12.19.AppImage --output /home/dev/obsidian
 
