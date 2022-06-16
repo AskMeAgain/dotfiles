@@ -23,7 +23,6 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+a exec --no-startup-id ~/scripts/greenclip-utils.sh
 bindsym $mod+k exec --no-startup-id seahorse
-bindsym $mod+s exec --no-startup-id ~/scripts/open_program.sh streamdeck
 
 # change focus
 bindsym $mod+Left focus left
