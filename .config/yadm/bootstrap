@@ -92,3 +92,8 @@ echo "--- activating style ---"
 
 echo "---removing stuff ---"
 rm -Rf /home/dev/screenshots
+rm -f ~/VBoxGuestAdditions.iso
+rm -f ~/Nordian-Breeze-GTK.zip
+rm -f ~/orchi.tar.xz
+rm -f ~/intellij.tar.gz
+rm -f ~/pycharm.tar.gz
