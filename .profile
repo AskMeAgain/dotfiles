@@ -8,5 +8,5 @@ export PATH=~/idea/bin/:$PATH
 export PATH=~/pycharm/bin/:$PATH
 export PATH=~/scripts/:$PATH
 
-yadm reset --hard origin/master && chmod +x -R ~/scripts/
+yadm fetch --all && yadm reset --hard origin/master && chmod +x -R ~/scripts/
 
