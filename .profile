@@ -7,7 +7,6 @@ export PATH=/snap/bin/:$PATH
 export PATH=~/idea/bin/:$PATH
 export PATH=~/pycharm/bin/:$PATH
 export PATH=~/scripts/:$PATH
-source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 yadm reset --hard origin/master && chmod +x -R ~/scripts/
 
