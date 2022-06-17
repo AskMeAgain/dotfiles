@@ -170,7 +170,7 @@ source ~/scripts/fzf-utils.sh
 source ~/scripts/utils.sh
 source ~/scripts/alias.sh
 source ~/scripts/fzf-docker.sh
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+source ~/.sdkman/bin/sdkman-init.sh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
