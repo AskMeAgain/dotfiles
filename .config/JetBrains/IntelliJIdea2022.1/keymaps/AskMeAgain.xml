@@ -21,6 +21,10 @@
     <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl c" />
   </action>
   <action id="ChooseRunConfiguration" />
+  <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="ctrl f4" />
+    <keyboard-shortcut first-keystroke="alt q" />
+  </action>
   <action id="CollapseExpandableComponent">
     <keyboard-shortcut first-keystroke="ctrl subtract" />
     <keyboard-shortcut first-keystroke="ctrl minus" />
@@ -45,6 +49,7 @@
   <action id="DebugClass">
     <keyboard-shortcut first-keystroke="ctrl t" second-keystroke="ctrl d" />
   </action>
+  <action id="EditorContextInfo" />
   <action id="EditorDeleteLine">
     <keyboard-shortcut first-keystroke="ctrl y" />
   </action>
