@@ -23,6 +23,7 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+a exec --no-startup-id ~/scripts/greenclip-utils.sh
 bindsym $mod+k exec --no-startup-id seahorse
+bindsym $mod+n exec --no-startup-id ~/scripts/dunst.sh
 
 # change focus
 bindsym $mod+Left focus left
