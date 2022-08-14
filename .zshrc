@@ -161,6 +161,7 @@ source ~/scripts/utils.sh
 source ~/scripts/alias.sh
 source ~/scripts/fzf-docker.sh
 source ~/.sdkman/bin/sdkman-init.sh
+source ~/scripts/envi-vars.sh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
