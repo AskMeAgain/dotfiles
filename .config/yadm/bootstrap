@@ -1,5 +1,8 @@
 #!/bin/sh -e
 
+sudo pacman -S --noconfirm ansible
+sudo ansible-galaxy collection install kewlfft.aur
+
 echo "--- yay setups ---"
 yay --save --answerclean All
 yay --save --answerdiff None

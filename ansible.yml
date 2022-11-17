@@ -1,0 +1,98 @@
+- name: test run
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: full system upgrade
+      pacman:
+        update_cache: yes
+        upgrade: yes
+      become: yes
+      become_user: root
+
+    - name: Remove packages
+      pacman:
+        state: absent
+        name:
+          - dunstify
+          - pcmanfm
+          - palemoon-bin
+          - picom
+      become: yes
+      become_user: root
+
+    - name: Install package
+      pacman:
+        state: present
+        name:
+          - jq
+          - virtualbox-guest-utils
+          - micro
+          - xclip
+          - fzf
+          - feh
+          - ranger
+          - rofi
+          - docker
+          - zsh
+          - zsh-completions
+          - tilix
+          - flameshot
+          - peek
+      become: yes
+      become_user: root
+
+    - name: Create the `aur_builder` user
+      become: yes
+      ansible.builtin.user:
+        name: aur_builder
+        create_home: yes
+        group: wheel
+
+    - name: Allow the `aur_builder` user to run `sudo pacman` without a password
+      become: yes
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/11-install-aur_builder
+        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        create: yes
+        validate: 'visudo -cf %s'
+
+    - name: Install packages using yay
+      kewlfft.aur.aur:
+        use: yay
+        name:
+          - ttf-sourcecodepro-nerd
+          - google-chrome
+          - postman-bin
+          - rofi-greenclip
+          - polybar-git
+      become: yes
+      become_user: aur_builder
+
+    - name: Zsh syntax highlighting
+      git:
+        repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        dest: /home/dev/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+        clone: yes
+        update: yes
+    - name: Powerlevel 10k
+      git:
+        repo: https://github.com/romkatv/powerlevel10k.git
+        dest: /home/dev/.oh-my-zsh/custom/themes/powerlevel10k
+        clone: yes
+        update: yes
+    - name: Zsh syntax highlighting
+      git:
+        repo: https://github.com/ibhagwan/picom-ibhagwan-git
+        dest: /home/dev/ibhagwan
+        clone: yes
+        update: yes
+
+    - name: Install ibhagwan picom from local PCK
+      kewlfft.aur.aur:
+        name: gnome-shell-extension-caffeine-git
+        use: pikaur
+        local_pkgbuild: { { role_path } }/files/gnome-shell-extension-caffeine-git
+        state: present
+      become: yes
+      become_user: aur_builder
