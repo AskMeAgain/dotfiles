@@ -17,7 +17,6 @@
           - dunstify
           - pcmanfm
           - palemoon-bin
-          - picom
       become: yes
       become_user: root
 
@@ -75,24 +74,11 @@
         dest: /home/dev/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
         clone: yes
         update: yes
-    - name: Powerlevel 10k
+
+    - name: PowerLevel10k
       git:
         repo: https://github.com/romkatv/powerlevel10k.git
         dest: /home/dev/.oh-my-zsh/custom/themes/powerlevel10k
         clone: yes
         update: yes
-    - name: Zsh syntax highlighting
-      git:
-        repo: https://github.com/ibhagwan/picom-ibhagwan-git
-        dest: /home/dev/ibhagwan
-        clone: yes
-        update: yes
-
-    - name: Install ibhagwan picom from local PCK
-      kewlfft.aur.aur:
-        name: gnome-shell-extension-caffeine-git
-        use: pikaur
-        local_pkgbuild: { { role_path } }/files/gnome-shell-extension-caffeine-git
-        state: present
-      become: yes
-      become_user: aur_builder
+        depth: 1
