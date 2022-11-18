@@ -24,6 +24,7 @@
       pacman:
         state: present
         name:
+          - obsidian
           - jq
           - virtualbox-guest-utils
           - micro
@@ -33,6 +34,7 @@
           - ranger
           - rofi
           - docker
+          - docker-compose
           - zsh
           - zsh-completions
           - tilix
@@ -82,3 +84,64 @@
         clone: yes
         update: yes
         depth: 1
+
+    - name: Copy ranger desktop
+      ansible.builtin.copy:
+        src: /home/dev/ranger.desktop
+        dest: /usr/share/applications/ranger.desktop
+      become: yes
+      become_user: root
+
+    - name: Creates directory
+      file:
+        path: /usr/lib/python3.8/site-packages/pygments/styles/
+        state: directory
+
+    - name: Copy pygment style
+      ansible.builtin.copy:
+        src: /home/dev/pygment_orchid.py
+        dest: /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
+
+    - name: Copy pygment style
+      ansible.builtin.copy:
+        src: /home/dev/init.py
+        dest: /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
+
+    - name: Extract light theme
+      ansible.builtin.unarchive:
+        src: /home/dev/orchi.tar.xz
+        dest: /usr/share/themes
+      become: yes
+      become_user: root
+
+    - name: Extract dark theme
+      ansible.builtin.unarchive:
+        src: /home/dev/Nordian-Breeze-GTK.zip
+        dest: /usr/share/themes
+      become: yes
+      become_user: root
+
+    - name: change user shell to zsh
+      become: yes
+      user:
+        name: "dev"
+        shell: /bin/zsh
+
+    - name: add user mod for docker
+      command: sudo usermod -aG docker dev
+
+    - name: activating style
+      command: /home/dev/scripts/change_style.sh vaporwave
+
+    - name: Cleanup files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      with_items:
+        - /home/dev/pycharm.tar.gz
+        - /home/dev/intellij.tar.gz
+        - /home/dev/VBoxGuestAdditions.iso
+        - /home/dev/README.md
+        - /home/dev/Nordian-Breeze-GTK.zip
+        - /home/dev/orchi.tar.xz
+        - /home/dev/manjaro-update.sh

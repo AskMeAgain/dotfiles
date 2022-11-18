@@ -3,6 +3,9 @@
 sudo pacman -S --noconfirm ansible
 sudo ansible-galaxy collection install kewlfft.aur
 
+ansible-playbook ansible.yml -e "ansible_sudo_pass=1234"
+ansible-playbook ansible-file-download.yml -e "ansible_sudo_pass=1234"
+
 #echo "--- yay setups ---"
 #yay --save --answerclean All
 #yay --save --answerdiff None
@@ -32,64 +35,65 @@ sudo ansible-galaxy collection install kewlfft.aur
 #sudo pacman -U *.pkg.tar.xz --noconfirm
 #cd ..
 
-sudo mv ranger.desktop /usr/share/applications/ranger.desktop
+#sudo mv ranger.desktop /usr/share/applications/ranger.desktop
 
-echo "--- zsh stuff ---"
-sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
-sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
-sudo usermod --shell $(which zsh) $USER
-chsh -s $(which zsh) <<< '1234'
+#echo "--- zsh stuff ---"
+#sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
+#sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
 
-echo "--- docker installation ---"
-sudo systemctl start docker.service
-sudo systemctl enable docker.service
-sudo usermod -aG docker $USER
-sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+#sudo usermod --shell $(which zsh) $USER
+#chsh -s $(which zsh) <<< '1234'
 
-echo "--- installing intellij ---"
-curl -L https://download.jetbrains.com/idea/ideaIU-2022.1.tar.gz > intellij.tar.gz
-tar -zxvf intellij.tar.gz
-mv idea-IU-* idea
+#echo "--- docker installation ---"
+#sudo systemctl start docker.service
+#sudo systemctl enable docker.service
+#sudo usermod -aG docker $USER
+#sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-echo "--- installing pycharm ---"
-curl -L https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz > pycharm.tar.gz
-tar -zxvf pycharm.tar.gz
-mv pycharm-* pycharm
+#echo "--- installing intellij ---"
+#curl -L https://download.jetbrains.com/idea/ideaIU-2022.1.tar.gz > intellij.tar.gz
+#tar -zxvf intellij.tar.gz
+#mv idea-IU-* idea
 
-echo "--- obsidian installations ---"
-curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v0.12.19/Obsidian-0.12.19.AppImage --output /home/dev/obsidian
+#echo "--- installing pycharm ---"
+#curl -L https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz > pycharm.tar.gz
+#tar -zxvf pycharm.tar.gz
+#mv pycharm-* pycharm
 
-echo "--- python installations ---"
-sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
-sudo mv /home/dev/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
-sudo mv /home/dev/init.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
-sudo pip install zenipy
-sudo mkdir /home/dev/.config/ranger/colorschemes/
-sudo mkdir /home/dev/.config/flameshot/
+#echo "--- obsidian installations ---"
+#curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v0.12.19/Obsidian-0.12.19.AppImage --output /home/dev/obsidian
 
-curl -sSL https://install.python-poetry.org | python3 -
+#echo "--- python installations ---"
+#sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
+#sudo mv /home/dev/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
+#sudo mv /home/dev/init.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
+#sudo pip install zenipy
+#sudo mkdir /home/dev/.config/ranger/colorschemes/
+#sudo mkdir /home/dev/.config/flameshot/
 
-echo "--- installing java ---"
-sudo curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+#curl -sSL https://install.python-poetry.org | python3 -
 
-echo "--- fixing permissions ---"
-sudo chown -R dev:dev /home/dev/.config
-sudo chown -R dev:dev /home/dev/.cache
+#echo "--- installing java ---"
+#sudo curl -s "https://get.sdkman.io" | bash
+#source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-echo "--- making everything executable ---"
-sudo chmod +x /usr/local/bin/docker-compose
-sudo chmod -R +x  /home/dev/scripts/
-sudo chmod +x  /home/dev/.config/ranger/scope.sh
-sudo chmod +x  /home/dev/obsidian
+#echo "--- fixing permissions ---"
+#sudo chown -R dev:dev /home/dev/.config
+#sudo chown -R dev:dev /home/dev/.cache
 
-echo "--- activating style ---"
-/home/dev/scripts/change_style.sh vaporwave
+#echo "--- making everything executable ---"
+#sudo chmod +x /usr/local/bin/docker-compose
+#sudo chmod -R +x  /home/dev/scripts/
+#sudo chmod +x  /home/dev/.config/ranger/scope.sh
+#sudo chmod +x  /home/dev/obsidian
 
-echo "---removing stuff ---"
-rm -Rf /home/dev/screenshots
-rm -f ~/VBoxGuestAdditions.iso
-rm -f ~/Nordian-Breeze-GTK.zip
-rm -f ~/orchi.tar.xz
-rm -f ~/intellij.tar.gz
-rm -f ~/pycharm.tar.gz
+#echo "--- activating style ---"
+#/home/dev/scripts/change_style.sh vaporwave
+
+#echo "---removing stuff ---"
+#rm -Rf /home/dev/screenshots
+#rm -f ~/VBoxGuestAdditions.iso
+#rm -f ~/Nordian-Breeze-GTK.zip
+#rm -f ~/orchi.tar.xz
+#rm -f ~/intellij.tar.gz
+#rm -f ~/pycharm.tar.gz

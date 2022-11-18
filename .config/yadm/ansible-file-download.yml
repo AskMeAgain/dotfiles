@@ -1,0 +1,24 @@
+- name: test run
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Download intellij Idea
+      ansible.builtin.get_url:
+        url: https://download.jetbrains.com/idea/ideaIU-2022.1.tar.gz
+        dest: /home/dev/intellij.tar.gz
+
+    - name: Extract intellij
+      ansible.builtin.unarchive:
+        src: /home/dev/intellij.tar.gz
+        dest: /home/dev/idea
+
+    - name: Download Pycharm
+      ansible.builtin.get_url:
+        url: https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz
+        dest: /home/dev/pycharm.tar.gz
+
+    - name: Extract Pycharm
+      ansible.builtin.unarchive:
+        src: /home/dev/pycharm.tar.gz
+        dest: /home/dev/pycharm
