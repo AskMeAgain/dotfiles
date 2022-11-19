@@ -5,6 +5,8 @@
   tasks:
     - name: Set name
       command: localectl set-keymap de
+      become: yes
+      become_user: root
 
     - name: full system upgrade
       pacman:
