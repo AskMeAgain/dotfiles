@@ -16,7 +16,8 @@
     - name: Extract intellij
       ansible.builtin.unarchive:
         src: /home/dev/intellij.tar.gz
-        dest: /home/dev/
+        dest: /home/dev
+        remote_src: yes
         list_files: yes
       register: intellij_untar_content
 
