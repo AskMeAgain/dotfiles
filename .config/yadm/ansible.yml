@@ -56,7 +56,6 @@
           - peek
           - python-pygments
           - python-pywal
-          - zsh-theme-powerlevel10k-git
           - zsh-syntax-highlighting
       become: yes
       become_user: root
@@ -193,6 +192,7 @@
           - postman-bin
           - rofi-greenclip
           - polybar-git
+          - zsh-theme-powerlevel10k-git
       become: yes
       become_user: aur_builder
 
