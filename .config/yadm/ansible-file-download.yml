@@ -26,7 +26,7 @@
         src: /home/dev/intellij.tar.gz
         dest: /home/dev
         list_files: yes
-        creates: /home/dev/intellij
+        creates: /home/dev/idea
       register: intellij_untar_content
 
     - name: Move intellij installation
