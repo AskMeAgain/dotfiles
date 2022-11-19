@@ -49,7 +49,7 @@
           - tilix
           - flameshot
           - peek
-          - wal
+          - python-pywal
       become: yes
       become_user: root
 
