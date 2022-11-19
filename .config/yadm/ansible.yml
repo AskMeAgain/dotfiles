@@ -19,6 +19,7 @@
       pacman:
         state: absent
         name:
+          - manjaro-zsh-config
           - dunstify
           - pcmanfm
           - palemoon-bin

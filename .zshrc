@@ -154,7 +154,6 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 source ~/scripts/fzf-utils.sh
 source ~/scripts/utils.sh
@@ -162,6 +161,7 @@ source ~/scripts/alias.sh
 source ~/scripts/fzf-docker.sh
 source ~/.sdkman/bin/sdkman-init.sh
 source ~/scripts/envi-vars.sh
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
