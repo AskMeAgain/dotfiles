@@ -12,15 +12,6 @@
         url: https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz
         dest: /home/dev/pycharm.tar.gz
 
-    - name: Create intellij folder
-      file:
-        path: /home/dev/idea/
-        state: directory
-    - name: Create pycharm folder
-      file:
-        path: /home/dev/pycharm/
-        state: directory
-
     - name: Extract intellij
       ansible.builtin.unarchive:
         src: /home/dev/intellij.tar.gz
@@ -28,6 +19,11 @@
         list_files: yes
         creates: /home/dev/idea
       register: intellij_untar_content
+
+    - name: Create intellij folder
+      file:
+        path: /home/dev/idea/
+        state: directory
 
     - name: Move intellij installation
       command: cp -a /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}/. /home/dev/idea/
@@ -40,6 +36,11 @@
         list_files: yes
         creates: /home/dev/pycharm
       register: pycharm_untar_content
+
+    - name: Create pycharm folder
+      file:
+        path: /home/dev/pycharm/
+        state: directory
 
     - name: Move Pycharm installation
       command: cp -a /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}/. /home/dev/pycharm/
