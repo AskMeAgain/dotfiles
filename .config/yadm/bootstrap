@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-sudo pacman -Syu --noconfirm --overwrite=/usr/bin/dunstify
+#sudo pacman -Syu --noconfirm --overwrite=/usr/bin/dunstify
 sudo pacman -S --noconfirm --needed ansible
 
 ansible-galaxy collection install kewlfft.aur
