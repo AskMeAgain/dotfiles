@@ -31,7 +31,7 @@
 
     - name: Move intellij installation
       command: cp -a /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}/. /home/dev/idea/
-      when: intellij_untar_content.changed == True
+      #when: intellij_untar_content.changed == True
 
     - name: Extract Pycharm
       ansible.builtin.unarchive:
@@ -43,4 +43,4 @@
 
     - name: Move Pycharm installation
       command: cp -a /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}/. /home/dev/pycharm/
-      when: pycharm_untar_content.changed == True
+      #when: pycharm_untar_content.changed == True
