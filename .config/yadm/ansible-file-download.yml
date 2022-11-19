@@ -8,7 +8,7 @@
         url: https://download.jetbrains.com/idea/ideaIU-2022.1.tar.gz
         dest: /home/dev/intellij.tar.gz
 
-    - name: Creates intellij folder
+    - name: Create intellij folder
       file:
         path: /home/dev/idea/
         state: directory
@@ -23,12 +23,12 @@
         url: https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz
         dest: /home/dev/pycharm.tar.gz
 
+    - name: Create pycharm folder
+      file:
+        path: /home/dev/pycharm/
+        state: directory
+
     - name: Extract Pycharm
       ansible.builtin.unarchive:
         src: /home/dev/pycharm.tar.gz
         dest: /home/dev/pycharm
-
-    - name: Creates pycharm folder
-      file:
-        path: /home/dev/pycharm/
-        state: directory
