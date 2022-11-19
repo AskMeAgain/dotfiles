@@ -49,6 +49,7 @@
           - tilix
           - flameshot
           - peek
+          - wal
       become: yes
       become_user: root
 
