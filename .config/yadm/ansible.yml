@@ -3,6 +3,9 @@
   connection: local
 
   tasks:
+    - name: Set name
+      command: localectl set-keymap de
+
     - name: full system upgrade
       pacman:
         update_cache: yes
