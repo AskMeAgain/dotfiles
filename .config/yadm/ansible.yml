@@ -84,6 +84,8 @@
       ansible.builtin.copy:
         src: /home/dev/pygment_orchid.py
         dest: /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
+      become: yes
+      become_user: root
 
     - name: Copy pygment style
       ansible.builtin.copy:
