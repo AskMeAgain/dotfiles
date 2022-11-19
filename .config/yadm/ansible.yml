@@ -27,6 +27,7 @@
           - dunstify
           - pcmanfm
           - palemoon-bin
+          - dunstify
       become: yes
       become_user: root
 
@@ -34,8 +35,15 @@
       pacman:
         state: present
         name:
+          - task
+          - apparmor
+          - asciidoc
+          - uthash
+          - gcc
           - unzip
+          - zip
           - obsidian
+          - seahorse
           - jq
           - virtualbox-guest-utils
           - micro
@@ -51,6 +59,7 @@
           - tilix
           - flameshot
           - peek
+          - python-pygments
           - python-pywal
       become: yes
       become_user: root

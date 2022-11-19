@@ -11,11 +11,8 @@ ansible-playbook /home/dev/.config/yadm/ansible-cleanup.yml -e "ansible_sudo_pas
 /home/dev/scripts/change_style.sh vaporwave
 
 #echo "--- pacman installations ---"
-#sudo pacman -R --noconfirm pcmanfm palemoon-bin
-#sudo pacman -Rd --nodeps --noconfirm picom
-#sudo pacman -S --noconfirm jq task apparmor asciidoc uthash gcc meson virtualbox-guest-utils micro xclip go go-tools python-docutils libxdg-basedir fzf
-#sudo pacman -S --noconfirm feh ranger rofi docker zsh zsh-completions tilix flameshot peek python-pygments python-pywal unzip python2 zip seahorse
-#sudo pacman -R --noconfirm dunstify
+#sudo pacman -S --noconfirm meson go go-tools python-docutils libxdg-basedir 
+#sudo pacman -S --noconfirm python2
 #sudo pacman -S --noconfirm python-pip keepassxc libxcrypt-compat
 
 #echo "--- yay installations ---"
