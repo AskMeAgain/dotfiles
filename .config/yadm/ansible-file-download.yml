@@ -21,9 +21,7 @@
       register: intellij_untar_content
 
     - name: Move intellij installation
-      ansible.builtin.copy:
-        src: /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}/
-        dest: /home/dev/idea/
+      command: cp /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}/ /home/dev/idea/
 
     - name: Download Pycharm
       ansible.builtin.get_url:
@@ -34,8 +32,13 @@
       file:
         path: /home/dev/pycharm/
         state: directory
+        list_files: yes
+      register: pycharm_untar_content
 
     - name: Extract Pycharm
       ansible.builtin.unarchive:
         src: /home/dev/pycharm.tar.gz
         dest: /home/dev/pycharm
+
+    - name: Move Pycharm installation
+      command: cp /home/dev/{{ pacharm_untar_content.files[0].split('/')[0] }}/ /home/dev/pycharm/
