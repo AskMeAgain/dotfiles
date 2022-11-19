@@ -144,7 +144,7 @@
       when: intellij_untar_content.changed == True
 
     - name: Delete intellij installation
-      command: rm /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}
+      command: rm -Rf /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}
       when: intellij_untar_content.changed == True
 
     - name: Extract Pycharm
@@ -165,7 +165,7 @@
       when: pycharm_untar_content.changed == True
 
     - name: Delete Pycharm installation
-      command: rm /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}
+      command: rm -Rf /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}
       when: pycharm_untar_content.changed == True
 
     - name: Create the `aur_builder` user

@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-sudo pacman -Syyu --noconfirm --overwrite=/usr/bin/dunstify
+sudo pacman -Syu --noconfirm --overwrite=/usr/bin/dunstify
 sudo pacman -S --noconfirm --needed ansible
 
 ansible-galaxy collection install kewlfft.aur
@@ -8,50 +8,3 @@ ansible-galaxy collection install kewlfft.aur
 ansible-playbook /home/dev/.config/yadm/ansible.yml -e "ansible_sudo_pass=1234"
 
 /home/dev/scripts/change_style.sh vaporwave
-
-#echo "--- pacman installations ---"
-#sudo pacman -S --noconfirm meson go go-tools python-docutils libxdg-basedir 
-#sudo pacman -S --noconfirm python2
-#sudo pacman -S --noconfirm python-pip keepassxc libxcrypt-compat
-
-#echo "--- yay installations ---"
-#yay -S nerd-fonts-source-code-pro --noprovides --noconfirm
-#yay -S google-chrome --noprovides --noconfirm
-#yay -S postman-bin --noprovides --noconfirm
-#yay -S rofi-greenclip --noprovides --noconfirm
-#yay -S polybar-git --noprovides --noconfirm
-
-#echo "--- zsh ---"
-#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/dev/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-#git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/dev/.oh-my-zsh/custom/themes/powerlevel10k
-#git clone https://github.com/ibhagwan/picom-ibhagwan-git
-
-#cd picom-ibhagwan-git/
-#makepkg
-#sudo pacman -U *.pkg.tar.xz --noconfirm
-#cd ..
-
-#sudo mv ranger.desktop /usr/share/applications/ranger.desktop
-
-#echo "--- zsh stuff ---"
-#sudo tar -C /usr/share/themes -xvf ./orchi.tar.xz
-#sudo unzip Nordian-Breeze-GTK.zip -d /usr/share/themes/
-
-#sudo usermod --shell $(which zsh) $USER
-#chsh -s $(which zsh) <<< '1234'
-
-#echo "--- docker installation ---"
-#sudo systemctl start docker.service
-#sudo systemctl enable docker.service
-#sudo usermod -aG docker $USER
-#sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-#curl -sSL https://install.python-poetry.org | python3 -
-
-#echo "--- installing java ---"
-#sudo curl -s "https://get.sdkman.io" | bash
-#source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-#echo "--- fixing permissions ---"
-#sudo chown -R dev:dev /home/dev/.config
-#sudo chown -R dev:dev /home/dev/.cache
