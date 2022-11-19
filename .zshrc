@@ -154,7 +154,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 source ~/scripts/fzf-utils.sh
 source ~/scripts/utils.sh
@@ -163,7 +163,6 @@ source ~/scripts/fzf-docker.sh
 source ~/.sdkman/bin/sdkman-init.sh
 source ~/scripts/envi-vars.sh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 bindkey "^[[A" history-beginning-search-backward

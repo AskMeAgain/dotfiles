@@ -56,23 +56,10 @@
           - peek
           - python-pygments
           - python-pywal
+          - zsh-theme-powerlevel10k-git
+          - zsh-syntax-highlighting
       become: yes
       become_user: root
-
-    - name: Zsh syntax highlighting
-      git:
-        repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-        dest: /home/dev/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-        clone: yes
-        update: yes
-
-    - name: PowerLevel10k
-      git:
-        repo: https://github.com/romkatv/powerlevel10k.git
-        dest: /home/dev/.oh-my-zsh/custom/themes/powerlevel10k
-        clone: yes
-        update: yes
-        depth: 1
 
     - name: Copy ranger desktop
       ansible.builtin.copy:
@@ -157,6 +144,10 @@
       command: cp -a /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}/. /home/dev/idea/
       when: intellij_untar_content.changed == True
 
+    - name: Delete intellij installation
+      command: rm /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}
+      when: intellij_untar_content.changed == True
+
     - name: Extract Pycharm
       ansible.builtin.unarchive:
         src: /home/dev/pycharm.tar.gz
@@ -172,6 +163,10 @@
 
     - name: Move Pycharm installation
       command: cp -a /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}/. /home/dev/pycharm/
+      when: pycharm_untar_content.changed == True
+
+    - name: Delete Pycharm installation
+      command: rm /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}
       when: pycharm_untar_content.changed == True
 
     - name: Create the `aur_builder` user
@@ -213,3 +208,6 @@
         - /home/dev/Nordian-Breeze-GTK.zip
         - /home/dev/orchi.tar.xz
         - /home/dev/manjaro-update.sh
+        - /home/dev/manjaro-additions.sh
+        - /home/dev/init.py
+        - /home/dev/ranger_desktop
