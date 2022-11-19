@@ -7,8 +7,6 @@
       ansible.builtin.get_url:
         url: https://download.jetbrains.com/idea/ideaIU-2022.1.tar.gz
         dest: /home/dev/intellij.tar.gz
-      args:
-        creates: /home/dev/intellij.tar.gz
 
     - name: Create intellij folder
       file:
@@ -24,8 +22,6 @@
       ansible.builtin.get_url:
         url: https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz
         dest: /home/dev/pycharm.tar.gz
-      args:
-        creates: /home/dev/pycharm.tar.gz
 
     - name: Create pycharm folder
       file:
