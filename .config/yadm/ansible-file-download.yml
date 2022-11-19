@@ -41,4 +41,4 @@
       register: pycharm_untar_content
 
     - name: Move Pycharm installation
-      command: cp -a /home/dev/{{ pacharm_untar_content.files[0].split('/')[0] }}/. /home/dev/pycharm/
+      command: cp -a /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}/. /home/dev/pycharm/
