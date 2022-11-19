@@ -87,11 +87,13 @@
       become: yes
       become_user: root
 
-    - name: Copy pygment style
+    - name: Copy pygment init script
       ansible.builtin.copy:
         src: /home/dev/init.py
         dest: /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
-
+      become: yes
+      become_user: root
+      
     - name: Extract light theme
       ansible.builtin.unarchive:
         src: /home/dev/orchi.tar.xz
