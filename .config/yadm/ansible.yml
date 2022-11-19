@@ -118,19 +118,3 @@
 
     - name: add user mod for docker
       command: sudo usermod -aG docker dev
-
-    - name: activating style
-      command: /home/dev/scripts/change_style.sh vaporwave
-
-    - name: Cleanup files
-      ansible.builtin.file:
-        path: "{{ item }}"
-        state: absent
-      with_items:
-        - /home/dev/pycharm.tar.gz
-        - /home/dev/intellij.tar.gz
-        - /home/dev/VBoxGuestAdditions.iso
-        - /home/dev/README.md
-        - /home/dev/Nordian-Breeze-GTK.zip
-        - /home/dev/orchi.tar.xz
-        - /home/dev/manjaro-update.sh

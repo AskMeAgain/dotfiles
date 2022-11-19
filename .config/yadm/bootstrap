@@ -5,6 +5,9 @@ sudo pacman -S --noconfirm ansible
 ansible-playbook ansible.yml -e "ansible_sudo_pass=1234"
 ansible-playbook ansible-file-download.yml -e "ansible_sudo_pass=1234"
 ansible-playbook ansible-yay.yml -e "ansible_sudo_pass=1234"
+ansible-playbook ansible-cleanup.yml -e "ansible_sudo_pass=1234"
+
+/home/dev/scripts/change_style.sh vaporwave
 
 #echo "--- pacman installations ---"
 #sudo pacman -R --noconfirm pcmanfm palemoon-bin
