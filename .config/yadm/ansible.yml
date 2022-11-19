@@ -73,10 +73,12 @@
       become: yes
       become_user: root
 
-    - name: Creates directory
+    - name: Creates pygment directory
       file:
         path: /usr/lib/python3.8/site-packages/pygments/styles/
         state: directory
+      become: yes
+      become_user: root
 
     - name: Copy pygment style
       ansible.builtin.copy:
