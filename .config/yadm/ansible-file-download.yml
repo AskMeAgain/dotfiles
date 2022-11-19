@@ -22,7 +22,7 @@
 
     - name: Move intellij installation
       ansible.builtin.copy:
-        src: /home/dev/tmp/{{ archive_contents.files[0] }}
+        src: /home/dev/{{ archive_contents.files[0] }}
         dest: /home/dev/idea
       become: yes
       become_user: root
