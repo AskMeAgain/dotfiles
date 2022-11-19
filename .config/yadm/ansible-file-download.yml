@@ -30,7 +30,7 @@
         dest: /home/dev
         list_files: yes
         creates: /home/dev/intellij
-     register: intellij_untar_content
+      register: intellij_untar_content
 
     - name: Extract Pycharm
       ansible.builtin.unarchive:
