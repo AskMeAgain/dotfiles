@@ -67,7 +67,7 @@
         validate: 'visudo -cf %s'
 
     - name: Install packages using yay
-      kewlfft.aur.aur:
+      aur:
         use: yay
         name:
           - ttf-sourcecodepro-nerd
