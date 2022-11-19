@@ -16,7 +16,16 @@
     - name: Extract intellij
       ansible.builtin.unarchive:
         src: /home/dev/intellij.tar.gz
+        dest: /home/dev/tmp
+        list_files: yes
+      register: archive_contents
+
+    - name: Move intellij installation
+      ansible.builtin.copy:
+        src: /home/dev/tmp/{{ archive_contents.files[0] }}
         dest: /home/dev/idea
+      become: yes
+      become_user: root
 
     - name: Download Pycharm
       ansible.builtin.get_url:
