@@ -38,7 +38,9 @@
         src: /home/dev/pycharm.tar.gz
         dest: /home/dev/pycharm
         list_files: yes
+        creates: /home/dev/pycharm
       register: pycharm_untar_content
 
     - name: Move Pycharm installation
       command: cp -a /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}/. /home/dev/pycharm/
+      when: pycharm_untar_content.changed == True
