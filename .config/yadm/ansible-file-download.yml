@@ -18,11 +18,11 @@
         src: /home/dev/intellij.tar.gz
         dest: /home/dev/
         list_files: yes
-      register: archive_contents
+      register: intellij_untar_content
 
     - name: Move intellij installation
       ansible.builtin.copy:
-        src: /home/dev/{{ archive_contents.files[0] }}
+        src: /home/dev/{{ intellij_untar_content.files[0] }}
         dest: /home/dev/idea
       become: yes
       become_user: root
