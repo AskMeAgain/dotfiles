@@ -32,13 +32,13 @@
       file:
         path: /home/dev/pycharm/
         state: directory
-        list_files: yes
-      register: pycharm_untar_content
 
     - name: Extract Pycharm
       ansible.builtin.unarchive:
         src: /home/dev/pycharm.tar.gz
         dest: /home/dev/pycharm
+        list_files: yes
+      register: pycharm_untar_content
 
     - name: Move Pycharm installation
       command: cp -r /home/dev/{{ pacharm_untar_content.files[0].split('/')[0] }}/ /home/dev/pycharm/
