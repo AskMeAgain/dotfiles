@@ -13,7 +13,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 
 bindsym $mod+Return exec tilix
 bindsym $mod+Shift+Return exec --no-startup-id ~/scripts/open_program.sh tilix --new-workspace
-bindsym $mod+o exec --no-startup-id ~/scripts/open_program.sh ~/obsidian
+bindsym $mod+o exec --no-startup-id ~/scripts/open_program.sh obsidian
 
 # kill focused window
 bindsym $mod+q kill
