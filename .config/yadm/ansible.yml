@@ -15,11 +15,6 @@
       become: yes
       become_user: root
 
-    - name: Install collection community.network
-      community.general.ansible_galaxy_install:
-        type: collection
-        name: kewlfft.aur
-
     - name: Remove packages
       pacman:
         state: absent
@@ -130,10 +125,10 @@
     - name: add user mod for docker
       command: sudo usermod -aG docker dev
 
-    - name: add user mod for docker
+    - name: start docker daemon
       command: sudo systemctl start docker.service
 
-    - name: add user mod for docker
+    - name: enable docker daemon for restart
       command: sudo systemctl enable docker.service
 
     - name: Download intellij Idea
@@ -178,3 +173,43 @@
     - name: Move Pycharm installation
       command: cp -a /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}/. /home/dev/pycharm/
       when: pycharm_untar_content.changed == True
+
+    - name: Create the `aur_builder` user
+      become: yes
+      ansible.builtin.user:
+        name: aur_builder
+        create_home: yes
+        group: wheel
+
+    - name: Allow the `aur_builder` user to run `sudo pacman` without a password
+      become: yes
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/11-install-aur_builder
+        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        create: yes
+        validate: 'visudo -cf %s'
+
+    - name: Install packages using yay
+      kewlfft.aur.aur:
+        use: yay
+        name:
+          - ttf-sourcecodepro-nerd
+          - google-chrome
+          - postman-bin
+          - rofi-greenclip
+          - polybar-git
+      become: yes
+      become_user: aur_builder
+
+    - name: Cleanup files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      with_items:
+        - /home/dev/pycharm.tar.gz
+        - /home/dev/intellij.tar.gz
+        - /home/dev/VBoxGuestAdditions.iso
+        - /home/dev/README.md
+        - /home/dev/Nordian-Breeze-GTK.zip
+        - /home/dev/orchi.tar.xz
+        - /home/dev/manjaro-update.sh

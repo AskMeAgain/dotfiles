@@ -3,6 +3,8 @@
 sudo pacman -Syyu --noconfirm --overwrite=/usr/bin/dunstify
 sudo pacman -S --noconfirm ansible
 
+ansible-galaxy collection install kewlfft.aur
+
 ansible-playbook /home/dev/.config/yadm/ansible.yml -e "ansible_sudo_pass=1234"
 ansible-playbook /home/dev/.config/yadm/ansible-yay.yml -e "ansible_sudo_pass=1234"
 ansible-playbook /home/dev/.config/yadm/ansible-cleanup.yml -e "ansible_sudo_pass=1234"
