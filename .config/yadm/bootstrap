@@ -1,5 +1,6 @@
 #!/bin/sh -e
 
+sudo pacman -Syyu --noconfirm --overwrite=/usr/bin/dunstify
 sudo pacman -S --noconfirm ansible
 
 ansible-playbook ansible.yml -e "ansible_sudo_pass=1234"
