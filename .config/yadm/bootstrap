@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 sudo pacman -S --noconfirm ansible
-sudo ansible-galaxy collection install kewlfft.aur
+#sudo ansible-galaxy collection install kewlfft.aur
 
 ansible-playbook ansible.yml -e "ansible_sudo_pass=1234"
 ansible-playbook ansible-file-download.yml -e "ansible_sudo_pass=1234"

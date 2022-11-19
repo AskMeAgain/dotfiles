@@ -13,6 +13,11 @@
       become: yes
       become_user: root
 
+    - name: Install collection community.network
+        community.general.ansible_galaxy_install:
+          type: collection
+          name: kewlfft.aur
+
     - name: Remove packages
       pacman:
         state: absent
