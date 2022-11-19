@@ -22,8 +22,8 @@
 
     - name: Move intellij installation
       ansible.builtin.copy:
-        src: /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}
-        dest: /home/dev/idea
+        src: /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}/
+        dest: /home/dev/idea/
 
     - name: Download Pycharm
       ansible.builtin.get_url:
