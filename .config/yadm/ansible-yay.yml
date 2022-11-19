@@ -1,0 +1,31 @@
+- name: test run
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Create the `aur_builder` user
+      become: yes
+      ansible.builtin.user:
+        name: aur_builder
+        create_home: yes
+        group: wheel
+
+    - name: Allow the `aur_builder` user to run `sudo pacman` without a password
+      become: yes
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/11-install-aur_builder
+        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        create: yes
+        validate: 'visudo -cf %s'
+
+    - name: Install packages using yay
+      aur:
+        use: yay
+        name:
+          - ttf-sourcecodepro-nerd
+          - google-chrome
+          - postman-bin
+          - rofi-greenclip
+          - polybar-git
+      become: yes
+      become_user: aur_builder
