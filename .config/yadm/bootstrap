@@ -4,7 +4,6 @@ sudo pacman -Syyu --noconfirm --overwrite=/usr/bin/dunstify
 sudo pacman -S --noconfirm ansible
 
 ansible-playbook /home/dev/.config/yadm/ansible.yml -e "ansible_sudo_pass=1234"
-ansible-playbook /home/dev/.config/yadm/ansible-file-download.yml -e "ansible_sudo_pass=1234"
 ansible-playbook /home/dev/.config/yadm/ansible-yay.yml -e "ansible_sudo_pass=1234"
 ansible-playbook /home/dev/.config/yadm/ansible-cleanup.yml -e "ansible_sudo_pass=1234"
 
@@ -47,27 +46,6 @@ ansible-playbook /home/dev/.config/yadm/ansible-cleanup.yml -e "ansible_sudo_pas
 #sudo usermod -aG docker $USER
 #sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-#echo "--- installing intellij ---"
-#curl -L https://download.jetbrains.com/idea/ideaIU-2022.1.tar.gz > intellij.tar.gz
-#tar -zxvf intellij.tar.gz
-#mv idea-IU-* idea
-
-#echo "--- installing pycharm ---"
-#curl -L https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz > pycharm.tar.gz
-#tar -zxvf pycharm.tar.gz
-#mv pycharm-* pycharm
-
-#echo "--- obsidian installations ---"
-#curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v0.12.19/Obsidian-0.12.19.AppImage --output /home/dev/obsidian
-
-#echo "--- python installations ---"
-#sudo mkdir -p /usr/lib/python3.8/site-packages/pygments/styles/
-#sudo mv /home/dev/pygment_orchid.py /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
-#sudo mv /home/dev/init.py /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
-#sudo pip install zenipy
-#sudo mkdir /home/dev/.config/ranger/colorschemes/
-#sudo mkdir /home/dev/.config/flameshot/
-
 #curl -sSL https://install.python-poetry.org | python3 -
 
 #echo "--- installing java ---"
@@ -77,20 +55,3 @@ ansible-playbook /home/dev/.config/yadm/ansible-cleanup.yml -e "ansible_sudo_pas
 #echo "--- fixing permissions ---"
 #sudo chown -R dev:dev /home/dev/.config
 #sudo chown -R dev:dev /home/dev/.cache
-
-#echo "--- making everything executable ---"
-#sudo chmod +x /usr/local/bin/docker-compose
-#sudo chmod -R +x  /home/dev/scripts/
-#sudo chmod +x  /home/dev/.config/ranger/scope.sh
-#sudo chmod +x  /home/dev/obsidian
-
-#echo "--- activating style ---"
-#/home/dev/scripts/change_style.sh vaporwave
-
-#echo "---removing stuff ---"
-#rm -Rf /home/dev/screenshots
-#rm -f ~/VBoxGuestAdditions.iso
-#rm -f ~/Nordian-Breeze-GTK.zip
-#rm -f ~/orchi.tar.xz
-#rm -f ~/intellij.tar.gz
-#rm -f ~/pycharm.tar.gz
