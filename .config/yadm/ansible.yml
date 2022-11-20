@@ -201,7 +201,6 @@
 
     - name: install sdk man
       command: curl -s "https://get.sdkman.io" | bash
-      become: yes
 
     - name: Cleanup files
       ansible.builtin.file:
