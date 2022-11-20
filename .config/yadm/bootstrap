@@ -1,5 +1,5 @@
 #!/bin/sh -e
 
-ansible-playbook /home/dev/.config/yadm/ansible.yml -e "ansible_sudo_pass=1234"
+ansible-playbook -v /home/dev/.config/yadm/ansible.yml -e "ansible_sudo_pass=1234"
 
 /home/dev/scripts/change_style.sh vaporwave
