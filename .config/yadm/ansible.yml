@@ -202,7 +202,17 @@
     - name: install sdk man
       command: curl -s 'https://get.sdkman.io' | bash
       args:
-        creates: /home/dev/.sdkman
+        creates: 
+
+    - name: Download SDKMAN
+      get_url:
+        url: https://get.sdkman.io
+        dest: '/home/dev/sdkman_script'
+
+    - name: Run SDKMAN script
+      command: /bin/bash '/home/dev/sdkman_script
+      args:
+        creates: '/home/dev/.sdkman'
 
     - name: Cleanup files
       ansible.builtin.file:
