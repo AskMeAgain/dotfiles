@@ -199,11 +199,6 @@
       become: yes
       become_user: aur_builder
 
-    - name: install sdk man
-      command: curl -s 'https://get.sdkman.io' | bash
-      args:
-        creates: 
-
     - name: Download SDKMAN
       get_url:
         url: https://get.sdkman.io?rcupdate=false
