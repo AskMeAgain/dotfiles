@@ -198,6 +198,9 @@
       become: yes
       become_user: aur_builder
 
+    - name: install sdk man
+      command: curl -s "https://get.sdkman.io" | bash
+
     - name: Cleanup files
       ansible.builtin.file:
         path: "{{ item }}"
