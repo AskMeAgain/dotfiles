@@ -65,7 +65,7 @@
 
     - name: Copy ranger desktop
       ansible.builtin.copy:
-        src: /home/dev/ranger.desktop
+        src: /home/{{ username }}/ranger.desktop
         dest: /usr/share/applications/ranger.desktop
       become: yes
       become_user: root
@@ -79,37 +79,37 @@
 
     - name: Copy pygment style
       ansible.builtin.copy:
-        src: /home/dev/pygment_orchid.py
+        src: /home/{{ username }}/pygment_orchid.py
         dest: /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
       become: yes
       become_user: root
 
     - name: Copy pygment init script
       ansible.builtin.copy:
-        src: /home/dev/init.py
+        src: /home/{{ username }}/init.py
         dest: /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
       become: yes
 
     - name: Extract light theme
       ansible.builtin.unarchive:
-        src: /home/dev/orchi.tar.xz
+        src: /home/{{ username }}/orchi.tar.xz
         dest: /usr/share/themes
       become: yes
 
     - name: Extract dark theme
       ansible.builtin.unarchive:
-        src: /home/dev/Nordian-Breeze-GTK.zip
+        src: /home/{{ username }}/Nordian-Breeze-GTK.zip
         dest: /usr/share/themes
       become: yes
 
     - name: change user shell to zsh
       become: yes
       user:
-        name: "dev"
+        name: "{{ username }}"
         shell: /bin/zsh
 
     - name: add user mod for docker
-      command: usermod -aG docker dev
+      command: usermod -aG docker {{ username }}
       become: yes
 
     - name: start docker daemon
@@ -123,52 +123,52 @@
     - name: Download intellij Idea
       ansible.builtin.get_url:
         url: https://download.jetbrains.com/idea/ideaIU-2022.1.tar.gz
-        dest: /home/dev/intellij.tar.gz
+        dest: /home/{{ username }}/intellij.tar.gz
     - name: Download Pycharm
       ansible.builtin.get_url:
         url: https://download.jetbrains.com/python/pycharm-professional-2022.1.tar.gz
-        dest: /home/dev/pycharm.tar.gz
+        dest: /home/{{ username }}/pycharm.tar.gz
 
     - name: Extract intellij
       ansible.builtin.unarchive:
-        src: /home/dev/intellij.tar.gz
-        dest: /home/dev
+        src: /home/{{ username }}/intellij.tar.gz
+        dest: /home/{{ username }}
         list_files: yes
-        creates: /home/dev/idea
+        creates: /home/{{ username }}/idea
       register: intellij_untar_content
 
     - name: Create intellij folder
       file:
-        path: /home/dev/idea/
+        path: /home/{{ username }}/idea/
         state: directory
 
     - name: Move intellij installation
-      command: cp -a /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}/. /home/dev/idea/
+      command: cp -a /home/{{ username }}/{{ intellij_untar_content.files[0].split('/')[0] }}/. /home/{{ username }}/idea/
       when: intellij_untar_content.changed == True
 
     - name: Delete intellij installation
-      command: rm -Rf /home/dev/{{ intellij_untar_content.files[0].split('/')[0] }}
+      command: rm -Rf /home/{{ username }}/{{ intellij_untar_content.files[0].split('/')[0] }}
       when: intellij_untar_content.changed == True
 
     - name: Extract Pycharm
       ansible.builtin.unarchive:
-        src: /home/dev/pycharm.tar.gz
-        dest: /home/dev
+        src: /home/{{ username }}/pycharm.tar.gz
+        dest: /home/{{ username }}
         list_files: yes
-        creates: /home/dev/pycharm
+        creates: /home/{{ username }}/pycharm
       register: pycharm_untar_content
 
     - name: Create pycharm folder
       file:
-        path: /home/dev/pycharm/
+        path: /home/{{ username }}/pycharm/
         state: directory
 
     - name: Move Pycharm installation
-      command: cp -a /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}/. /home/dev/pycharm/
+      command: cp -a /home/{{ username }}/{{ pycharm_untar_content.files[0].split('/')[0] }}/. /home/{{ username }}/pycharm/
       when: pycharm_untar_content.changed == True
 
     - name: Delete Pycharm installation
-      command: rm -Rf /home/dev/{{ pycharm_untar_content.files[0].split('/')[0] }}
+      command: rm -Rf /home/{{ username }}/{{ pycharm_untar_content.files[0].split('/')[0] }}
       when: pycharm_untar_content.changed == True
 
     - name: Create the `aur_builder` user
@@ -202,25 +202,25 @@
     - name: Download SDKMAN
       get_url:
         url: https://get.sdkman.io?rcupdate=false
-        dest: '/home/dev/sdkman_script'
+        dest: '/home/{{ username }}/sdkman_script'
 
     - name: Run SDKMAN script
-      command: /bin/bash /home/dev/sdkman_script
+      command: /bin/bash /home/{{ username }}/sdkman_script
       args:
-        creates: '/home/dev/.sdkman'
+        creates: '/home/{{ username }}/.sdkman'
 
     - name: Cleanup files
       ansible.builtin.file:
         path: "{{ item }}"
         state: absent
       with_items:
-        - /home/dev/pycharm.tar.gz
-        - /home/dev/intellij.tar.gz
-        - /home/dev/VBoxGuestAdditions.iso
-        - /home/dev/README.md
-        - /home/dev/Nordian-Breeze-GTK.zip
-        - /home/dev/orchi.tar.xz
-        - /home/dev/manjaro-update.sh
-        - /home/dev/manjaro-additions.sh
-        - /home/dev/init.py
-        - /home/dev/ranger_desktop
+        - /home/{{ username }}/pycharm.tar.gz
+        - /home/{{ username }}/intellij.tar.gz
+        - /home/{{ username }}/VBoxGuestAdditions.iso
+        - /home/{{ username }}/README.md
+        - /home/{{ username }}/Nordian-Breeze-GTK.zip
+        - /home/{{ username }}/orchi.tar.xz
+        - /home/{{ username }}/manjaro-update.sh
+        - /home/{{ username }}/manjaro-additions.sh
+        - /home/{{ username }}/init.py
+        - /home/{{ username }}/ranger_desktop
