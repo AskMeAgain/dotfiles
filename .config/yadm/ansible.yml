@@ -210,7 +210,7 @@
         dest: '/home/dev/sdkman_script'
 
     - name: Run SDKMAN script
-      command: /bin/bash '/home/dev/sdkman_script
+      command: /bin/bash /home/dev/sdkman_script
       args:
         creates: '/home/dev/.sdkman'
 
