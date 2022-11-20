@@ -22,7 +22,8 @@
           - dunstify
           - pcmanfm
           - palemoon-bin
-          - dunstify
+          - manjaro-zsh-config
+          - zsh-theme-powerlevel10k
       become: yes
       become_user: root
 
