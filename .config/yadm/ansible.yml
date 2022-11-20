@@ -59,6 +59,7 @@
           - python-pywal
           - zsh-syntax-highlighting
           - yay
+          - sed
       become: yes
       become_user: root
 
