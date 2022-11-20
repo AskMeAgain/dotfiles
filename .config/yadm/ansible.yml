@@ -206,7 +206,7 @@
 
     - name: Download SDKMAN
       get_url:
-        url: https://get.sdkman.io
+        url: https://get.sdkman.io?rcupdate=false
         dest: '/home/dev/sdkman_script'
 
     - name: Run SDKMAN script
