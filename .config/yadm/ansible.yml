@@ -213,7 +213,6 @@
       command: /bin/bash /home/dev/sdkman_script
       args:
         creates: '/home/dev/.sdkman'
-      become: yes
 
     - name: Cleanup files
       ansible.builtin.file:
