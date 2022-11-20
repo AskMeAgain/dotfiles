@@ -87,21 +87,18 @@
         src: /home/dev/init.py
         dest: /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
       become: yes
-      become_user: root
 
     - name: Extract light theme
       ansible.builtin.unarchive:
         src: /home/dev/orchi.tar.xz
         dest: /usr/share/themes
       become: yes
-      become_user: root
 
     - name: Extract dark theme
       ansible.builtin.unarchive:
         src: /home/dev/Nordian-Breeze-GTK.zip
         dest: /usr/share/themes
       become: yes
-      become_user: root
 
     - name: change user shell to zsh
       become: yes
@@ -110,13 +107,16 @@
         shell: /bin/zsh
 
     - name: add user mod for docker
-      command: sudo usermod -aG docker dev
+      command: usermod -aG docker dev
+      become: yes
 
     - name: start docker daemon
-      command: sudo systemctl start docker.service
+      command: systemctl start docker.service
+      become: yes
 
     - name: enable docker daemon for restart
-      command: sudo systemctl enable docker.service
+      command: systemctl enable docker.service
+      become: yes
 
     - name: Download intellij Idea
       ansible.builtin.get_url:
