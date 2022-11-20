@@ -58,6 +58,7 @@
           - python-pygments
           - python-pywal
           - zsh-syntax-highlighting
+          - yay
       become: yes
       become_user: root
 
