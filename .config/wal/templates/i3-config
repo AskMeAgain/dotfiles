@@ -64,10 +64,6 @@ set $ws10 "10"
 
 set $mod Mod4
 
-assign [class="Postman"] $ws0
-for_window [class="jetbrains-idea" title="EventMeshinery"] move container to workspace $ws1
-assign [class="Google-chrome"] $ws2
-
 # switch to workspace
 bindsym $mod+dead_circumflex exec --no-startup-id ~/scripts/switch_workspace.sh 0 9
 bindsym $mod+1 exec --no-startup-id ~/scripts/switch_workspace.sh 1 0
@@ -136,6 +132,13 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xset r rate 200 33
 exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
 
+
+assign [class="Postman"] $ws0
+assign [class="Google-chrome"] $ws2
+
+#for_window [class="Google-chrome"] move window to mark special_mark, mark special_mark, layout tabbed
+for_window [class="jetbrains-idea"] move container to workspace $ws1
+
 for_window [class=".*"] border pixel 1
 for_window [title="Select Bookmark"] border pixel 0
 for_window [class="Seahorse"] floating enable
@@ -145,9 +148,10 @@ gaps horizontal 0
 gaps top 1
 
 gaps bottom -6 gaps inner 6
+show_marks no
 
 # class                  border       bground      text         indicator    child_border
-client.focused           {background} {background} {foreground} {background} {foreground}
+client.focused           {background} {foreground} {background} {foreground} {background}
 client.focused_inactive  {background} {background} {foreground} {background} {background} 
 client.unfocused         {background} {background} {foreground} {background} {background} 
 client.urgent            {background} {background} {foreground} {background} {background} 
