@@ -1,6 +1,11 @@
 #!/bin/bash
 . /home/dev/scripts/utils.sh
 
+#call like this for file:
+#try_style.sh ~/XXXX.png --dark 60 -f
+#call like this for curl, but url needs to end with png or jpeg
+#try_style.sh www.lol.de/x.png --light 100 
+
 set -e
 
 tmp=$(mktemp)
@@ -8,7 +13,7 @@ tmp=$(mktemp)
 if [ "$4" == "-f" ]
 then
     echo "provided file, moving to correct space"
-    mv $1 $tmp
+    cp $1 $tmp
 else
 	echo "provided link is url, downloading file now"
 	curl $1 > $tmp	
@@ -50,5 +55,3 @@ else
 	sed -i "s/\"wallpaper\".*/\"wallpaper\": \"$replaced_home\/themes\/$theme_name\/$theme_name\.$file_ending\",/g" ~/themes/$theme_name/$theme_name-$theme_style.json
 	echo "Saved theme under $theme_name/$theme_name"
 fi
-
-

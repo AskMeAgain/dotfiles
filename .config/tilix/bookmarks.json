@@ -4,12 +4,17 @@
             "list": [
                 {
                     "command": "echo '1234' | sudo -S pacman-mirrors --fasttrack 5 && echo '1234' | sudo -S pacman -Syyu --noconfirm",
-                    "name": "choose other mirror",
+                    "name": "choose other mirror & update",
                     "type": "COMMAND"
                 },
                 {
                     "command": "ip route get 1.2.3.4 | awk '{print $7}'",
                     "name": "show local ip",
+                    "type": "COMMAND"
+                },
+                {
+                    "command": "sudo du -a /home | sort -n -r | head -n 40",
+                    "name": "show 40 biggest folders",
                     "type": "COMMAND"
                 }
             ],
