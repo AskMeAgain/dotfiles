@@ -16,6 +16,11 @@
                     "command": "sudo du -a /home | sort -n -r | head -n 40",
                     "name": "show 40 biggest folders",
                     "type": "COMMAND"
+                },
+                {
+                    "command": "sudo dd if=/dev/zero of=zero.tmp bs=10M; rm -f zero.tmp",
+                    "name": "zero end of disk",
+                    "type": "COMMAND"
                 }
             ],
             "name": "Useful",
