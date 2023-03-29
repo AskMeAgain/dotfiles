@@ -147,7 +147,8 @@ for_window [class="jetbrains-.*" title="win0"] floating enable border none
 gaps horizontal 0
 gaps top 1
 
-gaps bottom -6 gaps inner 6
+gaps bottom -6
+gaps inner 6
 show_marks no
 
 # class                  border       bground      text         indicator    child_border
