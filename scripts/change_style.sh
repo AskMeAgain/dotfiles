@@ -17,3 +17,6 @@ mv /home/dev/.cache/wal/i3-config /home/dev/.i3/config
 mv /home/dev/.cache/wal/envi-vars.sh /home/dev/scripts/envi-vars.sh
 
 chmod +x /home/dev/scripts/envi-vars.sh
+
+cp /home/dev/themes/$1/$1.jpg /home/dev/wallpaper.jpg
+feh --bg-scale --no-xinerama ~/wallpaper.jpg

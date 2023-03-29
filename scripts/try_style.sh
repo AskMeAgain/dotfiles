@@ -42,16 +42,16 @@ then
 	echo "Skipping export"
 	exit 1
 else
-	mkdir ~/themes/$theme_name && cd ~/themes/$theme_name	
-	mv $tmp ~/themes/$theme_name/$theme_name.$file_ending
+	mkdir ~/themes/$theme_name && cd ~/themes/$theme_name
+	mv $tmp ~/themes/$theme_name/$theme_name.jpg
 
 	#finding correct file
 	file_search_pattern=$(echo $tmp | sed "s/\//_/g" | sed "s/\./_/g")
 	file_name="$file_search_pattern"_"$theme_style"_None_None_1.1.0.json
-	mv ~/.cache/wal/schemes/$file_name ~/themes/$theme_name/$theme_name.json
+	mv ~/.cache/wal/schemes/$file_name ~/themes/$theme_name/$theme_name-$theme_style.json
 
 	#fixing wallpaper location
 	replaced_home=$(printf '%s\n' "$HOME" | sed -e 's/[\/&]/\\&/g')
-	sed -i "s/\"wallpaper\".*/\"wallpaper\": \"$replaced_home\/themes\/$theme_name\/$theme_name\.$file_ending\",/g" ~/themes/$theme_name/$theme_name-$theme_style.json
+	sed -i "s/\"wallpaper\".*/\"wallpaper\": \"$replaced_home\/themes\/$theme_name\/$theme_name\.jpg\",/g" ~/themes/$theme_name/$theme_name-$theme_style.json
 	echo "Saved theme under $theme_name/$theme_name"
 fi
