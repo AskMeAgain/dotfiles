@@ -58,6 +58,7 @@
           - python-pygments
           - python-pywal
           - zsh-syntax-highlighting
+          - zsh-history-substring-search
           - sed
       become: yes
       become_user: root
