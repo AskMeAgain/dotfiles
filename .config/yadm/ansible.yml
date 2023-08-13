@@ -58,7 +58,7 @@
           - python-pygments
           - python-pywal
           - zsh-syntax-highlighting
-          - yay
+          - trizen
           - sed
       become: yes
       become_user: root
@@ -186,9 +186,9 @@
         create: yes
         validate: 'visudo -cf %s'
 
-    - name: Install packages using yay
+    - name: Install aur packages
       kewlfft.aur.aur:
-        use: yay
+        use: trizen
         name:
           - ttf-sourcecodepro-nerd
           - google-chrome
