@@ -63,6 +63,7 @@
       become_user: root
 
     - name: Copy ranger desktop
+      ignore_errors: yes
       ansible.builtin.copy:
         src: /home/{{ username }}/ranger.desktop
         dest: /usr/share/applications/ranger.desktop
@@ -77,6 +78,7 @@
       become_user: root
 
     - name: Copy pygment style
+      ignore_errors: yes
       ansible.builtin.copy:
         src: /home/{{ username }}/pygment_orchid.py
         dest: /usr/lib/python3.8/site-packages/pygments/styles/orchid.py
@@ -84,18 +86,21 @@
       become_user: root
 
     - name: Copy pygment init script
+      ignore_errors: yes
       ansible.builtin.copy:
         src: /home/{{ username }}/init.py
         dest: /usr/lib/python3.8/site-packages/pygments/styles/__init__.py
       become: yes
 
     - name: Extract light theme
+      ignore_errors: yes
       ansible.builtin.unarchive:
         src: /home/{{ username }}/orchi.tar.xz
         dest: /usr/share/themes
       become: yes
 
     - name: Extract dark theme
+      ignore_errors: yes
       ansible.builtin.unarchive:
         src: /home/{{ username }}/Nordian-Breeze-GTK.zip
         dest: /usr/share/themes
@@ -160,6 +165,11 @@
     - name: Create pycharm folder
       file:
         path: /home/{{ username }}/pycharm/
+        state: directory
+
+    - name: Create .i3 folder
+      file:
+        path: /home/{{ username }}/.i3/
         state: directory
 
     - name: Move Pycharm installation
