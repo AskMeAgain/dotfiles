@@ -130,7 +130,8 @@
       lineinfile:
         path: /etc/lightdm/lightdm.conf
         line: autologin-user={{ username }}
-
+        become: yes
+        
     - name: start docker daemon
       command: systemctl start docker.service
       become: yes
