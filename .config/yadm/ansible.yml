@@ -237,7 +237,7 @@
         creates: '/home/{{ username }}/.sdkman'
 
     - name: enabling lightdm autologin
-      command: echo autologin-user={{ username }} >> /etc/lightdm/lightdm.conf
+      command: sed -i 's/^#autologin-user=/autologin-user={{ username }}/' /etc/lightdm/lightdm.conf
       become: yes
 
     - name: Cleanup files
