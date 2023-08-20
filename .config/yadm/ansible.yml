@@ -60,6 +60,7 @@
           - zsh-syntax-highlighting
           - zsh-history-substring-search
           - sed
+          - picom
       become: yes
       become_user: root
 
@@ -115,6 +116,14 @@
 
     - name: add user mod for docker
       command: usermod -aG docker {{ username }}
+      become: yes
+
+    - name: add user mod for autologin
+      command: usermod -aG autologin {{ username }}
+      become: yes
+
+    - name: needed for autologin
+      command: gpasswd -a {{ username }} autologin
       become: yes
 
     - name: start docker daemon
