@@ -125,14 +125,6 @@
     - name: needed for autologin
       command: gpasswd -a {{ username }} autologin
       become: yes
-
-    - name: 
-      command: echo autologin-user={{ username }} >> /etc/lightdm/lightdm.conf
-      become: yes
-        
-    - name: fixing lightconf
-      command: systemctl start docker.service
-      become: yes
         
     - name: start docker daemon
       command: systemctl start docker.service
@@ -243,6 +235,10 @@
       command: /bin/bash /home/{{ username }}/sdkman_script
       args:
         creates: '/home/{{ username }}/.sdkman'
+
+    - name: enabling lightdm autologin
+      command: echo autologin-user={{ username }} >> /etc/lightdm/lightdm.conf
+      become: yes
 
     - name: Cleanup files
       ansible.builtin.file:
