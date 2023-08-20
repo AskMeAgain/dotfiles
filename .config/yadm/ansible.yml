@@ -126,6 +126,11 @@
       command: gpasswd -a {{ username }} autologin
       become: yes
 
+    - name: fixing lightconf
+      lineinfile:
+        path: /etc/lightdm/lightdm.conf
+        line: autologin-user={{ username }}
+
     - name: start docker daemon
       command: systemctl start docker.service
       become: yes
