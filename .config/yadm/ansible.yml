@@ -118,8 +118,8 @@
       command: usermod -aG docker {{ username }}
       become: yes
 
-    - name: add user mod for autologin
-      command: usermod -aG autologin {{ username }}
+    - name: create autologin group
+      command: groupadd -r autologin
       become: yes
 
     - name: needed for autologin
