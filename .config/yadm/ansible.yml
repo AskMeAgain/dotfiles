@@ -119,10 +119,12 @@
       become: yes
 
     - name: create autologin group
+      ignore_errors: yes
       command: groupadd -r autologin
       become: yes
 
     - name: needed for autologin
+      ignore_errors: yes
       command: gpasswd -a {{ username }} autologin
       become: yes
         
