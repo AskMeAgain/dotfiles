@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 . /home/dev/scripts/utils.sh
 
 if test -f "/home/dev/themes/$1/$1-light.json"; 
