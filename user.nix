@@ -31,7 +31,4 @@
     pkgs.gnused
     pkgs.picom
   ];
-  services.xserver.layout = "de";
-
-  console.useXkbConfig = true;
 }
