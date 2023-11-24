@@ -41,9 +41,4 @@
   services.xserver.layout = "de";
 
   console.useXkbConfig = true;
-
-  services.openssh = {
-    enable = true;
-    settings.PasswordAuthentication = true;
-  };
 }
