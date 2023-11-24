@@ -1,11 +1,4 @@
 { config, pkgs, ... }: {
-  users.users.dev = {
-    hashedPassword = "$6$yvRAry3HvAaxVB5k$U0WFYDwAG3u/W1nYfy0oHJIf6z56tS5mY4XA4drsb2Ol1qklLq30/hm8bg.O0yH2.Fvxr6ilQXAquLSN6LFPD1";
-  	isNormalUser = true;
-  	home = "/home/dev";
-  	description = "Dev Account";
-  	extraGroups = [ "wheel" ];
-  };
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = [
     pkgs.micro
