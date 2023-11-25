@@ -6,4 +6,4 @@ else
     ansible-playbook /home/dev/.config/yadm/ansible.yml -e "ansible_sudo_pass=1234 username=$DEVBOX_USERNAME"
 fi
 
-/home/dev/scripts/change_style.sh vaporwave || true
+/home/dev/scripts/change_style.sh vaporwave
