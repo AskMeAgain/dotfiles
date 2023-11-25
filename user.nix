@@ -1,5 +1,6 @@
 { config, pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
+  #services.xserver.windowManager.i3.configFile = "/home/dev/.i3/config";
   environment.systemPackages = [
     pkgs.micro
     pkgs.ansible
