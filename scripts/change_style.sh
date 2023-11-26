@@ -4,10 +4,10 @@
 if test -f "/home/dev/themes/$1/$1-light.json"; 
 then
     wal --theme /home/dev/themes/$1/$1-light.json
-    writeGtkTheme --light
+    writeGtkTheme --light || true
 else
     wal --theme /home/dev/themes/$1/$1-dark.json
-    writeGtkTheme --dark
+    writeGtkTheme --dark || true
 fi
 
 dconf load /com/gexperts/Tilix/ < /home/dev/.cache/wal/tilix.dconf
