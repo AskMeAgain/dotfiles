@@ -3,6 +3,7 @@
 if [ -n "$NIXOS" ]; then
 else
     ansible-playbook /home/dev/.config/yadm/ansible.yml -e "ansible_sudo_pass=1234 username=$DEVBOX_USERNAME"
+    rm -f /home/dev/.zshrc
 fi
 
 /home/dev/scripts/change_style.sh vaporwave
