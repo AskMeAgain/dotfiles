@@ -1,7 +1,8 @@
 #!/bin/sh -e
 
 if [ -n "$NIXOS" ]; then
-   echo "nothing to do"
+   sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
+   sudo nix-channel --update
 else
     ansible-playbook /home/dev/.config/yadm/ansible.yml -e "ansible_sudo_pass=1234 username=$DEVBOX_USERNAME"
 fi
