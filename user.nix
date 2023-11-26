@@ -8,7 +8,7 @@
   home-manager.users.dev = { pkgs, ... }: {
   	home.stateVersion = "23.05";
     programs.zsh = {
-   	  enable = true;
+      enable = true;
       enableCompletion = true;
       enableAutosuggestions = true;
       enableSyntaxHighlighting = true;
