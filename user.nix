@@ -1,6 +1,9 @@
 { config, pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
-  #services.xserver.windowManager.i3.configFile = "/home/dev/.i3/config";
+  services.xserver.windowManager.i3.configFile = "/home/dev/.i3/config";
+  fonts.fonts = with pkgs; [
+    (nerdfonts.override { fonts = [ "SourceCodePro" ]; })
+  ];
   environment.systemPackages = [
     pkgs.micro
     pkgs.ansible
@@ -9,7 +12,6 @@
     pkgs.tilix
     pkgs.yadm
     pkgs.gnome.seahorse
-    pkgs.nerdfonts
     pkgs.jq
     pkgs.xclip
     pkgs.postman
