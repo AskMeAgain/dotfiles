@@ -1,7 +1,6 @@
 #!/bin/sh -e
 
 if [ -n "$NIXOS" ]; then
-    rm -f /home/dev/.zshrc
 else
     ansible-playbook /home/dev/.config/yadm/ansible.yml -e "ansible_sudo_pass=1234 username=$DEVBOX_USERNAME" 
 fi
