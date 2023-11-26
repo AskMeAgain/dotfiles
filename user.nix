@@ -4,10 +4,45 @@
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "SourceCodePro" ]; })
   ];
+  imports = [ <home-manager/nixos> ];
+  home-manager.users.dev = { pkgs, ... }: {
+  	home.stateVersion = "23.05";
+    programs.zsh = {
+   	  enable = true;
+      enableCompletion = true;
+      enableAutosuggestions = true;
+      enableSyntaxHighlighting = true;
+      oh-my-zsh = {
+        enable = true;
+        plugins = [ "git" "history-substring-search" ];
+        theme = "dst";
+      };
+      plugins = [
+        {
+          name = "powerlevel10k";
+          src = pkgs.zsh-powerlevel10k;
+          file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        }
+        {
+          name = "powerlevel10k-config";
+          src = "/home/dev/";
+          file = ".p10k.zsh";
+        }
+      ];
+    };
+    programs.fzf = {
+        enable = true;
+        enableZshIntegration = true;
+    };
+  };
+  programs.zsh.enable = true;
+  users.users.dev.shell = pkgs.zsh;
+  #users.defaultUserShell = pkgs.zsh;
   environment.systemPackages = [
     pkgs.micro
+    pkgs.git
     pkgs.ansible
-    pkgs.google-chrome
+    #pkgs.google-chrome
     pkgs.dconf
     pkgs.tilix
     pkgs.yadm
@@ -23,14 +58,10 @@
     pkgs.rofi
     pkgs.docker
     pkgs.zsh
-    pkgs.zsh-completions
-    pkgs.zsh-powerlevel10k
     pkgs.flameshot
     pkgs.peek
     pkgs.python311Packages.pygments
     pkgs.pywal
-    pkgs.zsh-syntax-highlighting
-    pkgs.zsh-history-substring-search
     pkgs.gnused
     pkgs.picom
   ];
