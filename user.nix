@@ -7,14 +7,19 @@
   imports = [ <home-manager/nixos> ];
   home-manager.users.dev = { pkgs, ... }: {
   	home.stateVersion = "23.05";
+  	programs.home-manager.enable = true;
+  	home.username = "dev";
+  	home.homeDirectory = "/home/dev";
     programs.zsh = {
+      historySubstringSearch.enable = true;
       enable = true;
+      enableVteIntegration = true;
       enableCompletion = true;
       enableAutosuggestions = true;
       enableSyntaxHighlighting = true;
       oh-my-zsh = {
         enable = true;
-        plugins = [ "git" "history-substring-search" ];
+        plugins = [ "git" ];
         theme = "dst";
       };
       plugins = [
@@ -37,12 +42,11 @@
   };
   programs.zsh.enable = true;
   users.users.dev.shell = pkgs.zsh;
-  #users.defaultUserShell = pkgs.zsh;
   environment.systemPackages = [
     pkgs.micro
     pkgs.git
     pkgs.ansible
-    #pkgs.google-chrome
+    pkgs.google-chrome
     pkgs.dconf
     pkgs.tilix
     pkgs.yadm
