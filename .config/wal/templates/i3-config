@@ -12,8 +12,6 @@ bindsym $mod+F4 exec ~/scripts/change_style.sh blue
 set $refresh_i3status killall -SIGUSR1 i3status
 
 bindsym $mod+Return exec tilix
-bindsym $mod+Shift+Return exec --no-startup-id ~/scripts/open_program.sh tilix --new-workspace
-bindsym $mod+o exec --no-startup-id ~/scripts/open_program.sh obsidian
 
 # kill focused window
 bindsym $mod+q kill
@@ -23,7 +21,6 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+a exec --no-startup-id ~/scripts/greenclip-utils.sh
 bindsym $mod+k exec --no-startup-id seahorse
-bindsym $mod+n exec --no-startup-id ~/scripts/dunst.sh
 
 # change focus
 bindsym $mod+Left focus left
@@ -36,17 +33,6 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+e layout toggle split
-bindsym $mod+h split toggle
-
-# enter fullscreen mode for the focused container
-bindsym $mod+w fullscreen toggle
-bindsym $mod+shift+w fullscreen toggle global
-
-# toggle tiling / floating
-bindsym $mod+space floating toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -63,6 +49,9 @@ set $ws9 "9"
 set $ws10 "10"
 
 set $mod Mod4
+
+assign [class="Postman"] $ws0
+assign [class="Google-chrome"] $ws2
 
 # switch to workspace
 bindsym $mod+dead_circumflex exec --no-startup-id ~/scripts/switch_workspace.sh 0 9
@@ -91,9 +80,6 @@ bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $
 bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
-
-bindsym $mod+Shift+space exec ~/scripts/move_to_new_workspace.sh
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -124,20 +110,16 @@ exec_always --no-startup-id killall -q polybar; ~/scripts/launch_polybar.sh
 exec_always --no-startup-id killall -q greenclip; greenclip daemon
 
 exec --no-startup-id flameshot
-exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
+exec --no-startup-id feh --bg-scale --no-xinerama ~/wallpaper.jpg
 
 exec --no-startup-id VBoxClient-all
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id xset r rate 200 33
-exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
 
-
-assign [class="Postman"] $ws0
-assign [class="Google-chrome"] $ws2
-
-#for_window [class="Google-chrome"] move window to mark special_mark, mark special_mark, layout tabbed
-for_window [class="jetbrains-idea"] move container to workspace $ws1
+exec --no-startup-id xrandr --newmode "2560x1440_30.00"  146.25  2560 2680 2944 3328  1440 1443 1448 1468 -hsync +vsync
+exec --no-startup-id xrandr --addmode VGA-1 2560x1440_30.00
+exec --no-startup-id xrandr -s 2560x1440
 
 for_window [class=".*"] border pixel 1
 for_window [title="Select Bookmark"] border pixel 0
@@ -147,12 +129,11 @@ for_window [class="jetbrains-.*" title="win0"] floating enable border none
 gaps horizontal 0
 gaps top 1
 
-gaps bottom -6
+gaps bottom -6 
 gaps inner 6
-show_marks no
 
 # class                  border       bground      text         indicator    child_border
-client.focused           {background} {foreground} {background} {foreground} {background}
+client.focused           {background} {background} {foreground} {background} {foreground}
 client.focused_inactive  {background} {background} {foreground} {background} {background} 
 client.unfocused         {background} {background} {foreground} {background} {background} 
 client.urgent            {background} {background} {foreground} {background} {background} 
@@ -160,3 +141,5 @@ client.placeholder       {background} {background} {foreground} {background} {ba
 client.background        {background} 
 
 exec --no-startup-id wal -R
+
+

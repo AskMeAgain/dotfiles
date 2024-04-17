@@ -3,10 +3,12 @@
     <property name="created">2021-09-15T21:13:25</property>
     <property name="ide">idea</property>
     <property name="ideVersion">2021.2.1.0.0</property>
-    <property name="modified">2021-10-03T09:04:15</property>
+    <property name="modified">2023-05-19T22:11:09</property>
     <property name="originalScheme">AskMeAgain</property>
   </metaInfo>
   <colors>
+    <option name="FOLDED_TEXT_BORDER_COLOR" value="3c3f41" />
+    <option name="HTML_TAG_TREE_LEVEL3" value="ff0000" />
     <option name="SELECTION_BACKGROUND" value="543d3d" />
     <option name="WHITESPACES" value="c2c2c2" />
   </colors>
@@ -101,6 +103,23 @@
         <option name="FOREGROUND" value="569f53" />
       </value>
     </option>
+    <option name="DUPLICATE_FROM_SERVER">
+      <value>
+        <option name="FOREGROUND" value="9aff" />
+        <option name="BACKGROUND" value="5e5339" />
+      </value>
+    </option>
+    <option name="FOLDED_TEXT_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="c0c0c0" />
+        <option name="BACKGROUND" value="3a3a3a" />
+      </value>
+    </option>
+    <option name="HTML_CUSTOM_TAG_NAME">
+      <value>
+        <option name="FOREGROUND" value="531801" />
+      </value>
+    </option>
     <option name="IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="89a1c5" />
@@ -108,6 +127,8 @@
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
+    <option name="JS.GLOBAL_FUNCTION" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
+    <option name="JS.INSTANCE_MEMBER_FUNCTION" baseAttributes="DEFAULT_INSTANCE_METHOD" />
     <option name="REASSIGNED_LOCAL_VARIABLE_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="a9b9c6" />
@@ -120,6 +141,11 @@
         <option name="FOREGROUND" value="a9b9c6" />
         <option name="EFFECT_COLOR" value="a9b9c6" />
         <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="SQL_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="936ac4" />
       </value>
     </option>
     <option name="STATIC_METHOD_ATTRIBUTES">
@@ -141,10 +167,21 @@
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
+    <option name="TS.GLOBAL_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="aa7676" />
+        <option name="FONT_TYPE" value="3" />
+      </value>
+    </option>
     <option name="WARNING_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="d2c6c6" />
+        <option name="FOREGROUND" value="a4a4a4" />
         <option name="BACKGROUND" value="5e5442" />
+      </value>
+    </option>
+    <option name="XML_CUSTOM_TAG_NAME">
+      <value>
+        <option name="FOREGROUND" value="c75555" />
       </value>
     </option>
   </attributes>

@@ -70,6 +70,7 @@
   <action id="EvaluateExpression">
     <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl e" />
   </action>
+  <action id="ExpandCollapseToggleAction" />
   <action id="ExpandExpandableComponent">
     <keyboard-shortcut first-keystroke="ctrl add" />
     <keyboard-shortcut first-keystroke="ctrl equals" />
@@ -246,6 +247,9 @@
   <action id="ShowPopupMenu">
     <keyboard-shortcut first-keystroke="context_menu" />
   </action>
+  <action id="ShowTypeBookmarks">
+    <keyboard-shortcut first-keystroke="ctrl b" second-keystroke="ctrl b" />
+  </action>
   <action id="SmartSelect">
     <keyboard-shortcut first-keystroke="shift alt equals" />
     <keyboard-shortcut first-keystroke="ctrl w" />
@@ -253,9 +257,6 @@
   <action id="SmartUnSelect">
     <keyboard-shortcut first-keystroke="shift alt minus" />
     <keyboard-shortcut first-keystroke="shift ctrl w" />
-  </action>
-  <action id="StackOverflow.AskQuestion.ToolsMenu">
-    <keyboard-shortcut first-keystroke="ctrl i" second-keystroke="ctrl m" />
   </action>
   <action id="StepInto">
     <keyboard-shortcut first-keystroke="f11" />
@@ -287,6 +288,11 @@
     <keyboard-shortcut first-keystroke="shift ctrl w" />
   </action>
   <action id="Terminal.ClearBuffer" />
+  <action id="ToggleBookmarkWithMnemonic">
+    <keyboard-shortcut first-keystroke="ctrl f11" />
+    <keyboard-shortcut first-keystroke="ctrl b" second-keystroke="ctrl k" />
+  </action>
+  <action id="UsageFiltering.Imports" />
   <action id="Vcs.Push">
     <keyboard-shortcut first-keystroke="shift ctrl k" />
     <keyboard-shortcut first-keystroke="ctrl g" second-keystroke="ctrl p" />
@@ -301,5 +307,10 @@
   <action id="editRunConfigurations">
     <keyboard-shortcut first-keystroke="f12" />
   </action>
+  <action id="io.github.askmeagain.more.shortcuts.introducemock.SmartIntroduceAction">
+    <keyboard-shortcut first-keystroke="ctrl m" second-keystroke="ctrl v" />
+    <keyboard-shortcut first-keystroke="ctrl i" second-keystroke="ctrl m" />
+  </action>
+  <action id="org.intellij.plugins.markdown.ui.actions.styling.ToggleBoldAction" />
   <action id="org.intellij.plugins.markdown.ui.actions.styling.ToggleItalicAction" />
 </keymap>

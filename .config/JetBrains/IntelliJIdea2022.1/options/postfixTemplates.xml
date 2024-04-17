@@ -1,0 +1,34 @@
+<application>
+  <component name="PostfixTemplates">
+    <template id="oon@userDefined" key=".oon" provider="builtin.java" language-level="1.3" topmost="false">
+      <conditions>
+        <condition id="non void" />
+      </conditions>
+      <template name="fakeKey" value="java.util.Optional.ofNullable($EXPR$);" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="assertThat@userDefined" key=".assertThat" provider="builtin.java" language-level="1.3" topmost="true">
+      <conditions>
+        <condition id="non void" />
+      </conditions>
+      <template name="fakeKey" value="org.assertj.core.api.Assertions.assertThat($EXPR$).$END$" description="" toReformat="true" toShortenFQNames="true" useStaticImport="true" />
+    </template>
+    <template id="oo@userDefined" key=".oo" provider="builtin.java" language-level="1.3" topmost="false">
+      <conditions>
+        <condition id="non void" />
+      </conditions>
+      <template name="fakeKey" value="java.util.Optional.of($EXPR$);" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="at@userDefined" key=".at" provider="builtin.java" language-level="1.3" topmost="false">
+      <conditions>
+        <condition id="non void" />
+      </conditions>
+      <template name="fakeKey" value="org.assertj.core.api.Assertions.assertThat($EXPR$)$END$" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="if@userDefined" key=".if" provider="builtin.java" language-level="1.3" topmost="false">
+      <conditions>
+        <condition id="boolean" />
+      </conditions>
+      <template name="fakeKey" value="if($EXPR$){&#10;    $END$&#10;}" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+  </component>
+</application>
