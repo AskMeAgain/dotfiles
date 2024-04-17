@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 . ~/scripts/utils.sh
 
 if [ "$2" = "--new-workspace" ]; 

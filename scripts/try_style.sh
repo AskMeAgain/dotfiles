@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 . /home/dev/scripts/utils.sh
 
 #call like this for file:

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 alias ccc="xclip -sel clip"
 alias ls='ls --color=auto'
