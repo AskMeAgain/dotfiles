@@ -1,6 +1,22 @@
 { config, pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
-  services.xserver.windowManager.i3.configFile = "/home/dev/.i3/config";
+
+  services = {
+  	xserver = {
+  		layout = "de";
+  		xkbVariant = "";
+  		enable = true;
+  		windowManager.i3 = {
+  			configFile = "/home/dev/.i3/config";
+  			enable = true;
+  		};
+  		displayManager = {
+  			defaultSession = "none+i3";
+  		};
+  	};
+  };
+
+  
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "SourceCodePro" ]; })
   ];
