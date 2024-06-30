@@ -12,6 +12,7 @@
   		};
   		displayManager = {
   			defaultSession = "none+i3";
+        autoLogin.user = "dev";
   		};
   	};
   };
