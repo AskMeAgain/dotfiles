@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-
 fe() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --preview 'cat {}' --multi --select-1 --exit-0))
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
